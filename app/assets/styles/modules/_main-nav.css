@@ -1,0 +1,27 @@
+.main-nav{
+
+  text-align: center;
+  height:100%;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    /* @mixin clearfix; */
+
+
+  }
+  li{
+    display: inline-block;
+    float: right;
+    margin: 0 5px;
+
+  }
+
+  a{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 4px;
+    line-height: 22px;
+  }
+
+}

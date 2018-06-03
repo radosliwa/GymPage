@@ -1,0 +1,21 @@
+.banner{
+  position: relative;
+  z-index: -1;
+  /* overflow: hidden;
+  &:after{
+    position:absolute;
+    display:block;
+    background-color: black;
+    content: "";
+    height: 294px;
+    width: auto;
+    top:85%;
+    left:0%;
+    right:0%;
+    transform-origin: top right;
+    transform: skewY(8deg);
+    border-radius: 50%;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 30%;
+  } */
+}
