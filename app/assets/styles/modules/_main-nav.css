@@ -1,27 +1,49 @@
 .main-nav{
 
+
   text-align: center;
-  height:100%;
+  font-weight: 900;
+  font-size: 1.1rem;
+
 
   ul{
-    margin: 0;
+    float: right;
+    height: inherit;
     padding: 0;
-    /* @mixin clearfix; */
+    margin: 0;
+    @mixin clearfix;
+    @mixin atMedium{
+      margin-right: 72px;
+    }
 
 
   }
   li{
     display: inline-block;
-    float: right;
     margin: 0 5px;
-
+    padding-right: 10px;
   }
 
   a{
-    display: inline-block;
-    vertical-align: middle;
-    padding: 4px 4px;
-    line-height: 22px;
-  }
+    display: block;
+    padding: 18px 0px;
+    height: 100%;
 
+    &:hover {
+      background-color: grey;
+    }
+
+  }
+  &__logo{
+    display: inline-block;
+    max-width: 160px;
+    position: absolute;
+    transform: scale(.8);
+    @mixin atMedium{
+      margin-left: 86px;
+      margin-top: -47px;
+    }
+
+
+  }
 }

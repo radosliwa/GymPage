@@ -1,21 +1,33 @@
+
+/* @font-face {
+font-family: 'AllStar';
+src: url('../../assets/fonts/AllStar.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+} */
 .banner{
-  position: relative;
-  z-index: -1;
-  /* overflow: hidden;
-  &:after{
-    position:absolute;
-    display:block;
-    background-color: black;
-    content: "";
-    height: 294px;
-    width: auto;
-    top:85%;
-    left:0%;
-    right:0%;
-    transform-origin: top right;
-    transform: skewY(8deg);
-    border-radius: 50%;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 30%;
-  } */
+
+  max-height: 750px;
+  @mixin clearfix;
+
+  &__image{
+    position: relative; /*to move subtitle on top */
+    z-index: -1;
+  }
+
+  &__subtitle{
+    display: inline-block;
+    text-shadow:;
+
+    @mixin atMedium{
+
+      &--on-the-right{
+        float:right;
+        margin-top: -25.5%;
+        margin-right: 5%;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+    }
+  }
 }
