@@ -9,14 +9,17 @@
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:500,700,900|Squada+One" rel="stylesheet">
   <link rel ="stylesheet" type="text/css" href="temp\styles\styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
   <header class ="site-header">
     <div class="wrapper">
       <nav class="main-nav">
         <ul>
+          <li><a href="#" id="our offer">OUR OFFER</a></li>
           <li><a href="#" id="about">IG'S MISSION</a></li>
-          <li><a href="#" id="lorem">OUR OFFER</a></li>
           <li><a href="#" id="contact">CONTACT</a></li>
         </ul>
       </nav>
@@ -25,24 +28,53 @@
       </div>
     </div>
   </header>
-
+  <!------------------------------ BANNER -->
   <div class ="banner">
     <div class="wrapper">
 
-        <picture>
-          <img src="assets/images/banner--large.png" alt ="fitness_and_flames" class ="banner__image">
-        </picture>
-        <!-- <h2 class="button button--banner">CALL TO ACTION</h2> -->
-        <h2 class ="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
+      <picture>
+        <img src="assets/images/banner--large.png" alt ="fitness_and_flames" class ="banner__image">
+      </picture>
+      <!-- <h2 class="button button--banner">CALL TO ACTION</h2> -->
+      <div class="banner__side-offer text-container">
+        <div class="banner__side-offer__close">X</div>
+        <p class="banner_side-offer__headline animated bounceInLeft">
+          CHECK OUR AWESOME SUMMER DEALS!<br>
+          UP TO 50% DISCOUNT ON MEMBERSHIP!<br>
+          FILL IN THE FORM FOR DETAILS
 
+        </p>
+      </div>
+      <h2 class ="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
     </div>
   </div>
 
+  <!------------------------------ OUR OFFER -->
+
+  <div id="our-offer" class ="section section--smaller-t-gap">
+    <div class ="wrapper">
+      <div class="row">
+
+        <div class="text-container row__medium_3">
+        <ul>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+        </ul>
+        </div>
+
+        <picture>
+          <img src="assets/images/chad--large.png" class ="our-offer-picture row__medium_9 our-offer-picture--pull-right" alt="bodybuilder">
+        </picture>
+      </div>
+    </div>
+  </div>
 
 
 
   <footer>
 
   </footer>
+  <script src="assets/scripts/main.js"></script>
 </body>
 </html>

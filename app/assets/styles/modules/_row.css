@@ -1,12 +1,26 @@
 .row{
    @mixin clearfix;
 
+  &__medium_3{
+    float: left;
+    width:25%;
+  }
   &__medium_4{
     float:left;
     width:33.33%;
+  }
+  &__medium_6{
+    float: left;
+    width: 50%;
   }
   &__medium_8{
     float:left;
     width:66.66%;
   }
+
+  &__medium_9{
+    float:left;
+    width:75%;
+  }
+
 }

@@ -2,8 +2,8 @@
 
 
   text-align: center;
-  font-weight: 900;
-  font-size: 1.1rem;
+  font-weight: normal;
+  font-size: 1.25rem;
 
 
   ul{
@@ -15,24 +15,35 @@
     @mixin atMedium{
       margin-right: 72px;
     }
-
-
   }
+
   li{
     display: inline-block;
     margin: 0 5px;
     padding-right: 10px;
   }
 
+
   a{
-    display: block;
+    position: relative;
+    display: inline-block;
     padding: 18px 0px;
     height: 100%;
-
-    &:hover {
-      background-color: grey;
+    &:after{
+      position:absolute;
+      content:"";
+      height: 3px;
+      background-color: white;
+      width: 100%;
+      bottom: 14px;
+      left:0;
+      transform: scale(0);
+      transition:transform .3s ease-out;
+      transform-origin: left;
     }
-
+    &:hover:after{
+      transform: scale(1);
+    }
   }
   &__logo{
     display: inline-block;

@@ -354,10 +354,20 @@ html, body{
 }
 
 body{
-background:url();
 
-font-family: 'Orbitron', sans-serif;
+background:url('../../assets/images/background.jpg') fixed center center;
 
+
+
+font-family:Maiden Crimes, 'Orbitron', sans-serif;
+
+}
+
+@font-face {
+font-family: 'Maiden Crimes';
+src: url('../../assets/fonts/Maiden Crimes.otf');
+font-weight: normal;
+font-style: normal;
 }
 
 img{
@@ -371,7 +381,7 @@ ul{
 
 li{
   text-decoration: none;
-
+cursor: pointer;
 
 }
 
@@ -384,7 +394,7 @@ a{
   overflow:hidden;
   padding-left: 10px;
   padding-right:10px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 
@@ -399,14 +409,16 @@ a{
 
 
 
+
+
 }
 
 .main-nav{
 
 
   text-align: center;
-  font-weight: 900;
-  font-size: 1.1rem;
+  font-weight: normal;
+  font-size: 1.25rem;
 }
 
 .main-nav ul{
@@ -414,8 +426,6 @@ a{
     height: inherit;
     padding: 0;
     margin: 0;
-
-
   }
 
 .main-nav ul::after{
@@ -428,8 +438,6 @@ a{
 
 .main-nav ul{
       margin-right: 72px
-
-
   }
   }
 
@@ -440,14 +448,32 @@ a{
   }
 
 .main-nav a{
-    display: block;
+    position: relative;
+    display: inline-block;
     padding: 18px 0px;
     height: 100%;
-
   }
 
-.main-nav a:hover {
-      background-color: grey;
+.main-nav a:after{
+      position:absolute;
+      content:"";
+      height: 3px;
+      background-color: white;
+      width: 100%;
+      bottom: 14px;
+      left:0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      transition:-webkit-transform .3s ease-out;
+      transition:transform .3s ease-out;
+      transition:transform .3s ease-out, -webkit-transform .3s ease-out;
+      -webkit-transform-origin: left;
+              transform-origin: left;
+    }
+
+.main-nav a:hover:after{
+      -webkit-transform: scale(1);
+              transform: scale(1);
     }
 
 .main-nav__logo{
@@ -470,14 +496,8 @@ a{
   }
   }
 
-/* @font-face {
-font-family: 'AllStar';
-src: url('../../assets/fonts/AllStar.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-} */
-
 .banner{
+
 
   max-height: 750px;
 }
@@ -494,20 +514,64 @@ font-style: normal;
   }
 
 .banner__subtitle{
+
     display: inline-block;
-    text-shadow:;
+    color: #000;
+    text-shadow:
+    2px 2px 0 #FFF,
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 2px 4px #FFF,
+    1px 4px 4px #000;
   }
 
 @media(min-width: 800px){
 
       .banner__subtitle--on-the-right{
+        letter-spacing: 2px;
         float:right;
         margin-top: -25.5%;
-        margin-right: 5%;
+        margin-right: 8.5%;
         font-weight: 900;
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
   }
+
+.banner__side-offer{
+    display: none;
+    border-radius: 5%;
+    position: absolute;
+    top:18%;
+    color: white;
+    width: 657px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.76);
+    -webkit-animation: boxS 2.5s ease-in 1;
+            animation: boxS 2.5s ease-in 1;
+    box-shadow: 0 4px 26px 7px white;
+  }
+
+.banner__side-offer__close{
+      text-align: right;
+      padding: 5%;
+      font-size: 1.3rem;
+      padding: 1% 2% 0 0;
+  }
+
+.banner__side-offer__close:hover {
+        color: #fabb69;
+        cursor: pointer;
+      }
+
+@-webkit-keyframes boxS{
+  from{ box-shadow: 0 0px 0px 0px white; }
+  to{ box-shadow: 0 4px 26px 7px white; }
+}
+
+@keyframes boxS{
+  from{ box-shadow: 0 0px 0px 0px white; }
+  to{ box-shadow: 0 4px 26px 7px white; }
+}
 
 .row::after{
     content:"";
@@ -515,12 +579,57 @@ font-style: normal;
     clear: both;
   }
 
+.row__medium_3{
+    float: left;
+    width:25%;
+  }
+
 .row__medium_4{
     float:left;
     width:33.33%;
+  }
+
+.row__medium_6{
+    float: left;
+    width: 50%;
   }
 
 .row__medium_8{
     float:left;
     width:66.66%;
   }
+
+.row__medium_9{
+    float:left;
+    width:75%;
+  }
+
+.section{
+  position: relative;
+
+  z-index: 2;
+
+  /* &--smaller-t-gap{
+      margin-top: -100px;
+  } */
+
+  /* .our-offer-picture{
+    &--pull-right{
+      position: absolute;
+      left:40%;
+    }
+  } */
+
+}
+
+.section::after{
+    content:"";
+    display: table;
+    clear: both;
+  }
+
+.text-container{
+  color: white;
+  text-align: center;
+  line-height: 1.65;
+}

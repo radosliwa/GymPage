@@ -1,0 +1,18 @@
+.section{
+  position: relative;
+
+  z-index: 2;
+  @mixin clearfix;
+
+  /* &--smaller-t-gap{
+      margin-top: -100px;
+  } */
+
+  /* .our-offer-picture{
+    &--pull-right{
+      position: absolute;
+      left:40%;
+    }
+  } */
+
+}

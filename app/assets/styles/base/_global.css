@@ -6,9 +6,19 @@ html, body{
   box-sizing: border-box;
 }
 body{
-background:url();
 
-font-family: 'Orbitron', sans-serif;
+background:url('../../assets/images/background.jpg') fixed center center;
+
+
+
+font-family:Maiden Crimes, 'Orbitron', sans-serif;
+
+@font-face {
+font-family: 'Maiden Crimes';
+src: url('../../assets/fonts/Maiden Crimes.otf');
+font-weight: normal;
+font-style: normal;
+}
 
 }
 
@@ -24,7 +34,7 @@ ul{
 
 li{
   text-decoration: none;
-
+cursor: pointer;
 
 }
 a{
