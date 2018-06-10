@@ -1,5 +1,40 @@
 .text-container{
+  overflow: hidden;
   color: white;
   text-align: center;
-  line-height: 1.65;
+  line-height: 1.85;
+  font-size: 1.9rem;
+  font-family: 'Orbitron';
+  &--dark-background{
+
+    margin-top: 20px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: rgba(0, 0, 0, 0.76);
+    box-shadow: 0 3px 28px rgba(219, 118, 6, 0.9);
+  }
+
+  &__girlPicture{
+
+    float: left;
+    max-height: 405px;
+    shape-outside: circle();
+    margin-top:-94%;
+  }
+
+  @mixin atMedium{
+    &__heading{
+      font-size: 2.5rem;
+    }
+    &__why-list{
+      font-size: 1.8rem;
+      line-height: 3rem;
+      margin-bottom: 30%;
+      li{
+        padding: 2%;
+      }
+
+    }
+  }
+
 }

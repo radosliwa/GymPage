@@ -46,8 +46,14 @@
     background-color:rgba(0, 0, 0, 0.76);
     animation: boxS 2.5s ease-in 1;
     box-shadow: 0 4px 26px 7px white;
-  &__close{
-      text-align: right;
+
+    span{
+      color: red;
+    }
+    &__close{
+      position: relative;
+      float: right;
+      z-index: 99; /* to make whole 'x' area clickable */
       padding: 5%;
       font-size: 1.3rem;
       padding: 1% 2% 0 0;
@@ -55,7 +61,7 @@
         color: #fabb69;
         cursor: pointer;
       }
-  }
+    }
   }
 }
 

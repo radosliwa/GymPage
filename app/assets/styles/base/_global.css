@@ -7,7 +7,7 @@ html, body{
 }
 body{
 
-background:url('../../assets/images/background.jpg') fixed center center;
+background:url('../../assets/images/background.jpg') fixed no-repeat center;
 
 
 
