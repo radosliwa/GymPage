@@ -356,7 +356,7 @@ html, body{
 body{
 
 background:url('../../assets/images/background.jpg') fixed no-repeat center;
-
+position: relative;
 
 
 font-family:Maiden Crimes, 'Orbitron', sans-serif;
@@ -406,6 +406,7 @@ a{
   color: white;
   width: 100%;
   /* padding: 8px 0; */
+  z-index: 99;
 
 
 
@@ -640,9 +641,25 @@ a{
   } */
 
 .section .our-offer-picture--pull-right{
-  
+
 
 }
+
+.section__igs-mission-team{
+
+  text-align: center;
+}
+
+.section__igs-mission-team__picture{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    border: 6px solid rgba(255, 255, 255, .3);
+    box-shadow: 0px 5px 18px 1px black;
+
+  }
 
 .text-container{
   overflow: hidden;
@@ -650,7 +667,8 @@ a{
   text-align: center;
   line-height: 1.85;
   font-size: 1.9rem;
-  font-family: 'Orbitron';
+  font-family: 'Orbitron', sans-serif;
+
 
 }
 
@@ -664,24 +682,72 @@ a{
   }
 
 .text-container__girlPicture{
-
     float: left;
-    max-height: 405px;
+    max-height: 374px;
     shape-outside: circle();
-    margin-top:-94%;
+    margin-top:-69%;
+
   }
 
-@media(min-width: 800px){
-    .text-container__heading{
-      font-size: 2.5rem;
-    }
-    .text-container__why-list{
-      font-size: 1.8rem;
-      line-height: 3rem;
-      margin-bottom: 30%;
+.text-container__heading{
 
-    }
-      .text-container__why-list li{
-        padding: 2%;
-      }
+
   }
+
+.text-container__heading--our-offer{
+    font-size: 2.5rem;
+    margin-right:-172px;
+  }
+
+.text-container__why-list{
+    text-align: right;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+.text-container__why-list li{
+      padding: 2%;
+    }
+
+.text-container__learn-more{
+    position: relative;
+    background-color: orange;
+    z-index: 1;
+  }
+
+.text-container__learn-more::after{
+    content:"";
+    display: table;
+    clear: both;
+  }
+
+.text-container__learn-more > *{
+      float: left;
+
+      display:inline-block;
+    }
+
+.text-container__arrow{
+
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-top: orange;
+    border-left: orange;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+
+  }
+
+.text-container__mission-statement{
+    font-size: 1.75rem;
+    /*  */
+
+  }
+
+.site-footer{
+  background-color:black;
+ color: #FFF;
+ padding: .5rem 18px .5rem 18px;
+ text-align: center;
+}

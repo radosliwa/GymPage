@@ -1,7 +1,7 @@
 
 
 
-         $(".main-nav li:first-child").hover(function(e) {
+         $(".main-nav li:first-child").hover(() =>{
            $('.banner__side-offer').fadeIn(800);
 
          });

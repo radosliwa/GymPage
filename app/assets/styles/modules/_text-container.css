@@ -4,7 +4,7 @@
   text-align: center;
   line-height: 1.85;
   font-size: 1.9rem;
-  font-family: 'Orbitron';
+  font-family: 'Orbitron', sans-serif;
   &--dark-background{
 
     margin-top: 20px;
@@ -15,26 +15,61 @@
   }
 
   &__girlPicture{
-
     float: left;
-    max-height: 405px;
+    max-height: 374px;
     shape-outside: circle();
-    margin-top:-94%;
+    margin-top:-69%;
+
   }
 
-  @mixin atMedium{
-    &__heading{
-      font-size: 2.5rem;
-    }
-    &__why-list{
-      font-size: 1.8rem;
-      line-height: 3rem;
-      margin-bottom: 30%;
-      li{
-        padding: 2%;
-      }
+  &__heading{
 
+
+  }
+
+  &__heading--our-offer{
+    font-size: 2.5rem;
+    margin-right:-172px;
+  }
+
+  &__why-list{
+    text-align: right;
+    font-size: 1.8rem;
+    line-height: 3rem;
+
+    li{
+      padding: 2%;
     }
   }
+
+  &__learn-more{
+    position: relative;
+    background-color: orange;
+    z-index: 1;
+    @mixin clearfix;
+    & > *{
+      float: left;
+
+      display:inline-block;
+    }
+  }
+
+  &__arrow{
+
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-top: orange;
+    border-left: orange;
+    transform: rotate(90deg);
+
+  }
+
+  &__mission-statement{
+    font-size: 1.75rem;
+    /*  */
+
+  }
+
 
 }

@@ -8,7 +8,7 @@ html, body{
 body{
 
 background:url('../../assets/images/background.jpg') fixed no-repeat center;
-
+position: relative;
 
 
 font-family:Maiden Crimes, 'Orbitron', sans-serif;

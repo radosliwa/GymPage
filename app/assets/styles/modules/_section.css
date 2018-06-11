@@ -8,7 +8,23 @@
   } */
 
 .our-offer-picture--pull-right{
-  
 
+
+}
+
+&__igs-mission-team{
+
+  text-align: center;
+
+  &__picture{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    border: 6px solid rgba(255, 255, 255, .3);
+    box-shadow: 0px 5px 18px 1px black;
+
+  }
 }
 }
