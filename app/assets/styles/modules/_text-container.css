@@ -16,9 +16,9 @@
 
   &__girlPicture{
     float: left;
-    max-height: 374px;
+    max-height: 373px;
     shape-outside: circle();
-    margin-top:-69%;
+    margin-top:-70%;
 
   }
 
@@ -46,22 +46,63 @@
     position: relative;
     background-color: orange;
     z-index: 1;
-    @mixin clearfix;
-    & > *{
-      float: left;
+    padding: 17px;
+    transition: all .4s ease-in;
+    &:hover {
+      background-color: #000;
+      border-top: 3px solid #FFF;
+      cursor: pointer;
+       .text-container__arrow{
+        border: 2px solid #FFF;
+        animation: none;
+        border-top: #000;
+        border-left: #000;
+      }
 
-      display:inline-block;
     }
+
+
+    &__text{
+      margin: 0 auto;
+    }
+
   }
 
   &__arrow{
-
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    display: inline-block;
+    margin: -21px auto 0 auto;
+    width: 15px;
+    height: 15px;
     border: 2px solid #000;
     border-top: orange;
     border-left: orange;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
+    animation: arrow 1s infinite linear;
+    z-index: -1;
+/*  */
+
+
+    &:before, &:after{
+      position:absolute;
+      content:"";
+      width: inherit;
+      height: inherit;
+      border: 2px solid #000;
+      border-top: orange;
+      border-left: orange;
+
+    }
+    &:before{
+      left:-12px;
+      top:-13px;
+    }
+
+    &:after{
+      left:10px;
+      top:10px;
+    }
+
 
   }
 
@@ -72,4 +113,13 @@
   }
 
 
+}
+
+@keyframes arrow {
+  /* 0% {transform: translate(-80deg);}
+  50% {transform: translate(0deg);}
+  100% {transform: translate(80deg);} */
+  0% {top:75px;}
+  50% {top: 100px;}
+  100% {top:120px;}
 }
