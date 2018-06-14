@@ -647,19 +647,43 @@ a{
 
 .section__igs-mission-team{
 
-  text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+ }
 
 .section__igs-mission-team__picture{
     display: inline-block;
+    position: relative;
     border-radius: 50%;
     overflow: hidden;
-    width: 160px;
-    height: 160px;
-    border: 6px solid rgba(255, 255, 255, .3);
+    width: 135px;
+    height: 135px;
+    border: 4px solid rgba(255, 255, 255, .3);
     box-shadow: 0px 5px 18px 1px black;
+    left:6%;
+    margin-top:2%;
+    /* top:50%;
+    position: absolute;
+    transform: translate(-50%,-50%); */
 
   }
+
+.section__igs-mission-team__person{
+    position: relative;
+    border:2px solid #FFF;
+    background-color: #0b0a09d9;
+    /* border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%; */
+    margin-bottom: 20px;
+    padding-bottom: 4%;
+  }
+
+.section__igs-mission-team__person h4{
+      display: inline-block;
+      margin:0 auto 0 0;
+      line-height: 1.5;
+      font-size: 1.7rem;
+    }
 
 .text-container{
   overflow: hidden;
@@ -668,7 +692,6 @@ a{
   line-height: 1.85;
   font-size: 1.9rem;
   font-family: 'Orbitron', sans-serif;
-
 
 }
 
@@ -690,9 +713,12 @@ a{
   }
 
 .text-container__heading{
-
-
+    text-decoration: underline;
   }
+
+.text-container__heading--no-underline{
+      text-decoration: none;
+    }
 
 .text-container__heading--our-offer{
     font-size: 2.5rem;
@@ -715,14 +741,12 @@ a{
     z-index: 1;
     padding: 17px;
     transition: all .4s ease-in;
-
   }
 
 .text-container__learn-more:hover {
       background-color: #000;
       border-top: 3px solid #FFF;
       cursor: pointer;
-
     }
 
 .text-container__learn-more:hover .text-container__arrow{
@@ -731,6 +755,8 @@ a{
                 animation: none;
         border-top: #000;
         border-left: #000;
+        top:90px;
+        left:51%;
       }
 
 .text-container__learn-more__text{
@@ -751,8 +777,6 @@ a{
     -webkit-animation: arrow 1s infinite linear;
             animation: arrow 1s infinite linear;
     z-index: -1;
-
-
   }
 
 /*  */
@@ -779,8 +803,20 @@ a{
     }
 
 .text-container__mission-statement{
-    font-size: 1.75rem;
+   text-align: center;
+   padding: 0 10%;
     /*  */
+
+  }
+
+.text-container__personAbout{
+    display: inline-block;
+    line-height: 1.45;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: justify;
+    padding: 2%;
+    font-style: italic;
 
   }
 
@@ -803,8 +839,10 @@ a{
 }
 
 .site-footer{
-  background-color:black;
+  background-color:#cd3600b5;
  color: #FFF;
  padding: .5rem 18px .5rem 18px;
  text-align: center;
+ height: 5%;
+ width: 100%;
 }

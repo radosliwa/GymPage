@@ -23,9 +23,12 @@
   }
 
   &__heading{
-
-
+    text-decoration: underline;
+    &--no-underline{
+      text-decoration: none;
+    }
   }
+
 
   &__heading--our-offer{
     font-size: 2.5rem;
@@ -57,15 +60,13 @@
         animation: none;
         border-top: #000;
         border-left: #000;
+        top:90px;
+        left:51%;
       }
-
     }
-
-
     &__text{
       margin: 0 auto;
     }
-
   }
 
   &__arrow{
@@ -102,16 +103,24 @@
       left:10px;
       top:10px;
     }
-
-
   }
 
   &__mission-statement{
-    font-size: 1.75rem;
+   text-align: center;
+   padding: 0 10%;
     /*  */
 
   }
+  &__personAbout{
+    display: inline-block;
+    line-height: 1.45;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: justify;
+    padding: 2%;
+    font-style: italic;
 
+  }
 
 }
 
