@@ -1,7 +1,6 @@
 
 .banner{
-
-
+  position: relative;
   max-height: 750px;
   @mixin clearfix;
 
@@ -11,7 +10,7 @@
   }
 
   &__subtitle{
-
+    font-family: Maiden Crimes, 'Orbitron', sans-serif;
     display: inline-block;
     color: #000;
     text-shadow:
@@ -62,6 +61,35 @@
         cursor: pointer;
       }
     }
+  }
+
+
+  &__btn-container{
+    border-radius:30px;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 3px 5px 1px #FFF;
+    transition: all 0.3s. linear;
+    @mixin atMedium{
+      border-radius:30px;
+      position: absolute;
+      left:50%;
+      bottom:14%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0px 3px 5px 1px #FFF;
+
+      &:hover{
+        box-shadow: 0px 3px 5px 3px #FFF;
+      }
+
+      &:active {
+      bottom:13.7%;
+      box-shadow: 0px 1px 2px 0px #FFF;
+      }
+    }
+
   }
 }
 

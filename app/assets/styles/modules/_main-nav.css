@@ -1,6 +1,6 @@
 .main-nav{
 
-
+  font-family: Maiden Crimes, 'Orbitron', sans-serif;
   text-align: center;
   font-weight: normal;
   font-size: 1.25rem;
@@ -21,6 +21,7 @@
     display: inline-block;
     margin: 0 5px;
     padding-right: 10px;
+
   }
 
 

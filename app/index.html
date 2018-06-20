@@ -35,20 +35,19 @@
       <picture>
         <img src="assets/images/banner--large.png" alt ="fitness_and_flames" class ="banner__image">
       </picture>
-      <!-- <h2 class="button button--banner">CALL TO ACTION</h2> -->
+
       <div class="banner__side-offer text-container">
         <div class="banner__side-offer__close">X</div>
         <p class="banner_side-offer__headline animated bounceInLeft">
           CHECK OUR AWESOME SUMMER DEALS!<br>
           UP TO <span>50% DISCOUNT</span> ON MEMBERSHIP!<br>
-          FILL IN THE FORM FOR DETAILS
-          <form action="#">
-
-          </form>
-
+          CONTACT US FOR DETAILS!
         </p>
       </div>
       <h2 class ="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
+      <div class="banner__btn-container">
+        <a href="#" class ="btn">JOIN NOW!</a>
+      </div>
     </div>
   </div>
 
@@ -67,9 +66,9 @@
           </ul>
           <img src="assets/images/girlBall.png" class ="text-container__girlPicture" alt="">
           <div class="text-container__learn-more">
-            <h3 class ="text-container__learn-more__text">LEARN MORE</h3>
+            <h3 class ="text-container__learn-more__text"><a href="#" id="learn more" >LEARN MORE</a></h3>
 
-            <div class="text-container__arrow">  </div>
+            <div class="text-container__arrow"> </div>
           </div>
         </div>
 
@@ -80,7 +79,7 @@
     </div>
   </div>
 
-  <!------------------------------ IG'S MISSION -->
+  <!-- ----------------------------IG'S MISSION -->
   <div id="igs-mission" class ="section">
     <div class="wrapper">
       <div class="row">
@@ -91,20 +90,20 @@
         <div class="row__medium_6 text-container">
           <h3 class="text-container__heading text-container__heading--no-underline">MEET OUR TEAM</h3>
           <div class="section__igs-mission-team">
-            <div class="section__igs-mission-team__person">
-              <div class="row__medium_4 section__igs-mission-team__picture"></div>
-              <h4 class="row__medium_4">Marek</h4>
-              <p class="row__medium_8 text-container__personAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
+            <div class="section__igs-mission-team__coach">
+              <h5 class="text-container__coachName">Marek</h5>
+              <div class="row__medium_4 section__igs-mission-team__coach__picture"></div>
+              <p class="row__medium_8 text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
-            <div class="section__igs-mission-team__person">
-              <p class="row__medium_8 text-container__personAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
-              <h4 class="row__medium_4">Ania</h4>
-              <div class="row__medium_4 section__igs-mission-team__picture"></div>
+            <div class="section__igs-mission-team__coach">
+              <h5 class="text-container__coachName">Ania</h5>
+              <div class="row__medium_4 section__igs-mission-team__coach__picture"></div>
+              <p class="row__medium_8 text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
-            <div class="section__igs-mission-team__person">
-              <p class="row__medium_8 text-container__personAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
-              <h4 class="row__medium_4">Sylwia</h4>
-              <div class="row__medium_4 section__igs-mission-team__picture"></div>
+            <div class="section__igs-mission-team__coach">
+              <h5 class="text-container__coachName">Sylwia</h5>
+              <div class="row__medium_4 section__igs-mission-team__coach__picture"></div>
+              <p class="row__medium_8 text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
           </div>
         </div>
@@ -113,10 +112,53 @@
   </div>
 
 
+  <!-- ----------------------------CONTACT SECTION -->
+  <div id="contact" class ="section section--black-background">
+    <div class="wrapper">
+      <div class="row">
+          <div class="row__medium_12 section__contact-companyInfo">
+            <h3 class ="text-container__heading--no-underline">Contact us!</h3>
+            <h4>Iron Gym</h4>
+          </div>
+        <form class="form">
 
-  <footer class ="site-footer">
+            <div class="form__input form__input--name">
+              <label class="form__label" for="name">
+              Your name
+              <input id="name" name="name" type="text">
+              </label>
+            </div>
 
-  </footer>
-  <script src="assets/scripts/main.js"></script>
-</body>
-</html>
+            <div class="form__input form__input--email">
+              <label class="form__label" for="email">
+              Your e-mail
+              <input id="email" name="email" type="text">
+              </label>
+            </div>
+
+            <div class="form__message">
+              <label class="form__label" for="message">
+              Message
+              <textarea id="message" name="message" type="text" rows="5"></textarea>
+              </label>
+            </div>
+
+            <div class="banner__btn-container">
+              <a href="#" class ="btn">Submit</a>
+            </div>
+          </form>
+
+          <div class="row__medium_6 section__contact__socialMedia">
+            SOCIAL MEDIA ICONS
+          </div>
+          <div class="row__medium_6">MAPA</div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class ="site-footer">
+    </footer>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+  </html>

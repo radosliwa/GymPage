@@ -1,0 +1,21 @@
+.btn{
+  font-family: 'Orbitron',sans-serif;
+  box-shadow:inset 0px 38px 0px -17px #b54b3a;
+  background:linear-gradient(to bottom, #280e15 5%, #b34332 100%);
+  background-color:#a73f2d;
+  border-radius:30px;
+  border:3px solid #241d13;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size: 1.3rem;
+  padding:15px 25px;
+  text-decoration:none;
+  transition: all .2s linear;
+  /* &:hover{
+    color: #ffed34;
+  } */
+  &:active{
+    color: #ffed34;
+  }
+}

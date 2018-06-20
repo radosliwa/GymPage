@@ -354,12 +354,10 @@ html, body{
 }
 
 body{
-
 background:url('../../assets/images/background.jpg') fixed no-repeat center;
 position: relative;
-
-
-font-family:Maiden Crimes, 'Orbitron', sans-serif;
+font-family:'Orbitron', sans-serif;
+color: #FFF;
 
 }
 
@@ -390,6 +388,30 @@ a{
   text-decoration: none;
 }
 
+.btn{
+  font-family: 'Orbitron',sans-serif;
+  box-shadow:inset 0px 38px 0px -17px #b54b3a;
+  background:linear-gradient(to bottom, #280e15 5%, #b34332 100%);
+  background-color:#a73f2d;
+  border-radius:30px;
+  border:3px solid #241d13;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size: 1.3rem;
+  padding:15px 25px;
+  text-decoration:none;
+  transition: all .2s linear;
+}
+
+/* &:hover{
+    color: #ffed34;
+  } */
+
+.btn:active{
+    color: #ffed34;
+  }
+
 .wrapper{
   overflow:hidden;
   padding-left: 10px;
@@ -416,7 +438,7 @@ a{
 
 .main-nav{
 
-
+  font-family: Maiden Crimes, 'Orbitron', sans-serif;
   text-align: center;
   font-weight: normal;
   font-size: 1.25rem;
@@ -435,7 +457,7 @@ a{
     clear: both;
   }
 
-@media(min-width: 800px){
+@media(min-width: 768px){
 
 .main-nav ul{
       margin-right: 72px
@@ -446,6 +468,7 @@ a{
     display: inline-block;
     margin: 0 5px;
     padding-right: 10px;
+
   }
 
 .main-nav a{
@@ -487,7 +510,7 @@ a{
 
   }
 
-@media(min-width: 800px){
+@media(min-width: 768px){
 
 .main-nav__logo{
       margin-left: 86px;
@@ -498,8 +521,7 @@ a{
   }
 
 .banner{
-
-
+  position: relative;
   max-height: 750px;
 }
 
@@ -515,7 +537,7 @@ a{
   }
 
 .banner__subtitle{
-
+    font-family: Maiden Crimes, 'Orbitron', sans-serif;
     display: inline-block;
     color: #000;
     text-shadow:
@@ -526,7 +548,7 @@ a{
     1px 4px 4px #000;
   }
 
-@media(min-width: 800px){
+@media(min-width: 768px){
 
       .banner__subtitle--on-the-right{
         letter-spacing: 2px;
@@ -570,6 +592,41 @@ a{
         cursor: pointer;
       }
 
+.banner__btn-container{
+    border-radius:30px;
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    box-shadow: 0px 3px 5px 1px #FFF;
+    transition: all 0.3s. linear;
+
+  }
+
+@media(min-width: 768px){
+
+.banner__btn-container{
+      border-radius:30px;
+      position: absolute;
+      left:50%;
+      bottom:14%;
+      -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+      box-shadow: 0px 3px 5px 1px #FFF
+
+  }
+
+      .banner__btn-container:hover{
+        box-shadow: 0px 3px 5px 3px #FFF;
+      }
+
+      .banner__btn-container:active {
+      bottom:13.7%;
+      box-shadow: 0px 1px 2px 0px #FFF;
+      }
+  }
+
 @-webkit-keyframes boxS{
   from{ box-shadow: 0 0px 0px 0px white; }
   to{ box-shadow: 0 4px 26px 7px white; }
@@ -580,8 +637,13 @@ a{
   to{ box-shadow: 0 4px 26px 7px white; }
 }
 
+.form{
+  
+}
+
 .row{
   position: relative;
+
 
 }
 
@@ -591,54 +653,55 @@ a{
     clear: both;
   }
 
-.row__medium_3{
-    float: left;
-    width:25%;
-  }
+@media(min-width: 768px){
+    .row__medium_3{
+      float: left;
+      width:25%;
+    }
+    .row__medium_4{
+      float:left;
+      width:33.33%;
+    }
+    .row__medium_5{
+      float: left;
+      width: 41.66%;
+    }
+    .row__medium_6{
+      float: left;
+      width: 50%;
+    }
+    .row__medium_7{
+      float: left;
+      width: 58.33%;
+    }
+    .row__medium_8{
+      float:left;
+      width:66.66%;
+    }
 
-.row__medium_4{
-    float:left;
-    width:33.33%;
-  }
+    .row__medium_9{
+      float:left;
+      width:75%;
+    }
 
-.row__medium_5{
-    float: left;
-    width: 41.66%;
-  }
-
-.row__medium_6{
-    float: left;
-    width: 50%;
-  }
-
-.row__medium_7{
-    float: left;
-    width: 58.33%;
-  }
-
-.row__medium_8{
-    float:left;
-    width:66.66%;
-  }
-
-.row__medium_9{
-    float:left;
-    width:75%;
+    .row__medium_12{
+      float:left;
+      width:100%;
+    }
   }
 
 .section{
   margin-top: 1%;
+  min-height: 200px;
 }
+
+/* just to check why mission section gets cut*/
 
 .section::after{
     content:"";
     display: table;
     clear: both;
   }
-
-/* &--smaller-t-gap{
-      margin-top: -100px;
-  } */
 
 .section .our-offer-picture--pull-right{
 
@@ -651,24 +714,7 @@ a{
   flex-direction: column;
  }
 
-.section__igs-mission-team__picture{
-    display: inline-block;
-    position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 135px;
-    height: 135px;
-    border: 4px solid rgba(255, 255, 255, .3);
-    box-shadow: 0px 5px 18px 1px black;
-    left:6%;
-    margin-top:2%;
-    /* top:50%;
-    position: absolute;
-    transform: translate(-50%,-50%); */
-
-  }
-
-.section__igs-mission-team__person{
+.section__igs-mission-team__coach{
     position: relative;
     border:2px solid #FFF;
     background-color: #0b0a09d9;
@@ -678,12 +724,26 @@ a{
     padding-bottom: 4%;
   }
 
-.section__igs-mission-team__person h4{
+.section__igs-mission-team__coach__picture{
       display: inline-block;
-      margin:0 auto 0 0;
-      line-height: 1.5;
-      font-size: 1.7rem;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 135px;
+      height: 135px;
+      border: 4px solid rgba(255, 255, 255, .3);
+      box-shadow: 0px 5px 18px 1px black;
+      left:5%;
+      margin-top: -9px;
+      /* top:50%;
+      position: absolute;
+      transform: translate(-50%,-50%); */
     }
+
+.section--black-background{
+   background-color: #000;
+
+ }
 
 .text-container{
   overflow: hidden;
@@ -691,7 +751,6 @@ a{
   text-align: center;
   line-height: 1.85;
   font-size: 1.9rem;
-  font-family: 'Orbitron', sans-serif;
 
 }
 
@@ -735,38 +794,10 @@ a{
       padding: 2%;
     }
 
-.text-container__learn-more{
-    position: relative;
-    background-color: orange;
-    z-index: 1;
-    padding: 17px;
-    transition: all .4s ease-in;
-  }
-
-.text-container__learn-more:hover {
-      background-color: #000;
-      border-top: 3px solid #FFF;
-      cursor: pointer;
-    }
-
-.text-container__learn-more:hover .text-container__arrow{
-        border: 2px solid #FFF;
-        -webkit-animation: none;
-                animation: none;
-        border-top: #000;
-        border-left: #000;
-        top:90px;
-        left:51%;
-      }
-
-.text-container__learn-more__text{
-      margin: 0 auto;
-    }
-
 .text-container__arrow{
     position: absolute;
-    display: inline-block;
-    margin: -21px auto 0 auto;
+    left: 50.8%;
+    margin-top:-4%;
     width: 15px;
     height: 15px;
     border: 2px solid #000;
@@ -779,8 +810,6 @@ a{
     z-index: -1;
   }
 
-/*  */
-
 .text-container__arrow:before, .text-container__arrow:after{
       position:absolute;
       content:"";
@@ -789,7 +818,6 @@ a{
       border: 2px solid #000;
       border-top: orange;
       border-left: orange;
-
     }
 
 .text-container__arrow:before{
@@ -802,40 +830,76 @@ a{
       top:10px;
     }
 
+.text-container__learn-more{
+    position: relative;
+    background-color: orange;
+    z-index: 1;
+    padding: 17px;
+    transition: all .3s ease-in;
+  }
+
+.text-container__learn-more:hover {
+      background-color: #000;
+      border-top: 3px solid #FFF;
+      cursor: pointer;
+
+    }
+
+.text-container__learn-more:hover a:hover{
+          color: orange;
+        }
+
+.text-container__learn-more:hover .text-container__arrow{
+        transition: all .5s ease-in;
+        top:90px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #FFF;
+        border-top: #000;
+        border-left: #000;
+        -webkit-animation: none;
+                animation: none;
+      }
+
+.text-container__learn-more__text{
+      margin: 0 auto;
+    }
+
 .text-container__mission-statement{
-   text-align: center;
-   padding: 0 10%;
+    text-align: center;
+    padding: 0 10%;
     /*  */
+  }
+
+.text-container__coachName{
+    /* display: inline-block; */
+    margin:0;
 
   }
 
-.text-container__personAbout{
+.text-container__coachAbout{
     display: inline-block;
     line-height: 1.45;
     font-size: 1rem;
     font-weight: lighter;
-    text-align: justify;
+    text-align: right;
     padding: 2%;
     font-style: italic;
 
   }
 
 @-webkit-keyframes arrow {
-  /* 0% {transform: translate(-80deg);}
-  50% {transform: translate(0deg);}
-  100% {transform: translate(80deg);} */
+
   0% {top:75px;}
   50% {top: 100px;}
-  100% {top:120px;}
+  100% {top:130px;}
 }
 
 @keyframes arrow {
-  /* 0% {transform: translate(-80deg);}
-  50% {transform: translate(0deg);}
-  100% {transform: translate(80deg);} */
+
   0% {top:75px;}
   50% {top: 100px;}
-  100% {top:120px;}
+  100% {top:130px;}
 }
 
 .site-footer{

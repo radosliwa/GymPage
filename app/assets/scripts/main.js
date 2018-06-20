@@ -1,13 +1,11 @@
 
 
 
-         $(".main-nav li:first-child").hover(() =>{
-           $('.banner__side-offer').fadeIn(800);
+// $(function(){
+//   $('.banner__side-offer').delay(1000).fadeIn(800);
+// });
 
-         });
+$(".banner__side-offer__close").click(()=>{
+  $('.banner__side-offer').css({display: 'none'});
 
-         $(".banner__side-offer__close").click(()=>{
-
-              $('.banner__side-offer').css({display: 'none'});
-
-         })
+})
