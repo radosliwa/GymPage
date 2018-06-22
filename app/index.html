@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,15 @@
   <meta name="keywords" content="workout, diet, motivation, bodybuilding, fitness">
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:500,700,900|Squada+One" rel="stylesheet">
-  <link rel ="stylesheet" type="text/css" href="temp\styles\styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="temp\styles\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
+
 <body>
-  <header class ="site-header">
+  <header class="site-header">
     <div class="wrapper">
       <nav class="main-nav">
         <ul>
@@ -24,63 +27,61 @@
         </ul>
       </nav>
       <div class="main-nav__logo">
-        <img class ="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png" >
+        <img class="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png">
       </div>
     </div>
   </header>
   <!------------------------------ BANNER -->
-  <div class ="banner">
+  <div class="banner">
     <div class="wrapper">
 
       <picture>
-        <img src="assets/images/banner--large.png" alt ="fitness_and_flames" class ="banner__image">
+        <img src="assets/images/banner--large.png" alt="fitness_and_flames" class="banner__image">
       </picture>
 
       <div class="banner__side-offer text-container">
         <div class="banner__side-offer__close">X</div>
         <p class="banner_side-offer__headline animated bounceInLeft">
-          CHECK OUR AWESOME SUMMER DEALS!<br>
-          UP TO <span>50% DISCOUNT</span> ON MEMBERSHIP!<br>
-          CONTACT US FOR DETAILS!
+          CHECK OUR AWESOME SUMMER DEALS!<br> UP TO <span>50% DISCOUNT</span> ON MEMBERSHIP!<br> CONTACT US FOR DETAILS!
         </p>
       </div>
-      <h2 class ="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
+      <h2 class="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
       <div class="banner__btn-container">
-        <a href="#" class ="btn">JOIN NOW!</a>
+        <a href="#" class="btn btn__banner">JOIN NOW!</a>
       </div>
     </div>
   </div>
 
   <!------------------------------ OUR OFFER -->
 
-  <div id="our-offer" class ="section section--smaller-t-gap">
-    <div class ="wrapper">
+  <div id="our-offer" class="section section--smaller-t-gap">
+    <div class="wrapper">
       <div class="row">
 
         <div class="text-container text-container--dark-background row__medium_5">
           <h3 class="text-container__heading text-container__heading--our-offer">WHY US?</h3>
-          <ul class ="text-container__why-list">
+          <ul class="text-container__why-list">
             <li> Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipisicing elit</li>
             <li> Sapiente amet pariatur!</li>
           </ul>
-          <img src="assets/images/girlBall.png" class ="text-container__girlPicture" alt="">
+          <img src="assets/images/girlBall.png" class="text-container__girlPicture" alt="">
           <div class="text-container__learn-more">
-            <h3 class ="text-container__learn-more__text"><a href="#" id="learn more" >LEARN MORE</a></h3>
+            <h3 class="text-container__learn-more__text"><a href="#" id="learn more" >LEARN MORE</a></h3>
 
             <div class="text-container__arrow"> </div>
           </div>
         </div>
 
         <picture>
-          <img src="assets/images/chad--large.png" class ="section__our-offer-picture section__our-offer-picture--pull-right row__medium_7" alt="bodybuilder">
+          <img src="assets/images/chad--large.png" class="section__our-offer-picture section__our-offer-picture--pull-right row__medium_7" alt="bodybuilder">
         </picture>
       </div>
     </div>
   </div>
 
   <!-- ----------------------------IG'S MISSION -->
-  <div id="igs-mission" class ="section">
+  <div id="igs-mission" class="section">
     <div class="wrapper">
       <div class="row">
         <div class="row__medium_6 text-container">
@@ -113,52 +114,64 @@
 
 
   <!-- ----------------------------CONTACT SECTION -->
-  <div id="contact" class ="section section--black-background">
+  <div id="contact" class="section">
     <div class="wrapper">
       <div class="row">
-          <div class="row__medium_12 section__contact-companyInfo">
-            <h3 class ="text-container__heading--no-underline">Contact us!</h3>
-            <h4>Iron Gym</h4>
+
+        <div class="address">
+          <h2 class="text-container__heading--no-underline">Contact us!</h2>
+          <h3 class="text-container__heading"><span class ="text-container--bold">Iron </span>Gym</h3>
+
+          <div class="row__medium_4 address__item"><img src="assets/images/icons/map.svg" class="icon icon__map">
+            <p>Mystery Street 12 <br> Warsaw, Poland</p>
           </div>
-        <form class="form">
-
-            <div class="form__input form__input--name">
-              <label class="form__label" for="name">
-              Your name
-              <input id="name" name="name" type="text">
-              </label>
-            </div>
-
-            <div class="form__input form__input--email">
-              <label class="form__label" for="email">
-              Your e-mail
-              <input id="email" name="email" type="text">
-              </label>
-            </div>
-
-            <div class="form__message">
-              <label class="form__label" for="message">
-              Message
-              <textarea id="message" name="message" type="text" rows="5"></textarea>
-              </label>
-            </div>
-
-            <div class="banner__btn-container">
-              <a href="#" class ="btn">Submit</a>
-            </div>
-          </form>
-
-          <div class="row__medium_6 section__contact__socialMedia">
-            SOCIAL MEDIA ICONS
+          <div class="row__medium_4 address__item"><img src="assets/images/icons/envelope.svg" class="icon icon__envelope">
+            <p>sliwa.radoslaw2@gmail.com</p>
           </div>
-          <div class="row__medium_6">MAPA</div>
+          <div class="row__medium_4 address__item"><img src="assets/images/icons/phone.svg" class="icon icon__phone">
+            <p>+48 999 999 999</p>
+          </div>
         </div>
+
+        <form class="row__medium_12 form">
+          <div class="form__input form__input--name">
+            <label class="form__label" for="name">
+              Your name
+            </label>
+            <input id="name" name="name" type="text" placeholder="your name...">
+          </div>
+
+          <div class="form__input form__input--email">
+            <label class="form__label" for="email">
+              Your e-mail
+            </label>
+            <input id="email" name="email" type="email">
+          </div>
+
+          <div class="form__message">
+            <label class="form__label" for="message">
+              Message
+            </label>
+            <textarea id="message" name="message" type="text" rows="5"></textarea>
+          </div>
+
+          <div class="form__btn-container">
+            <a href="#" class="btn btn__address">Submit</a>
+          </div>
+        </form>
+
+        <div class="row__medium_6 section__contact__socialMedia">
+          SOCIAL MEDIA ICONS
+        </div>
+        <div class="row__medium_6">MAPA</div>
       </div>
     </div>
+  </div>
 
 
-    <footer class ="site-footer">
-    </footer>
-    <script src="assets/scripts/main.js"></script>
-  </body>
-  </html>
+  <footer class="site-footer">
+  </footer>
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

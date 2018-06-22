@@ -1,31 +1,21 @@
-
-.banner{
+.banner {
   position: relative;
   max-height: 750px;
   @mixin clearfix;
-
-  &__image{
-    position: relative; /*to move subtitle on top */
+  &__image {
+    position: relative;
+    /*to move subtitle on top */
     z-index: -1;
   }
-
-  &__subtitle{
+  &__subtitle {
     font-family: Maiden Crimes, 'Orbitron', sans-serif;
     display: inline-block;
     color: #000;
-    text-shadow:
-    2px 2px 0 #FFF,
-    -1px -1px 0 #FFF,
-    1px -1px 0 #FFF,
-    -1px 2px 4px #FFF,
-    1px 4px 4px #000;
-
-
-    @mixin atMedium{
-
-      &--on-the-right{
+    text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
+    @mixin atMedium {
+      &--on-the-right {
         letter-spacing: 2px;
-        float:right;
+        float: right;
         margin-top: -25.5%;
         margin-right: 8.5%;
         font-weight: 900;
@@ -33,26 +23,25 @@
       }
     }
   }
-
-  &__side-offer{
+  &__side-offer {
     display: none;
     border-radius: 5%;
     position: absolute;
-    top:18%;
+    top: 18%;
     color: white;
     width: 657px;
     height: 350px;
-    background-color:rgba(0, 0, 0, 0.76);
+    background-color: rgba(0, 0, 0, 0.76);
     animation: boxS 2.5s ease-in 1;
     box-shadow: 0 4px 26px 7px white;
-
-    span{
+    span {
       color: red;
     }
-    &__close{
+    &__close {
       position: relative;
       float: right;
-      z-index: 99; /* to make whole 'x' area clickable */
+      z-index: 99;
+      /* to make whole 'x' area clickable */
       padding: 5%;
       font-size: 1.3rem;
       padding: 1% 2% 0 0;
@@ -62,38 +51,37 @@
       }
     }
   }
-
-
-  &__btn-container{
-    border-radius:30px;
+  &__btn-container {
+    border-radius: 30px;
     position: absolute;
-    left:50%;
-    bottom:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 0px 3px 5px 1px #FFF;
     transition: all 0.3s. linear;
-    @mixin atMedium{
-      border-radius:30px;
+    @mixin atMedium {
+      border-radius: 30px;
       position: absolute;
-      left:50%;
-      bottom:14%;
-      transform: translate(-50%,-50%);
+      left: 50%;
+      bottom: 14%;
+      transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
-
-      &:hover{
+      &:hover {
         box-shadow: 0px 3px 5px 3px #FFF;
       }
-
       &:active {
-      bottom:13.7%;
-      box-shadow: 0px 1px 2px 0px #FFF;
+        bottom: 13.7%;
+        box-shadow: 0px 1px 2px 0px #FFF;
       }
     }
-
   }
 }
 
-@keyframes boxS{
-  from{ box-shadow: 0 0px 0px 0px white; }
-  to{ box-shadow: 0 4px 26px 7px white; }
+@keyframes boxS {
+  from {
+    box-shadow: 0 0px 0px 0px white;
+  }
+  to {
+    box-shadow: 0 4px 26px 7px white;
+  }
 }
