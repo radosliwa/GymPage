@@ -345,7 +345,7 @@ template {
 
 /* @import "base/_global"; */
 
-html, body{
+html, body {
   height: 100%;
 }
 
@@ -353,37 +353,35 @@ html, body{
   box-sizing: border-box;
 }
 
-body{
-background:url('../../assets/images/background.jpg') fixed no-repeat center;
-position: relative;
-font-family:'Orbitron', sans-serif;
-color: #FFF;
-
+body {
+  background: url('../../assets/images/background.jpg') fixed no-repeat center;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  color: #FFF;
 }
 
 @font-face {
-font-family: 'Maiden Crimes';
-src: url('../../assets/fonts/Maiden Crimes.otf');
-font-weight: normal;
-font-style: normal;
-}
+    font-family: 'Maiden Crimes';
+    src: url('../../assets/fonts/Maiden Crimes.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
-ul{
-   list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
-li{
+li {
   text-decoration: none;
-cursor: pointer;
-
+  cursor: pointer;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -418,9 +416,13 @@ a{
   }
 
 .icon {
-  width: 8%;
-  height: 8%;
+  width: 10%;
+  height: 10%;
+  text-align: center;
+  display: inline-block;
 }
+
+.icon__social-icon {}
 
 .wrapper{
   overflow:hidden;
@@ -648,9 +650,10 @@ a{
 }
 
 .address {
-  background: url('');
+  /* background: url('../../assets/images/fire.jpg'); */
+  /* border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF; */
   margin: 0 auto;
-  background-color: rgba(11, 11, 9, 0.72);
   text-align: center;
   max-width: 85%;
 }
@@ -664,29 +667,50 @@ a{
 .address__item {
     font-size: 1rem;
     font-weight: lighter;
+    margin-top: 1%;
+    padding: 2% 0;
   }
 
 .address h3:nth-child(2) {
-    margin-top: 4%;
+    margin-top: 1.3%;
     font-size: 1.4rem;
   }
 
+.address p {
+    margin: 12px 0 8px 0;
+  }
+
+.address fieldset {
+    background-color: rgba(11, 11, 9, 0.92);
+  }
+
 .form {
-  background-color: #000;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 85%;
+  max-height: 100%;
+  background-color: #302f2eed;
 }
 
-.form>div {
-    margin-top: 1%;
+.form::after{
+    content:"";
+    display: table;
+    clear: both;
   }
 
-@media(min-width: 768px){
+.form__label {
+    display: block;
+    padding: 1.5% 0 1.5% 0;
   }
+
+/* &--padding-t-bigger {
+      padding-top: 2%;
+    } */
+
+.form__label--padding-b-smaller {
+      padding-bottom: 0.5%;
+    }
 
 .form__btn-container {
-    width: 5%;
     display: inline-block;
     /* margin: 0 auto; */
     border-radius: 30px;
@@ -702,6 +726,12 @@ a{
       bottom: 13.7%;
       box-shadow: 0px 1px 2px 0px #FFF;
     }
+
+.form__message {}
+
+.form__input, .form__message {
+    text-align: center;
+  }
 
 .row {
   position: relative;
@@ -761,7 +791,9 @@ a{
     clear: both;
   }
 
-.section .our-offer-picture--pull-right {}
+.section--larger-t-margin {
+    margin-top: 3%;
+  }
 
 .section__igs-mission-team {
     display: flex;
@@ -769,6 +801,8 @@ a{
   }
 
 .section__igs-mission-team__coach {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
       position: relative;
       border: 2px solid #FFF;
       background-color: #0b0a09d9;
@@ -932,11 +966,11 @@ a{
 
 .text-container__coachAbout {
     display: inline-block;
-    line-height: 1.45;
+    line-height: 1.35;
     font-size: 1rem;
     font-weight: 500;
     text-align: right;
-    padding: 2%;
+    padding: 1.5%;
     font-style: italic;
   }
 

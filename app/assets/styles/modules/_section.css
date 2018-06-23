@@ -3,11 +3,15 @@
   min-height: 200px;
   /* just to check why mission section gets cut*/
   @mixin clearfix;
-  .our-offer-picture--pull-right {}
+  &--larger-t-margin {
+    margin-top: 3%;
+  }
   &__igs-mission-team {
     display: flex;
     flex-direction: column;
     &__coach {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
       position: relative;
       border: 2px solid #FFF;
       background-color: #0b0a09d9;
