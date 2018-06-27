@@ -3,5 +3,12 @@
   height: 10%;
   text-align: center;
   display: inline-block;
-  &__social-icon {}
+  transition: all .3s linear;
+  &__social-icon {
+    margin: 0 4%;
+    border-radius: 10%;
+    &:hover {
+      background-color: #FFF;
+    }
+  }
 }

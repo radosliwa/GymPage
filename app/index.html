@@ -20,15 +20,17 @@
   <header class="site-header">
     <div class="wrapper">
       <nav class="main-nav">
+
+        <div class="main-nav__logo">
+          <img class="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png">
+        </div>
+
         <ul>
           <li><a href="#" id="our offer">OUR OFFER</a></li>
           <li><a href="#" id="about">IG'S MISSION</a></li>
           <li><a href="#" id="contact">CONTACT</a></li>
         </ul>
       </nav>
-      <div class="main-nav__logo">
-        <img class="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png">
-      </div>
     </div>
   </header>
   <!------------------------------ BANNER -->
@@ -93,11 +95,12 @@
           <div class="section__igs-mission-team">
             <div class="section__igs-mission-team__coach">
               <h5 class="text-container__coachName">Marek</h5>
-              <div class="row__medium_4 section__igs-mission-team__coach__picture"></div>
+              <div class="row__medium_4 section__igs-mission-team__coach__picture"><img src="assets/images/coach1.jpg" alt=""></div>
               <p class="row__medium_8 text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
+
             <div class="section__igs-mission-team__coach">
-              <h5 class="text-container__coachName">Ania</h5>
+              <h5 class="text-container__coachName">Kasia</h5>
               <div class="row__medium_4 section__igs-mission-team__coach__picture"></div>
               <p class="row__medium_8 text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
@@ -119,11 +122,12 @@
       <div class="row">
 
         <div class="address">
-          <fieldset>
+          <fieldset class="address__fieldset">
             <legend>
-              <h2 class="text-container__heading--no-underline">Contact us!</h2></legend>
+              <h2 class="text-container__heading">Contact us!</h2>
+            </legend>
 
-            <h3 class="text-container__heading"><span class ="text-container--bold">Iron </span>Gym</h3>
+            <h3 class="text-container__heading--no-underline"><span class ="text-container--bold">Iron </span>Gym</h3>
 
             <div class="row__medium_4 address__item"><img src="assets/images/icons/map.svg" class="icon icon__map">
               <p>Mystery Street 12 <br> Warsaw, Poland</p>
@@ -138,62 +142,60 @@
         </div>
 
         <form class="form">
-          <div class="row__medium_4 form__input form__input--name">
-            <label class="form__label" for="name">
+          <div class="form__input form__input--name">
+            <label class="form__label form__label--margin-t-bigger" for="name">
                 Your name
               </label>
             <input id="name" name="name" type="text" placeholder="your name...">
           </div>
 
-          <div class="row__medium_4 form__input form__input--phone">
-            <label class="form__label" for="phone">
+          <div class="form__input form__input--phone">
+            <label class="form__label form__label--margin-t-bigger" for="phone">
                 Your phone number
               </label>
             <input id="phone" name="phone" type="tel" placeholder="your name...">
           </div>
 
-          <div class="row__medium_4 form__input form__input--email">
-            <label class="form__label" for="email">
+          <div class="form__input form__input--email">
+            <label class="form__label form__label--margin-t-bigger" for="email">
                 Your e-mail
               </label>
             <input id="email" name="email" type="email">
           </div>
 
-          <div class="row__medium_4 form__message">
-            <label class="form__label form__label--padding-b-smaller" for="message">
+          <div class="form__message">
+            <label class="form__label form__label--margin-t-bigger form__label--padding-b-smaller" for="message">
                 Message
               </label>
             <textarea id="message" name="message" type="text" rows="5"></textarea>
           </div>
 
-          <div class="row__medium_4">
+          <div class="form__submit">
             <a href="#" class="btn btn__address">Submit</a>
           </div>
-          <div class="address__social-icons-container">
 
-            <div class="row__medium_4">
-              <a href="#">
+          <div class="form__social-icons-container">
+            <!-- <div class="row__medium_4"> -->
+            <a href="#">
                   <img src="assets/images/icons/facebook.svg" class="icon icon__social-icon">
                 </a>
-              <a href="#">
+            <a href="#">
                   <img src="assets/images/icons/instagram.svg" class="icon icon__social-icon">
                 </a>
-              <a href="#">
+            <a href="#">
                   <img src="assets/images/icons/twitter.svg" class="icon icon__social-icon">
                 </a>
-            </div>
-
+            <!-- </div> -->
         </form>
-
-
         </div>
       </div>
     </div>
+  </div>
 
-
-    <footer class="site-footer">
-    </footer>
-    <script src="assets/scripts/main.js"></script>
+  <footer class="site-footer">
+    Radoslaw Sliwa 2018
+  </footer>
+  <script src="assets/scripts/main.js"></script>
 </body>
 
 </html>

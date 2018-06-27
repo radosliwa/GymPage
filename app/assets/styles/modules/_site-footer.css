@@ -1,8 +1,7 @@
-.site-footer{
-  background-color:#cd3600b5;
- color: #FFF;
- padding: .5rem 18px .5rem 18px;
- text-align: center;
- height: 5%;
- width: 100%;
+.site-footer {
+  background-color: #cd3600b5;
+  color: #FFF;
+  padding: .5rem 18px .5rem 18px;
+  text-align: center;
+  width: 100%;
 }

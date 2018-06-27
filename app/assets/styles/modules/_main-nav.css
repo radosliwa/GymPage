@@ -1,61 +1,51 @@
-.main-nav{
-
-  font-family: Maiden Crimes, 'Orbitron', sans-serif;
+.main-nav {
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  font-weight: normal;
-  font-size: 1.25rem;
-
-
-  ul{
-    float: right;
+  font-weight: 900;
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
     height: inherit;
     padding: 0;
-    margin: 0;
-    @mixin clearfix;
-    @mixin atMedium{
-      margin-right: 72px;
-    }
+    margin: 0 0 0 52%;
   }
-
-  li{
+  li {
     display: inline-block;
     margin: 0 5px;
-    padding-right: 10px;
-
+    padding-right: 15px;
   }
-
-
-  a{
+  a {
     position: relative;
     display: inline-block;
     padding: 18px 0px;
     height: 100%;
-    &:after{
-      position:absolute;
-      content:"";
+    &:after {
+      position: absolute;
+      content: "";
       height: 3px;
       background-color: white;
       width: 100%;
       bottom: 14px;
-      left:0;
+      left: 0;
       transform: scale(0);
-      transition:transform .3s ease-out;
+      transition: transform .3s ease-out;
       transform-origin: left;
     }
-    &:hover:after{
+    &:hover:after {
       transform: scale(1);
     }
   }
-  &__logo{
-    display: inline-block;
-    max-width: 160px;
+  &__logo {
     position: absolute;
-    transform: scale(.8);
-    @mixin atMedium{
-      margin-left: 86px;
-      margin-top: -47px;
-    }
-
-
+    display: inline-block;
+    width: 120px;
+    height: 63px;
+    z-index: 99;
+    top: 25%;
+    margin-left: 10%;
+    /* margin-right: 60%; */
+    transform: scale(1.3);
   }
 }

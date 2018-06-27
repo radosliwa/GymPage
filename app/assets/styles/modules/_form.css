@@ -1,17 +1,27 @@
 .form {
   margin: 0 auto;
-  max-width: 85%;
+  padding: 3% 0;
   max-height: 100%;
-  @mixin clearfix;
+  max-width: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: #302f2eed;
+  &>div {
+    @mixin atMedium {
+      display: inline-block;
+      width: 33%;
+    }
+  }
   &__label {
     display: block;
     padding: 1.5% 0 1.5% 0;
-    /* &--padding-t-bigger {
-      padding-top: 2%;
-    } */
+    &--margin-t-bigger {
+      margin-top: 3%;
+    }
     &--padding-b-smaller {
-      padding-bottom: 0.5%;
+      padding-bottom: 1.5%;
     }
   }
   &__btn-container {
@@ -28,7 +38,12 @@
       box-shadow: 0px 1px 2px 0px #FFF;
     }
   }
-  &__message {}
+  &__submit {
+    text-align: center;
+  }
+  &__social-icons-container {
+    text-align: center;
+  }
   &__input, &__message {
     text-align: center;
   }

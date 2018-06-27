@@ -400,6 +400,10 @@ a {
   transition: all .2s linear;
 }
 
+.btn:hover {
+    color: #000;
+  }
+
 .btn:active {
     color: #faff00;
     box-shadow: none;
@@ -420,116 +424,102 @@ a {
   height: 10%;
   text-align: center;
   display: inline-block;
+  transition: all .3s linear;
 }
 
-.icon__social-icon {}
+.icon__social-icon {
+    margin: 0 4%;
+    border-radius: 10%;
+  }
 
-.wrapper{
-  overflow:hidden;
+.icon__social-icon:hover {
+      background-color: #FFF;
+    }
+
+.wrapper {
+  overflow: hidden;
   padding-left: 10px;
-  padding-right:10px;
-  max-width: 1300px;
+  padding-right: 10px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-
+  /* &--narrower {
+    height: 100%;
+    max-width: 900px;
+  } */
 }
 
-.site-header{
-  position:fixed;
+.site-header {
+  position: fixed;
   background-color: rgba(11, 11, 9, 0.72);
   color: white;
   width: 100%;
   /* padding: 8px 0; */
-  z-index: 99;
-
-
-
-
-
+  z-index: 3;
 }
 
-.main-nav{
-
-  font-family: Maiden Crimes, 'Orbitron', sans-serif;
+.main-nav {
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  font-weight: normal;
-  font-size: 1.25rem;
+  font-weight: 900;
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main-nav ul{
-    float: right;
+.main-nav ul {
     height: inherit;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 52%;
   }
 
-.main-nav ul::after{
-    content:"";
-    display: table;
-    clear: both;
-  }
-
-@media(min-width: 768px){
-
-.main-nav ul{
-      margin-right: 72px
-  }
-  }
-
-.main-nav li{
+.main-nav li {
     display: inline-block;
     margin: 0 5px;
-    padding-right: 10px;
-
+    padding-right: 15px;
   }
 
-.main-nav a{
+.main-nav a {
     position: relative;
     display: inline-block;
     padding: 18px 0px;
     height: 100%;
   }
 
-.main-nav a:after{
-      position:absolute;
-      content:"";
+.main-nav a:after {
+      position: absolute;
+      content: "";
       height: 3px;
       background-color: white;
       width: 100%;
       bottom: 14px;
-      left:0;
+      left: 0;
       -webkit-transform: scale(0);
               transform: scale(0);
-      transition:-webkit-transform .3s ease-out;
-      transition:transform .3s ease-out;
-      transition:transform .3s ease-out, -webkit-transform .3s ease-out;
+      transition: -webkit-transform .3s ease-out;
+      transition: transform .3s ease-out;
+      transition: transform .3s ease-out, -webkit-transform .3s ease-out;
       -webkit-transform-origin: left;
               transform-origin: left;
     }
 
-.main-nav a:hover:after{
+.main-nav a:hover:after {
       -webkit-transform: scale(1);
               transform: scale(1);
     }
 
-.main-nav__logo{
-    display: inline-block;
-    max-width: 160px;
+.main-nav__logo {
     position: absolute;
-    -webkit-transform: scale(.8);
-            transform: scale(.8);
-
-
-  }
-
-@media(min-width: 768px){
-
-.main-nav__logo{
-      margin-left: 86px;
-      margin-top: -47px
-
-
-  }
+    display: inline-block;
+    width: 120px;
+    height: 63px;
+    z-index: 99;
+    top: 25%;
+    margin-left: 10%;
+    /* margin-right: 60%; */
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
 
 .banner {
@@ -561,7 +551,7 @@ a {
         letter-spacing: 2px;
         float: right;
         margin-top: -25.5%;
-        margin-right: 8.5%;
+        margin-right: 4.5%;
         font-weight: 900;
         font-size: 1.8rem;
       }
@@ -655,7 +645,6 @@ a {
   border-top: 1px solid #FFF; */
   margin: 0 auto;
   text-align: center;
-  max-width: 85%;
 }
 
 .address::after{
@@ -680,21 +669,28 @@ a {
     margin: 12px 0 8px 0;
   }
 
-.address fieldset {
+.address__fieldset {
     background-color: rgba(11, 11, 9, 0.92);
   }
 
 .form {
   margin: 0 auto;
-  max-width: 85%;
+  padding: 3% 0;
   max-height: 100%;
+  max-width: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: #302f2eed;
 }
 
-.form::after{
-    content:"";
-    display: table;
-    clear: both;
+@media(min-width: 768px){
+
+.form>div {
+      display: inline-block;
+      width: 33%
+  }
   }
 
 .form__label {
@@ -702,12 +698,12 @@ a {
     padding: 1.5% 0 1.5% 0;
   }
 
-/* &--padding-t-bigger {
-      padding-top: 2%;
-    } */
+.form__label--margin-t-bigger {
+      margin-top: 3%;
+    }
 
 .form__label--padding-b-smaller {
-      padding-bottom: 0.5%;
+      padding-bottom: 1.5%;
     }
 
 .form__btn-container {
@@ -727,7 +723,13 @@ a {
       box-shadow: 0px 1px 2px 0px #FFF;
     }
 
-.form__message {}
+.form__submit {
+    text-align: center;
+  }
+
+.form__social-icons-container {
+    text-align: center;
+  }
 
 .form__input, .form__message {
     text-align: center;
@@ -781,6 +783,7 @@ a {
 .section {
   margin-top: 1%;
   min-height: 200px;
+  margin-bottom: 2%;
 }
 
 /* just to check why mission section gets cut*/
@@ -801,15 +804,14 @@ a {
   }
 
 .section__igs-mission-team__coach {
-      border-top-left-radius: 50%;
-      border-bottom-left-radius: 50%;
+      border-top-left-radius: 60%;
+      border-bottom-left-radius: 60%;
       position: relative;
       border: 2px solid #FFF;
       background-color: #0b0a09d9;
       /* border-top-left-radius: 25%;
     border-bottom-left-radius: 25%; */
       margin-bottom: 20px;
-      padding-bottom: 4%;
     }
 
 .section__igs-mission-team__coach__picture {
@@ -817,12 +819,13 @@ a {
         position: relative;
         border-radius: 50%;
         overflow: hidden;
-        width: 135px;
-        height: 135px;
-        border: 4px solid rgba(255, 255, 255, .3);
-        box-shadow: 0px 5px 18px 1px black;
-        left: 5%;
+        width: 125px;
+        height: 125px;
+        border: 4px solid rgba(0, 0, 0, .65);
+        box-shadow: 0px 3px 10px 1px #FFF;
+        left: 2%;
         margin-top: -9px;
+        shape-outside: circle();
         /* top:50%;
       position: absolute;
       transform: translate(-50%,-50%); */
@@ -851,8 +854,7 @@ a {
 .text-container__girlPicture {
     float: left;
     max-height: 373px;
-    shape-outside: circle();
-    margin-top: -70%;
+    margin-top: -73%;
   }
 
 .text-container__heading {
@@ -960,7 +962,7 @@ a {
   }
 
 .text-container__coachName {
-    /* display: inline-block; */
+    display: inline-block;
     margin: 0;
   }
 
@@ -998,11 +1000,10 @@ a {
   }
 }
 
-.site-footer{
-  background-color:#cd3600b5;
- color: #FFF;
- padding: .5rem 18px .5rem 18px;
- text-align: center;
- height: 5%;
- width: 100%;
+.site-footer {
+  background-color: #cd3600b5;
+  color: #FFF;
+  padding: .5rem 18px .5rem 18px;
+  text-align: center;
+  width: 100%;
 }

@@ -14,8 +14,7 @@
   &__girlPicture {
     float: left;
     max-height: 373px;
-    shape-outside: circle();
-    margin-top: -70%;
+    margin-top: -73%;
   }
   &__heading {
     text-decoration: underline;
@@ -105,7 +104,7 @@
     /*  */
   }
   &__coachName {
-    /* display: inline-block; */
+    display: inline-block;
     margin: 0;
   }
   &__coachAbout {
