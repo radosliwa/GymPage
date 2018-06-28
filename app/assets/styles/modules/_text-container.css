@@ -48,7 +48,7 @@
     border-top: orange;
     border-left: orange;
     transform: rotate(45deg);
-    animation: arrow 1s infinite linear;
+    animation: arrow 1.2s infinite linear;
     z-index: -1;
     &:before, &:after {
       position: absolute;
@@ -120,9 +120,15 @@
 
 @keyframes arrow {
   0% {
-    top: 75px;
+    top: 25px;
+  }
+  25% {
+    top: 50px;
   }
   50% {
+    top: 75px;
+  }
+  75% {
     top: 100px;
   }
   100% {

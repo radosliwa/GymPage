@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="temp\styles\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/scripts/jquery.waypoints.js"></script>
 
 </head>
 
@@ -44,7 +45,7 @@
       <div class="banner__side-offer text-container">
         <div class="banner__side-offer__close">X</div>
         <p class="banner_side-offer__headline animated bounceInLeft">
-          CHECK OUR AWESOME SUMMER DEALS!<br> UP TO <span>50% DISCOUNT</span> ON MEMBERSHIP!<br> CONTACT US FOR DETAILS!
+          CHECK OUR AWESOME SUMMER DEALS!<br> UP TO <span>50% DISCOUNT</span> ON MEMBERSHIP!<br> <a href="#">CONTACT US</a> FOR DETAILS!
         </p>
       </div>
       <h2 class="banner__subtitle banner__subtitle--on-the-right">FITNESS & STRENGTH</h2>
@@ -59,24 +60,25 @@
   <div id="our-offer" class="section section--smaller-t-gap">
     <div class="wrapper">
       <div class="row">
+        <div class="section__our-offer__why-us">
+          <div class=" row__medium_5 text-container text-container--dark-background">
+            <h3 class="text-container__heading text-container__heading--our-offer">WHY US?</h3>
+            <ul class="text-container__why-list">
+              <li> Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipisicing elit</li>
+              <li> Sapiente amet pariatur!</li>
+            </ul>
+            <img src="assets/images/girlBall.png" class="text-container__girlPicture" alt="">
+            <div class="text-container__learn-more">
+              <h3 class="text-container__learn-more__text"><a href="#" id="learn more" >LEARN MORE</a></h3>
 
-        <div class="text-container text-container--dark-background row__medium_5">
-          <h3 class="text-container__heading text-container__heading--our-offer">WHY US?</h3>
-          <ul class="text-container__why-list">
-            <li> Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipisicing elit</li>
-            <li> Sapiente amet pariatur!</li>
-          </ul>
-          <img src="assets/images/girlBall.png" class="text-container__girlPicture" alt="">
-          <div class="text-container__learn-more">
-            <h3 class="text-container__learn-more__text"><a href="#" id="learn more" >LEARN MORE</a></h3>
-
-            <div class="text-container__arrow"> </div>
+              <div class="text-container__arrow"> </div>
+            </div>
           </div>
         </div>
 
-        <picture>
-          <img src="assets/images/chad--large.png" class="section__our-offer-picture section__our-offer-picture--pull-right row__medium_7" alt="bodybuilder">
+        <picture class="row__medium_7 section__our-offer-picture section__our-offer-picture--pull-right">
+          <img src="assets/images/chad--large.png" alt="bodybuilder">
         </picture>
       </div>
     </div>
@@ -195,7 +197,7 @@
   <footer class="site-footer">
     Radoslaw Sliwa 2018
   </footer>
-  <script src="assets/scripts/main.js"></script>
+  <script src="temp/scripts/app.js/main.js"></script>
 </body>
 
 </html>

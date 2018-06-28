@@ -5,6 +5,7 @@
   margin: 0 auto;
   @mixin clearfix;
   text-align: center;
+  z-index: 99;
   &__item {
     font-size: 1rem;
     font-weight: lighter;

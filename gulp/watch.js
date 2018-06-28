@@ -21,8 +21,8 @@ gulp.task('watch', function(){
   });
 
    watch('./app/assets/scripts/**/*.js', function(){
-     // gulp.start('scriptsRefresh');
-     browserSync.reload();
+     gulp.start('scriptsRefresh');
+     
    });
 });
 

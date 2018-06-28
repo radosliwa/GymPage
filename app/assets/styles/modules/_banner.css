@@ -37,6 +37,15 @@
     span {
       color: red;
     }
+    a {
+      display: inline-block;
+      animation: text .8s infinite linear;
+      &:hover {
+        animation: none;
+        color: rgb(255, 193, 173);
+        text-decoration: underline;
+      }
+    }
     &__close {
       position: relative;
       float: right;
@@ -83,5 +92,14 @@
   }
   to {
     box-shadow: 0 4px 26px 7px white;
+  }
+}
+
+@keyframes text {
+  from {
+    color: inherit;
+  }
+  to {
+    color: #ffdf02;
   }
 }

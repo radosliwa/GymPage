@@ -477,13 +477,13 @@ a {
 .main-nav li {
     display: inline-block;
     margin: 0 5px;
-    padding-right: 15px;
+    /* padding-right: 15px; */
   }
 
 .main-nav a {
     position: relative;
     display: inline-block;
-    padding: 18px 0px;
+    padding: 18px 15px 18px 0px;
     height: 100%;
   }
 
@@ -575,6 +575,19 @@ a {
       color: red;
     }
 
+.banner__side-offer a {
+      display: inline-block;
+      -webkit-animation: text .8s infinite linear;
+              animation: text .8s infinite linear;
+    }
+
+.banner__side-offer a:hover {
+        -webkit-animation: none;
+                animation: none;
+        color: rgb(255, 193, 173);
+        text-decoration: underline;
+      }
+
 .banner__side-offer__close {
       position: relative;
       float: right;
@@ -639,12 +652,31 @@ a {
   }
 }
 
+@-webkit-keyframes text {
+  from {
+    color: inherit;
+  }
+  to {
+    color: #ffdf02;
+  }
+}
+
+@keyframes text {
+  from {
+    color: inherit;
+  }
+  to {
+    color: #ffdf02;
+  }
+}
+
 .address {
   /* background: url('../../assets/images/fire.jpg'); */
   /* border-bottom: 1px solid #FFF;
   border-top: 1px solid #FFF; */
   margin: 0 auto;
   text-align: center;
+  z-index: 99;
 }
 
 .address::after{
@@ -683,6 +715,10 @@ a {
   justify-content: space-around;
   align-items: center;
   background-color: #302f2eed;
+  position: relative;
+  z-index: -99;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
 }
 
 @media(min-width: 768px){
@@ -896,8 +932,8 @@ a {
     border-left: orange;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    -webkit-animation: arrow 1s infinite linear;
-            animation: arrow 1s infinite linear;
+    -webkit-animation: arrow 1.2s infinite linear;
+            animation: arrow 1.2s infinite linear;
     z-index: -1;
   }
 
@@ -978,9 +1014,15 @@ a {
 
 @-webkit-keyframes arrow {
   0% {
-    top: 75px;
+    top: 25px;
+  }
+  25% {
+    top: 50px;
   }
   50% {
+    top: 75px;
+  }
+  75% {
     top: 100px;
   }
   100% {
@@ -990,9 +1032,15 @@ a {
 
 @keyframes arrow {
   0% {
-    top: 75px;
+    top: 25px;
+  }
+  25% {
+    top: 50px;
   }
   50% {
+    top: 75px;
+  }
+  75% {
     top: 100px;
   }
   100% {
@@ -1007,3 +1055,12 @@ a {
   text-align: center;
   width: 100%;
 }
+
+.reveal-item {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+.reveal-item--is-visible {
+    opacity: 1;
+  }

@@ -8,6 +8,9 @@
   justify-content: space-around;
   align-items: center;
   background-color: #302f2eed;
+  position: relative;
+  z-index: -99;
+  transform: translate(0, -100%);
   &>div {
     @mixin atMedium {
       display: inline-block;
