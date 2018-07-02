@@ -5,7 +5,10 @@
   /* just to check why mission section gets cut*/
   @mixin clearfix;
   &--larger-t-margin {
-    margin-top: 3%;
+    margin-top: 5%;
+  }
+  &--larger-b-margin {
+    margin-bottom: 50%;
   }
   &__igs-mission-team {
     display: flex;
@@ -16,8 +19,6 @@
       position: relative;
       border: 2px solid #FFF;
       background-color: #0b0a09d9;
-      /* border-top-left-radius: 25%;
-    border-bottom-left-radius: 25%; */
       margin-bottom: 20px;
       &__picture {
         display: inline-block;

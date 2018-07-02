@@ -456,7 +456,12 @@ a {
   width: 100%;
   /* padding: 8px 0; */
   z-index: 3;
+  transition: all .3s linear;
 }
+
+.site-header--darkerBackground {
+    background-color: rgba(11, 11, 9, 1);
+  }
 
 .main-nav {
   font-family: 'Orbitron', sans-serif;
@@ -509,6 +514,10 @@ a {
               transform: scale(1);
     }
 
+.main-nav a.matching-link {
+      color: yellow;
+    }
+
 .main-nav__logo {
     position: absolute;
     display: inline-block;
@@ -520,7 +529,13 @@ a {
     /* margin-right: 60%; */
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
+    transition: all .2s ease-out;
   }
+
+.main-nav__logo--smallerScale {
+      -webkit-transform: scale(.9) translateY(-31%);
+              transform: scale(.9) translateY(-31%);
+    }
 
 .banner {
   position: relative;
@@ -717,9 +732,9 @@ a {
   background-color: #302f2eed;
   position: relative;
   z-index: -99;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
 }
+
+/* transform: translate(0, -100%); */
 
 @media(min-width: 768px){
 
@@ -831,7 +846,11 @@ a {
   }
 
 .section--larger-t-margin {
-    margin-top: 3%;
+    margin-top: 5%;
+  }
+
+.section--larger-b-margin {
+    margin-bottom: 50%;
   }
 
 .section__igs-mission-team {
@@ -845,8 +864,6 @@ a {
       position: relative;
       border: 2px solid #FFF;
       background-color: #0b0a09d9;
-      /* border-top-left-radius: 25%;
-    border-bottom-left-radius: 25%; */
       margin-bottom: 20px;
     }
 
