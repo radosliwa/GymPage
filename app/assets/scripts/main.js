@@ -8,7 +8,7 @@
 //   $('.banner__side-offer').css({display: 'none'});
 //
 // })
-
+// import 'smoothScroll' from 'jquery-smooth-scroll';
 
 
 class RevealOnScroll{
@@ -25,7 +25,7 @@ class RevealOnScroll{
 
   wayPoints(offset){
     this.itemsToReveal.each(function(){
-      var current = this;
+      let current = this;
       new Waypoint({
         element: current,
         handler: function() {
@@ -73,25 +73,28 @@ class StickyH{
   }
 
   sectionWaypoint(){
-    var that = this;
+    let that = this;
     this.pageSections.each(function(){
-      var currentSection = this;
+      let currentSection = this;
       new Waypoint({
         element: currentSection,
         handler: function(direction){
+          that.headerLinks.removeClass('matching-link');
+
           if(direction =="down"){
-            var matchingLink = currentSection.getAttribute('data-match');
+            let matchingLink = currentSection.getAttribute('data-match');
+            console.log(matchingLink);
             that.headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
           }
         },
-        offset: "20%"
+        offset: "40%"
       });
       new Waypoint({
         element: currentSection,
         handler: function(direction){
           if(direction =="up"){
-            var matchingLink = currentSection.getAttribute('data-match');
+            let matchingLink = currentSection.getAttribute('data-match');
             that.headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
           }

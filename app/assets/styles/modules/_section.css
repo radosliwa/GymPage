@@ -5,11 +5,9 @@
   /* just to check why mission section gets cut*/
   @mixin clearfix;
   &--larger-t-margin {
-    margin-top: 5%;
+    margin-top: 2%;
   }
-  &--larger-b-margin {
-    margin-bottom: 50%;
-  }
+  &--larger-b-margin {}
   &__igs-mission-team {
     display: flex;
     flex-direction: column;

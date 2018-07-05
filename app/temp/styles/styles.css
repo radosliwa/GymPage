@@ -846,12 +846,10 @@ a {
   }
 
 .section--larger-t-margin {
-    margin-top: 5%;
+    margin-top: 2%;
   }
 
-.section--larger-b-margin {
-    margin-bottom: 50%;
-  }
+.section--larger-b-margin {}
 
 .section__igs-mission-team {
     display: flex;
@@ -944,13 +942,13 @@ a {
       }
 
 .text-container__why-list li:nth-child(2) {
-        -webkit-animation-delay: .5s;
-                animation-delay: .5s;
+        -webkit-animation-delay: .3s;
+                animation-delay: .3s;
       }
 
 .text-container__why-list li:nth-child(3) {
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s;
+        -webkit-animation-delay: .5s;
+                animation-delay: .5s;
       }
 
 .text-container__arrow {

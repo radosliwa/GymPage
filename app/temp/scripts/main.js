@@ -12,6 +12,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 //   $('.banner__side-offer').css({display: 'none'});
 //
 // })
+// import 'smoothScroll' from 'jquery-smooth-scroll';
 
 
 var RevealOnScroll = function () {
@@ -96,13 +97,16 @@ var StickyH = function () {
         new Waypoint({
           element: currentSection,
           handler: function handler(direction) {
+            that.headerLinks.removeClass('matching-link');
+
             if (direction == "down") {
               var matchingLink = currentSection.getAttribute('data-match');
+              console.log(matchingLink);
               that.headerLinks.removeClass('matching-link');
               $(matchingLink).addClass('matching-link');
             }
           },
-          offset: "20%"
+          offset: "40%"
         });
         new Waypoint({
           element: currentSection,

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "latest",
+    "jquery-smooth-scroll": "^2.2.0",
     "normalize.css": "latest",
     "waypoints": "^4.0.1"
   },
