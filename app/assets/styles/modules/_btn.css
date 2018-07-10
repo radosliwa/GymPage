@@ -18,8 +18,11 @@
     box-shadow: none;
   }
   &__banner {
-    padding: 15px 25px;
-    font-size: 1.3rem;
+    padding: 13px 23px;
+    font-size: 1rem;
+    @mixin atLarge {
+      font-size: 1.3rem;
+    }
   }
   &__address {
     padding: 10px 20px;

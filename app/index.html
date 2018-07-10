@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="temp\styles\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/scripts/jquery.waypoints.min.js"></script>
 
 </head>
 
@@ -39,8 +37,11 @@
     <div class="wrapper">
 
       <picture>
+        <source media='(max-width: 530px)' srcset="assets/images/banner--small.png">
+        <source media='(max-width: 769px)' srcset="assets/images/banner--medium.png">
         <img src="assets/images/banner--large.png" alt="fitness_and_flames" class="banner__image">
       </picture>
+
 
       <div class="banner__side-offer text-container">
         <div class="banner__side-offer__close">X</div>
@@ -146,29 +147,29 @@
         <form class="form">
           <div class="form__input form__input--name">
             <label class="form__label form__label--margin-t-bigger" for="name">
-              Your name
-            </label>
+                Your name
+              </label>
             <input id="name" name="name" type="text" placeholder="your name...">
           </div>
 
           <div class="form__input form__input--phone">
             <label class="form__label form__label--margin-t-bigger" for="phone">
-              Your phone number
-            </label>
+                Your phone number
+              </label>
             <input id="phone" name="phone" type="tel" placeholder="your name...">
           </div>
 
           <div class="form__input form__input--email">
             <label class="form__label form__label--margin-t-bigger" for="email">
-              Your e-mail
-            </label>
+                Your e-mail
+              </label>
             <input id="email" name="email" type="email">
           </div>
 
           <div class="form__message">
             <label class="form__label form__label--margin-t-bigger form__label--padding-b-smaller" for="message">
-              Message
-            </label>
+                Message
+              </label>
             <textarea id="message" name="message" type="text" rows="5"></textarea>
           </div>
 
@@ -179,14 +180,14 @@
           <div class="form__social-icons-container">
             <!-- <div class="row__medium_4"> -->
             <a href="#">
-              <img src="assets/images/icons/facebook.svg" class="icon icon__social-icon">
-            </a>
+                <img src="assets/images/icons/facebook.svg" class="icon icon__social-icon">
+              </a>
             <a href="#">
-              <img src="assets/images/icons/instagram.svg" class="icon icon__social-icon">
-            </a>
+                <img src="assets/images/icons/instagram.svg" class="icon icon__social-icon">
+              </a>
             <a href="#">
-              <img src="assets/images/icons/twitter.svg" class="icon icon__social-icon">
-            </a>
+                <img src="assets/images/icons/twitter.svg" class="icon icon__social-icon">
+              </a>
             <!-- </div> -->
         </form>
         </div>
@@ -198,6 +199,7 @@
     Radoslaw Sliwa 2018
   </footer>
   <script src="temp/scripts/main.js"></script>
+
 </body>
 
 </html>

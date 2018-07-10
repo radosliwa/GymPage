@@ -1,32 +1,32 @@
-@define-mixin atSmall{
-  @media(min-width: 530px){
+@define-mixin atSmall {
+  @media(min-width: 530px) {
     @mixin-content;
   }
 }
 
-@define-mixin atMedium{
-  @media(min-width: 768px){
+@define-mixin atMedium {
+  @media(min-width: 768px) {
     @mixin-content;
   }
 }
 
-@define-mixin atLarge{
-  @media(min-width: 1010px){
+@define-mixin atLarge {
+  @media(min-width: 1080px) {
     @mixin-content;
   }
 }
 
-@define-mixin clearfix{
-  &::after{
-    content:"";
+@define-mixin clearfix {
+  &::after {
+    content: "";
     display: table;
     clear: both;
   }
 }
 
-@define-mixin centerVerHor{
+@define-mixin centerVerHor {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

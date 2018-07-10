@@ -1,5 +1,5 @@
 
-
+// 
 // $(function(){
 //   $('.banner__side-offer').delay(1000).fadeIn(800);
 // });
@@ -8,6 +8,7 @@
 //   $('.banner__side-offer').css({display: 'none'});
 //
 // })
+
 // import 'smoothScroll' from 'jquery-smooth-scroll';
 
 
@@ -16,7 +17,6 @@ class RevealOnScroll{
     this.itemsToReveal = elements;
     this.hideInitially();
     this.wayPoints(offset);
-
   }
 
   hideInitially(){
@@ -30,7 +30,7 @@ class RevealOnScroll{
         element: current,
         handler: function() {
           $(current).addClass('reveal-item--is-visible');
-          $('.text-container__why-list').children().each(function(index){
+          $('.text-container__why-list').children().each(function(){
             $(this).addClass('animated bounceInLeft');
           })
         },
@@ -44,6 +44,9 @@ class RevealOnScroll{
 new RevealOnScroll($('.section'), "85%");
 
 
+
+
+
 //-------------------------------------------STICKY HEADER
 class StickyH{
   constructor(){
@@ -54,12 +57,16 @@ class StickyH{
     this.pageSections = $('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
+
     }
 
   wayPointHeader(){
     new Waypoint({
       element: this.triggerForHeader.get(0),
       handler: (direction)=>{
+        this.headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
+        WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
+
         if(direction == "down"){
           this.siteHeader.addClass('site-header--darkerBackground');
           this.headerLogo.addClass('main-nav__logo--smallerScale');
@@ -79,11 +86,10 @@ class StickyH{
       new Waypoint({
         element: currentSection,
         handler: function(direction){
-          that.headerLinks.removeClass('matching-link');
 
           if(direction =="down"){
+            console.log(that.headerLinks.eq(0));
             let matchingLink = currentSection.getAttribute('data-match');
-            console.log(matchingLink);
             that.headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
           }
@@ -99,7 +105,7 @@ class StickyH{
             $(matchingLink).addClass('matching-link');
           }
         },
-        offset: "-40%"
+        offset: "-30%"
       });
 
     })

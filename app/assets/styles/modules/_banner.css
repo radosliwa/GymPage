@@ -1,11 +1,14 @@
 .banner {
   position: relative;
   max-height: 750px;
+  margin-bottom: 7%;
   @mixin clearfix;
   &__image {
+    margin: 0 auto;
     position: relative;
     /*to move subtitle on top */
     z-index: -1;
+    @mixin atMedium {}
   }
   &__subtitle {
     font-family: Maiden Crimes, 'Orbitron', sans-serif;
@@ -19,6 +22,11 @@
         margin-top: -25.5%;
         margin-right: 4.5%;
         font-weight: 900;
+        font-size: 1.45rem;
+      }
+    }
+    @mixin atLarge {
+      &--on-the-right {
         font-size: 1.8rem;
       }
     }
