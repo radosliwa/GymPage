@@ -10,6 +10,12 @@
   }
 }
 
+@define-mixin atMediumXL {
+  @media(min-width: 875px) {
+    @mixin-content;
+  }
+}
+
 @define-mixin atLarge {
   @media(min-width: 1080px) {
     @mixin-content;

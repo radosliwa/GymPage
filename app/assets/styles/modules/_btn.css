@@ -19,9 +19,16 @@
   }
   &__banner {
     padding: 13px 23px;
-    font-size: 1rem;
+    font-size: 1.1em;
+    @mixin atMedium {
+      padding: 11px 21px;
+    }
+    @mixin atMediumXL {
+      font-size: 1.25em;
+      padding: 13px 23px;
+    }
     @mixin atLarge {
-      font-size: 1.3rem;
+      font-size: 1.3em;
     }
   }
   &__address {

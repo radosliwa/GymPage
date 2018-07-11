@@ -15,19 +15,26 @@
     display: inline-block;
     color: #000;
     text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
-    @mixin atMedium {
-      &--on-the-right {
+    &--on-the-right {
+      @mixin atMedium {
+        letter-spacing: 2.5px;
+        float: right;
+        margin-top: -25.5%;
+        margin-right: 6.5%;
+        font-weight: 500;
+        font-size: 1.47em;
+      }
+      @mixin atMediumXL {
         letter-spacing: 2px;
         float: right;
         margin-top: -25.5%;
-        margin-right: 4.5%;
-        font-weight: 900;
-        font-size: 1.45rem;
+        margin-right: 6.5%;
+        font-weight: 600;
+        font-size: 1.63em;
       }
-    }
-    @mixin atLarge {
-      &--on-the-right {
-        font-size: 1.8rem;
+      @mixin atLarge {
+        font-size: 1.8em;
+        font-weight: 600;
       }
     }
   }
@@ -76,20 +83,28 @@
     transform: translate(-50%, -50%);
     box-shadow: 0px 3px 5px 1px #FFF;
     transition: all 0.3s. linear;
+    &:hover {
+      box-shadow: 0px 3px 5px 3px #FFF;
+    }
+    &:active {
+      bottom: 13.7%;
+      box-shadow: 0px 1px 2px 0px #FFF;
+    }
     @mixin atMedium {
+      border-radius: 30px;
+      position: absolute;
+      left: 76%;
+      bottom: 14%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 3px 5px 1px #FFF;
+    }
+    @mixin atMediumXL {
       border-radius: 30px;
       position: absolute;
       left: 50%;
       bottom: 14%;
       transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
-      &:hover {
-        box-shadow: 0px 3px 5px 3px #FFF;
-      }
-      &:active {
-        bottom: 13.7%;
-        box-shadow: 0px 1px 2px 0px #FFF;
-      }
     }
   }
 }

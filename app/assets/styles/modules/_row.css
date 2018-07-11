@@ -1,6 +1,9 @@
 .row {
   position: relative;
   @mixin clearfix;
+  [class*="row__medium_"] {
+    max-width: 100%;
+  }
   @mixin atMedium {
     &__medium_3 {
       float: left;
