@@ -17,12 +17,13 @@
     text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
     &--on-the-right {
       @mixin atMedium {
-        letter-spacing: 2.5px;
+        letter-spacing: 3px;
         float: right;
         margin-top: -25.5%;
         margin-right: 6.5%;
         font-weight: 500;
-        font-size: 1.47em;
+        font-size: 1.4em;
+        min-width: 20%;
       }
       @mixin atMediumXL {
         letter-spacing: 2px;
@@ -30,7 +31,6 @@
         margin-top: -25.5%;
         margin-right: 6.5%;
         font-weight: 600;
-        font-size: 1.63em;
       }
       @mixin atLarge {
         font-size: 1.8em;
@@ -93,8 +93,8 @@
     @mixin atMedium {
       border-radius: 30px;
       position: absolute;
-      left: 76%;
-      bottom: 14%;
+      left: 75%;
+      bottom: 16%;
       transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
     }
@@ -105,6 +105,9 @@
       bottom: 14%;
       transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
+    }
+    @mixin atLarge {
+      bottom: 12%;
     }
   }
 }

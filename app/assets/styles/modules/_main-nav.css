@@ -5,42 +5,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   ul {
     margin: 0 0 0 25%;
     height: inherit;
     padding: 0;
+    @mixin atSmall {
+      margin: 0 0 0 32%;
+    }
     @mixin atMedium {
-      margin: 0 0 0 35%;
-      font-size: 1.28rem;
+      margin: 0 0 0 40%;
     }
     @mixin atMediumXL {
-      margin: 0 0 0 43%;
-      font-size: 1.30rem;
+      margin: 0 0 0 42%;
+      font-size: 1.3rem;
     }
     @mixin atLarge {
-      margin: 0 0 0 52%;
+      margin: 0 0 0 50%;
       font-size: 1.35rem;
     }
-  }
-  li {
-    display: inline-block;
-    margin: 0 5px;
-    /* padding-right: 15px; */
+    &>li {
+      @mixin atSmall {
+        display: inline-block;
+      }
+    }
   }
   a {
+    /* background-color: yellow; */
     position: relative;
     display: inline-block;
-    padding: 8px 13px 8px 0px;
-    @mixin atMedium {
-      padding: 14px 13px 14px 0px;
-    }
-    @mixin atMediumXL {
-      padding: 16px 13px 16px 0px;
-    }
-    @mixin atLarge {
-      padding: 18px 15px 18px 0px;
-    }
+    padding: 1em 1em 1em 0;
+    @mixin atMedium {}
+    @mixin atMediumXL {}
+    @mixin atLarge {}
     &:after {
       position: absolute;
       content: "";

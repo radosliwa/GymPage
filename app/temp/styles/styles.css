@@ -411,20 +411,20 @@ a {
 
 .btn__banner {
     padding: 13px 23px;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
 
 .btn__banner {
-      padding: 11px 21px
+      padding: 11px 21px;
+      font-size: .9em
   }
   }
 
 @media(min-width: 875px) {
 
 .btn__banner {
-      font-size: 1.25em;
       padding: 13px 23px
   }
   }
@@ -499,7 +499,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .main-nav ul {
@@ -508,61 +508,57 @@ a {
     padding: 0;
   }
 
-@media(min-width: 768px) {
+@media(min-width: 530px) {
 
 .main-nav ul {
-      margin: 0 0 0 35%;
-      font-size: 1.28rem
+      margin: 0 0 0 32%
+  }
+  }
+
+@media(min-width: 770px) {
+
+.main-nav ul {
+      margin: 0 0 0 40%
   }
   }
 
 @media(min-width: 875px) {
 
 .main-nav ul {
-      margin: 0 0 0 43%;
-      font-size: 1.30rem
+      margin: 0 0 0 42%;
+      font-size: 1.3rem
   }
   }
 
 @media(min-width: 1080px) {
 
 .main-nav ul {
-      margin: 0 0 0 52%;
+      margin: 0 0 0 50%;
       font-size: 1.35rem
   }
   }
 
-.main-nav li {
-    display: inline-block;
-    margin: 0 5px;
-    /* padding-right: 15px; */
+@media(min-width: 530px) {
+
+.main-nav ul>li {
+        display: inline-block
+    }
   }
 
 .main-nav a {
+    /* background-color: yellow; */
     position: relative;
     display: inline-block;
-    padding: 8px 13px 8px 0px;
+    padding: 1em 1em 1em 0;
   }
 
-@media(min-width: 768px) {
-
-.main-nav a {
-      padding: 14px 13px 14px 0px
-  }
+@media(min-width: 770px) {
   }
 
 @media(min-width: 875px) {
-
-.main-nav a {
-      padding: 16px 13px 16px 0px
-  }
   }
 
 @media(min-width: 1080px) {
-
-.main-nav a {
-      padding: 18px 15px 18px 0px
-  }
   }
 
 .main-nav a:after {
@@ -620,7 +616,7 @@ a {
               transform: scale(.9) translateY(-31%);
     }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
 
 .main-nav__logo {
       max-width: 4.5em
@@ -661,7 +657,7 @@ a {
     z-index: -1;
   }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
   }
 
 .banner__subtitle {
@@ -671,15 +667,16 @@ a {
     text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
   }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
 
 .banner__subtitle--on-the-right {
-        letter-spacing: 2.5px;
+        letter-spacing: 3px;
         float: right;
         margin-top: -25.5%;
         margin-right: 6.5%;
         font-weight: 500;
-        font-size: 1.47em
+        font-size: 1.4em;
+        min-width: 20%
     }
   }
 
@@ -690,8 +687,7 @@ a {
         float: right;
         margin-top: -25.5%;
         margin-right: 6.5%;
-        font-weight: 600;
-        font-size: 1.63em
+        font-weight: 600
     }
   }
 
@@ -769,13 +765,13 @@ a {
       box-shadow: 0px 1px 2px 0px #FFF;
     }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
 
 .banner__btn-container {
       border-radius: 30px;
       position: absolute;
-      left: 76%;
-      bottom: 14%;
+      left: 75%;
+      bottom: 16%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF
@@ -792,6 +788,13 @@ a {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF
+  }
+  }
+
+@media(min-width: 1080px) {
+
+.banner__btn-container {
+      bottom: 12%
   }
   }
 
@@ -882,7 +885,7 @@ a {
 
 /* transform: translate(0, -100%); */
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
 
 .form>div {
       display: inline-block;
@@ -946,7 +949,7 @@ a {
     max-width: 100%;
   }
 
-@media(min-width: 768px) {
+@media(min-width: 770px) {
     .row__medium_3 {
       float: left;
       width: 25%;
