@@ -5,6 +5,13 @@
   /* top doesnt get cut after clicking
   on the header link*/
   @mixin clearfix;
+  &__our-offer-picture {
+    &--pull-right {
+      @mixin atMediumXL {
+        padding-left: 8%;
+      }
+    }
+  }
   &--larger-t-margin {
     /* padding-top: 20%; */
   }

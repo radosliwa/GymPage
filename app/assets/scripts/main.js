@@ -1,5 +1,5 @@
 
-// 
+//
 // $(function(){
 //   $('.banner__side-offer').delay(1000).fadeIn(800);
 // });
