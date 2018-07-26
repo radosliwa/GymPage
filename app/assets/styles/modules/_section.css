@@ -1,12 +1,13 @@
 .section {
   margin-top: 1%;
   min-height: 200px;
-  padding-top: 4%;
+  padding-top: 3%;
   /* top doesnt get cut after clicking
   on the header link*/
   @mixin clearfix;
   &__our-offer-picture {
     &--pull-right {
+      min-height: 395px;
       @mixin atMediumXL {
         padding-left: 8%;
       }

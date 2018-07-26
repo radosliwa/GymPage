@@ -8,16 +8,20 @@
     line-height: 1.85;
   }
   &--dark-background {
+    background: url(../../assets/images/girlBall--small.png) center no-repeat;
+    background-size: contain;
     margin-top: 20px;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 3px 28px rgba(219, 118, 6, 0.9);
-  }
-  &__girlPicture {
-    max-height: 373px;
-    margin-top: -61%;
-    float: left;
+    height: 15%;
+    max-height: 395px;
+    @mixin atMediumXL {
+      background: url(../../assets/images/girlBall.png) center no-repeat;
+      background-size: contain;
+      background-color: rgba(0, 0, 0, 0.76);
+    }
   }
   &__heading {
     text-decoration: underline;
@@ -30,27 +34,32 @@
     font-weight: 900;
   }
   &__heading--our-offer {
+    display: inline-block;
+    z-index: 99;
     @mixin atLarge {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-right: -172px;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
   &__why-list {
     text-align: center;
-    font-size: 1.6rem;
-    line-height: 2.5rem;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
     @mixin atLarge {
-      text-align: right;
-      font-size: 1.8rem;
-      line-height: 3rem;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      margin-top: 1%;
     }
     li {
       display: inline-block;
       @mixin atMediumXL {
         padding-right: 2%;
-        margin-top: 3%;
+        margin-top: 2%;
       }
       &:nth-child(1) {
+        margin-top: 10%;
         animation-delay: 0;
       }
       &:nth-child(2) {
@@ -96,8 +105,7 @@
     background-color: orange;
     z-index: 1;
     transition: all .3s ease-in;
-    display: inline-block;
-    width: 100%;
+    display: block;
     &:hover {
       background-color: #000;
       border-top: 3px solid #FFF;

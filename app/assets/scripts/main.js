@@ -88,7 +88,7 @@ class StickyH{
         handler: function(direction){
 
           if(direction =="down"){
-            console.log(that.headerLinks.eq(0));
+            // console.log(that.headerLinks.eq(0));
             let matchingLink = currentSection.getAttribute('data-match');
             that.headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
