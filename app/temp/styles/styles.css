@@ -472,12 +472,17 @@ a {
 }
 
 .site-header {
-  display: none;
+  display: block;
+  position: fixed;
+  background-color: rgba(11, 11, 9, 0.72);
+  width: 100%;
+  height: 12vh;
 }
 
-@media(min-width: 530px) {
+@media(min-width: 770px) {
 
 .site-header {
+    height: auto;
     display: block;
     position: fixed;
     background-color: rgba(11, 11, 9, 0.72);
@@ -503,29 +508,24 @@ a {
 }
 
 .main-nav ul {
-    margin: 0 0 0 25%;
-    height: inherit;
-    padding: 0;
+    display: none;
   }
 
 @media(min-width: 530px) {
-
-.main-nav ul {
-      margin: 0 0 0 32%
-  }
   }
 
 @media(min-width: 770px) {
 
 .main-nav ul {
-      margin: 0 0 0 40%
+      display: block;
+      margin: 0 0 0 35%
   }
   }
 
 @media(min-width: 875px) {
 
 .main-nav ul {
-      margin: 0 0 0 42%;
+      margin: 0 0 0 39%;
       font-size: 1.3rem
   }
   }
@@ -533,7 +533,7 @@ a {
 @media(min-width: 1080px) {
 
 .main-nav ul {
-      margin: 0 0 0 50%;
+      margin: 0 0 0 47%;
       font-size: 1.35rem
   }
   }
@@ -640,8 +640,8 @@ a {
 
 .banner {
   position: relative;
-  max-height: 750px;
-  margin-bottom: 5%;
+  max-height: 750vh;
+  margin-bottom: 2%;
 }
 
 .banner::after {
@@ -959,7 +959,7 @@ a {
 
 .row [class*='row__medium'] {}
 
-@media(min-width: 770px) {
+@media(min-width: 875px) {
     .row__medium_3 {
       float: left;
       width: 25%;
@@ -997,7 +997,7 @@ a {
 .section {
   margin-top: 1%;
   min-height: 200px;
-  padding-top: 3%;
+  padding-top: 4%;
 }
 
 /* top doesnt get cut after clicking
@@ -1009,15 +1009,31 @@ a {
     clear: both;
   }
 
-.section__our-offer-picture--pull-right {
-      min-height: 395px;
-    }
+.section__our-offer-picture {
+    display: block;
+    margin-left: 8%;
+    padding: 3%;
+  }
+
+@media(min-width: 530px) {
+
+.section__our-offer-picture {
+      margin-left: 10%
+  }
+  }
+
+@media(min-width: 770px) {
+
+.section__our-offer-picture {
+      margin-left: 9%
+  }
+  }
 
 @media(min-width: 875px) {
 
-.section__our-offer-picture--pull-right {
-        padding-left: 8%
-    }
+.section__our-offer-picture {
+      margin-left: 0
+  }
   }
 
 .section--larger-t-margin {
@@ -1042,6 +1058,10 @@ a {
       margin-bottom: 20px;
     }
 
+/* display: flex;
+      justify-content: space-around;
+      flex-flow: row wrap; */
+
 .section__igs-mission-team__coach__picture {
         display: inline-block;
         position: relative;
@@ -1053,7 +1073,6 @@ a {
         box-shadow: 0px 3px 10px 1px #FFF;
         left: 2%;
         margin-top: -9px;
-        shape-outside: circle();
         /* top:50%;
       position: absolute;
       transform: translate(-50%,-50%); */
@@ -1079,23 +1098,21 @@ a {
   }
 
 .text-container--dark-background {
-    background: url(../../assets/images/girlBall--small.png) center no-repeat;
+    background: url(../../assets/images/girlBall--small.png) no-repeat center;
     background-size: contain;
     margin-top: 20px;
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
     background-color: rgba(0, 0, 0, 0.76);
-    box-shadow: 0 3px 28px rgba(219, 118, 6, 0.9);
-    height: 15%;
-    max-height: 395px;
+    box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
   }
 
 @media(min-width: 875px) {
 
 .text-container--dark-background {
-      background: url(../../assets/images/girlBall.png) center no-repeat;
+      background: url(../../assets/images/girlBall.png) no-repeat left center;
       background-size: contain;
-      background-color: rgba(0, 0, 0, 0.76)
+      background-color: rgba(0, 0, 0, 0.76);
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%
   }
   }
 
@@ -1128,9 +1145,11 @@ a {
   }
 
 .text-container__why-list {
-    text-align: center;
+    display: block;
+    text-align: right;
     font-size: 1.3rem;
     line-height: 2.3rem;
+    padding-left: 0;
   }
 
 @media(min-width: 1080px) {
@@ -1143,13 +1162,12 @@ a {
   }
 
 .text-container__why-list li {
-      display: inline-block;
+      display: block;
     }
 
 @media(min-width: 875px) {
 
 .text-container__why-list li {
-        padding-right: 2%;
         margin-top: 2%
     }
   }
@@ -1216,7 +1234,7 @@ a {
 
 .text-container__learn-more:hover {
       background-color: #000;
-      border-top: 3px solid #FFF;
+      /* border-top: 1px solid #FFF;  caused picture to move*/
       cursor: pointer;
     }
 
@@ -1241,8 +1259,7 @@ a {
     }
 
 .text-container__mission-statement {
-    text-align: center;
-    padding: 0 10%;
+    text-align: left;
     /*  */
   }
 

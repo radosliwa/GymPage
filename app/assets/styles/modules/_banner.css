@@ -1,7 +1,7 @@
 .banner {
   position: relative;
-  max-height: 750px;
-  margin-bottom: 5%;
+  max-height: 750vh;
+  margin-bottom: 2%;
   @mixin clearfix;
   &__image {
     margin: 0 auto;

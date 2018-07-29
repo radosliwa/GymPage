@@ -2,7 +2,7 @@
   position: relative;
   @mixin clearfix;
   [class*='row__medium'] {}
-  @mixin atMedium {
+  @mixin atMediumXL {
     &__medium_3 {
       float: left;
       width: 25%;

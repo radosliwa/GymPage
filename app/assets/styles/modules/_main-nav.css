@@ -7,21 +7,18 @@
   align-items: center;
   font-size: 1.2rem;
   ul {
-    margin: 0 0 0 25%;
-    height: inherit;
-    padding: 0;
-    @mixin atSmall {
-      margin: 0 0 0 32%;
-    }
+    display: none;
+    @mixin atSmall {}
     @mixin atMedium {
-      margin: 0 0 0 40%;
+      display: block;
+      margin: 0 0 0 35%;
     }
     @mixin atMediumXL {
-      margin: 0 0 0 42%;
+      margin: 0 0 0 39%;
       font-size: 1.3rem;
     }
     @mixin atLarge {
-      margin: 0 0 0 50%;
+      margin: 0 0 0 47%;
       font-size: 1.35rem;
     }
     &>li {

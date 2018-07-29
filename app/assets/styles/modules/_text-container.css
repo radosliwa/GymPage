@@ -8,19 +8,17 @@
     line-height: 1.85;
   }
   &--dark-background {
-    background: url(../../assets/images/girlBall--small.png) center no-repeat;
+    background: url(../../assets/images/girlBall--small.png) no-repeat center;
     background-size: contain;
     margin-top: 20px;
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
     background-color: rgba(0, 0, 0, 0.76);
-    box-shadow: 0 3px 28px rgba(219, 118, 6, 0.9);
-    height: 15%;
-    max-height: 395px;
+    box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
     @mixin atMediumXL {
-      background: url(../../assets/images/girlBall.png) center no-repeat;
+      background: url(../../assets/images/girlBall.png) no-repeat left center;
       background-size: contain;
       background-color: rgba(0, 0, 0, 0.76);
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
     }
   }
   &__heading {
@@ -44,18 +42,19 @@
     }
   }
   &__why-list {
-    text-align: center;
+    display: block;
+    text-align: right;
     font-size: 1.3rem;
     line-height: 2.3rem;
+    padding-left: 0;
     @mixin atLarge {
       font-size: 1.6rem;
       line-height: 2.5rem;
       margin-top: 1%;
     }
     li {
-      display: inline-block;
+      display: block;
       @mixin atMediumXL {
-        padding-right: 2%;
         margin-top: 2%;
       }
       &:nth-child(1) {
@@ -108,7 +107,7 @@
     display: block;
     &:hover {
       background-color: #000;
-      border-top: 3px solid #FFF;
+      /* border-top: 1px solid #FFF;  caused picture to move*/
       cursor: pointer;
       a {
         &:hover {
@@ -131,8 +130,7 @@
     }
   }
   &__mission-statement {
-    text-align: center;
-    padding: 0 10%;
+    text-align: left;
     /*  */
   }
   &__coachName {
