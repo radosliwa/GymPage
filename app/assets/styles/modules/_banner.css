@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   max-height: 750vh;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   @mixin clearfix;
   &__image {
     margin: 0 auto;
@@ -16,14 +16,16 @@
     color: #000;
     text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
     &--on-the-right {
-      @mixin atSmall {
+      display: none;
+      @mixin atSmallXL {
+        display: inline-block;
         letter-spacing: 3px;
         float: right;
         margin-top: -36.7%;
         margin-right: 6.5%;
-        font-weight: 300;
-        font-size: 1.4em;
-        min-width: 20%;
+        font-weight: 100;
+        font-size: 1.3em;
+        min-width: 15%;
       }
       @mixin atMedium {
         letter-spacing: 3px;
@@ -88,7 +90,7 @@
     position: absolute;
     left: 50%;
     bottom: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 336%);
     transition: all 0.3s. linear;
     &:hover {
       box-shadow: 0px 3px 5px 3px #FFF;
@@ -100,8 +102,8 @@
     @mixin atSmall {
       border-radius: 30px;
       position: absolute;
-      left: 50%;
-      bottom: 23%;
+      left: 65%;
+      bottom: 22%;
       transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
     }

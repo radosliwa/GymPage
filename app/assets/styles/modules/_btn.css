@@ -20,6 +20,10 @@
   &__banner {
     padding: 10px 18px;
     font-size: 1em;
+    @mixin atSmallXL {
+      padding: 9px 18px;
+      font-size: 1em;
+    }
     @mixin atMedium {
       padding: 11px 21px;
       font-size: 1.1em;

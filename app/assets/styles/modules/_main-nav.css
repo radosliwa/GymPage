@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 99;
   ul {
     display: none;
     @mixin atSmall {}
@@ -64,7 +65,7 @@
     position: absolute;
     display: inline-block;
     max-width: 4.3em;
-    height: 63px;
+    height: 53px;
     z-index: 99;
     top: .75em;
     margin-left: 10%;
@@ -72,17 +73,22 @@
     transform: scale(1.3);
     transition: all .2s ease-out;
     &--smallerScale {
-      transform: scale(.9) translateY(-31%);
+      transform: scale(.97) translateY(-21%);
+      @mixin atMedium {
+        transform: scale(.9) translateY(-31%);
+      }
     }
     @mixin atMedium {
-      max-width: 4.5em;
+      height: 63px;
+      top: .75em;
+      margin-left: 10%;
+      max-width: 5em;
     }
     @mixin atMediumXL {
       max-width: 5.8em;
     }
     @mixin atLarge {
       max-width: 6.7em;
-      height: 63px;
     }
   }
 }
