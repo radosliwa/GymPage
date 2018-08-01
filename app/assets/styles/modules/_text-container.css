@@ -8,13 +8,17 @@
     line-height: 1.85;
   }
   &--dark-background {
-    background: url(../../assets/images/girlBall--small.png) no-repeat center;
+    background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
     background-size: contain;
-    margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
+    @mixin atSmallXL {
+      background: url(../../assets/images/girlBall--small.png) no-repeat left center;
+      background-size: contain;
+    }
     @mixin atMediumXL {
-      background: url(../../assets/images/girlBall.png) no-repeat left center;
+      margin-top: 20px;
+      background: url(../../assets/images/girlBall.png) no-repeat center;
       background-size: contain;
       background-color: rgba(0, 0, 0, 0.76);
       border-bottom-left-radius: 20%;
@@ -32,8 +36,7 @@
     font-weight: 900;
   }
   &__heading--our-offer {
-    display: inline-block;
-    z-index: 99;
+    display: block;
     @mixin atLarge {
       font-size: 2.3rem;
       margin-right: -172px;
@@ -42,18 +45,22 @@
     }
   }
   &__why-list {
-    display: block;
-    text-align: right;
+    display: inline-block;
+    text-align: center;
     font-size: 1.3rem;
     line-height: 2.3rem;
     padding-left: 0;
+    @mixin atMedium {
+      font-size: 1.5rem;
+      text-align: right;
+    }
     @mixin atLarge {
+      display: block;
       font-size: 1.6rem;
       line-height: 2.5rem;
       margin-top: 1%;
     }
     li {
-      display: block;
       @mixin atMediumXL {
         margin-top: 2%;
       }

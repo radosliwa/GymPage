@@ -14,16 +14,32 @@
     font-family: Maiden Crimes, 'Orbitron', sans-serif;
     display: inline-block;
     color: #000;
-    text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
     &--on-the-right {
-      display: none;
+      font-family: 'Orbitron', sans-serif;
+      display: inline-block;
+      letter-spacing: 2.7px;
+      float: right;
+      margin-top: -29.7%;
+      margin-right: 9.5%;
+      font-weight: 100;
+      font-size: 1.1em;
+      min-width: 15%;
+      font-weight: bolder;
+      @mixin atUltraSmall {
+        font-size: 1.3em;
+        margin-right: 14.5%;
+      }
+      @mixin atSmall {
+        font-family: Maiden Crimes, 'Orbitron', sans-serif;
+        text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
+        margin-top: -36.7%;
+        margin-right: 8%;
+        font-weight: 100;
+      }
       @mixin atSmallXL {
-        display: inline-block;
         letter-spacing: 3px;
         float: right;
-        margin-top: -36.7%;
-        margin-right: 6.5%;
-        font-weight: 100;
+        margin-right: 10%;
         font-size: 1.3em;
         min-width: 15%;
       }
@@ -36,7 +52,7 @@
         min-width: 20%;
       }
       @mixin atMediumXL {
-        letter-spacing: 2px;
+        letter-spacing: 2.7px;
         float: right;
         margin-top: -25.5%;
         margin-right: 6.5%;
@@ -89,8 +105,8 @@
     border-radius: 30px;
     position: absolute;
     left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 336%);
+    bottom: 3%;
+    transform: translate(-50%, -50%);
     transition: all 0.3s. linear;
     &:hover {
       box-shadow: 0px 3px 5px 3px #FFF;
@@ -99,13 +115,17 @@
       bottom: 13.7%;
       box-shadow: 0px 1px 2px 0px #FFF;
     }
+    @mixin atUltraSmall {
+      left: 50%;
+      bottom: 8%;
+      box-shadow: 0px 3px 5px 1px #FFF;
+    }
     @mixin atSmall {
       border-radius: 30px;
       position: absolute;
-      left: 65%;
+      left: 66%;
       bottom: 22%;
       transform: translate(-50%, -50%);
-      box-shadow: 0px 3px 5px 1px #FFF;
     }
     @mixin atMedium {
       border-radius: 30px;

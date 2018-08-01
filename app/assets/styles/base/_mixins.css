@@ -1,3 +1,15 @@
+@define-mixin atLogo {
+  @media(max-width: 399px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atUltraSmall {
+  @media(min-width: 400px) {
+    @mixin-content;
+  }
+}
+
 @define-mixin atSmall {
   @media(min-width: 530px) {
     @mixin-content;

@@ -3,7 +3,7 @@
   position: fixed;
   background-color: rgba(11, 11, 9, 0.72);
   width: 100%;
-  height: 12vh;
+  height: 50px;
   z-index: 3;
   @mixin atMedium {
     height: auto;

@@ -70,15 +70,30 @@ class StickyH{
         if(direction == "down"){
           this.siteHeader.addClass('site-header--darkerBackground');
           this.headerLogo.addClass('main-nav__logo--smallerScale');
+
+        }else if(window.matchMedia("(max-width: 399px)").matches){
+          this.headerLogo.css({opacity: 0});
         }else{
+          this.headerLogo.css({opacity: 1});
           this.siteHeader.removeClass('site-header--darkerBackground');
           this.headerLogo.removeClass('main-nav__logo--smallerScale');
         }
       },
       offset: "35%"
     });
-  }
 
+  //   new Waypoint({
+  //     element: this.triggerForHeader.get(0),
+  //     handler: (direction)=>{
+  //
+  //       if(direction == "up" && window.matchMedia("(min-width: 400px)").matches){
+  //         this.headerLogo.css({display: 'inline-block'});
+  //       }
+  //     },
+  //     offset: "35%"
+  //
+  // });
+}
   sectionWaypoint(){
     let that = this;
     this.pageSections.each(function(){
