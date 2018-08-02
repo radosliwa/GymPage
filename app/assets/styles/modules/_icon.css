@@ -1,12 +1,18 @@
 .icon {
-  width: 10%;
-  height: 10%;
+  width: 9%;
   text-align: center;
   display: inline-block;
   transition: all .3s linear;
+  @mixin atSmall {}
+  @mixin atMediumXL {
+    width: 12%;
+  }
   &__social-icon {
-    margin: 0 4%;
+    margin: 4%;
     border-radius: 10%;
+    @mixin atMediumXL {
+      margin: 0 4%;
+    }
     &:hover {
       background-color: #FFF;
     }

@@ -387,14 +387,20 @@ a {
 }
 
 h3 {
-  margin: 1% auto;
-  font-size: 1em;
+  font-size: 1.17em;
 }
 
 @media(min-width: 600px) {
 
 h3 {
-    font-size: 1.17em
+    font-size: 1.4em
+}
+  }
+
+@media(min-width: 875px) {
+
+h3 {
+    font-size: 1.5em
 }
   }
 
@@ -465,21 +471,37 @@ h3 {
   }
 
 .btn__address {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
   }
 
 .icon {
-  width: 10%;
-  height: 10%;
+  width: 9%;
   text-align: center;
   display: inline-block;
   transition: all .3s linear;
 }
 
+@media(min-width: 530px) {
+  }
+
+@media(min-width: 875px) {
+
+.icon {
+    width: 12%
+}
+  }
+
 .icon__social-icon {
-    margin: 0 4%;
+    margin: 4%;
     border-radius: 10%;
+  }
+
+@media(min-width: 875px) {
+
+.icon__social-icon {
+      margin: 0 4%
+  }
   }
 
 .icon__social-icon:hover {
@@ -500,19 +522,25 @@ h3 {
 }
 
 .site-header {
-  display: block;
-  position: fixed;
+  display: none;
   background-color: rgba(11, 11, 9, 0.72);
   width: 100%;
   height: 50px;
   z-index: 3;
 }
 
+@media(min-width: 400px) {
+
+.site-header {
+    position: fixed;
+    display: block
+}
+  }
+
 @media(min-width: 770px) {
 
 .site-header {
     height: auto;
-    display: block;
     position: fixed;
     background-color: rgba(11, 11, 9, 0.72);
     color: white;
@@ -740,7 +768,7 @@ h3 {
       letter-spacing: 2.7px;
       float: right;
       margin-top: -29.7%;
-      margin-right: 9.5%;
+      margin-right: 10vw;
       font-weight: 100;
       font-size: 1.1em;
       min-width: 15%;
@@ -751,7 +779,7 @@ h3 {
 
 .banner__subtitle--on-the-right {
         font-size: 1.3em;
-        margin-right: 14.5%
+        margin-right: 14.5vw
     }
   }
 
@@ -761,7 +789,7 @@ h3 {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
         margin-top: -36.7%;
-        margin-right: 8%;
+        margin-right: 12vw;
         font-weight: 100
     }
   }
@@ -967,19 +995,19 @@ h3 {
   }
 
 .address__item {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: lighter;
     margin-top: 1%;
-    padding: 2% 0;
+    padding: 1% 0;
   }
 
-.address h3:nth-child(2) {
-    margin-top: 1.3%;
-    font-size: 1.4rem;
-  }
+@media(min-width: 875px) {
 
-.address p {
-    margin: 12px 0 8px 0;
+.address__item {
+      font-size: 1.2rem;
+      margin-top: 1%;
+      padding: 2% 0
+  }
   }
 
 .address__fieldset {
@@ -990,34 +1018,51 @@ h3 {
   margin: 0 auto;
   padding: 3% 0;
   max-height: 100%;
-  max-width: 85%;
+  max-width: 1000px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #302f2eed;
-  position: relative;
   z-index: -99;
+  font-size: 1.3rem;
+  overflow: hidden;
 }
 
-/* transform: translate(0, -100%); */
+@media(min-width: 875px) {
 
-@media(min-width: 770px) {
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center
+}
+  }
+
+@media(min-width: 875px) {
 
 .form>div {
-      display: inline-block;
-      width: 33%
+      /* display: inline-block;
+      width: 33%; */
+      flex: 0 1 33%
   }
   }
 
 .form__label {
     display: block;
-    padding: 1.5% 0 1.5% 0;
+    padding: 2% 0;
   }
 
 .form__label--margin-t-bigger {
-      margin-top: 3%;
+      margin-top: 10%;
     }
+
+@media(min-width: 875px) {
+
+.form__label--margin-t-bigger {
+        margin-top: 1%
+    }
+  }
 
 .form__label--padding-b-smaller {
       padding-bottom: 1.5%;
@@ -1042,6 +1087,14 @@ h3 {
 
 .form__submit {
     text-align: center;
+    margin-top: 4%;
+  }
+
+@media(min-width: 875px) {
+
+.form__submit {
+      margin-top: 0
+  }
   }
 
 .form__social-icons-container {
@@ -1049,6 +1102,7 @@ h3 {
   }
 
 .form__input, .form__message {
+    max-width: auto;
     text-align: center;
   }
 
@@ -1169,11 +1223,19 @@ h3 {
 
 .section__igs-mission-team__coach {
       flex: 1 1 200px;
-      border-radius: 60%;
-      border: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+      border-top: 2px solid #FFF;
       background-color: #0b0a09d9;
       margin-bottom: 42px;
     }
+
+@media(min-width: 530px) {
+
+.section__igs-mission-team__coach {
+        border-radius: 60%;
+        border: 2px solid #FFF
+    }
+  }
 
 @media(min-width: 875px) {
 
@@ -1188,16 +1250,37 @@ h3 {
 
 .section__igs-mission-team__coach__picture {
         display: inline-block;
-        position: relative;
         border-radius: 50%;
         overflow: hidden;
         width: 125px;
         height: 125px;
         border: 4px solid rgba(0, 0, 0, .65);
         box-shadow: 0px 3px 10px 1px #FFF;
-        left: 2%;
-        margin-top: -9px;
+        position: relative;
+        margin: -9% auto -10% -5%;
       }
+
+@media(min-width: 400px) {
+
+.section__igs-mission-team__coach__picture {
+          margin-bottom: -5%
+      }
+  }
+
+@media(min-width: 875px) {
+
+.section__igs-mission-team__coach__picture {
+          display: inline-block;
+          border-radius: 50%;
+          overflow: hidden;
+          width: 125px;
+          height: 125px;
+          border: 4px solid rgba(0, 0, 0, .65);
+          box-shadow: 0px 3px 10px 1px #FFF;
+          left: -37%;
+          margin-top: -9px
+      }
+  }
 
 .section--black-background {
     background-color: #000;
@@ -1208,7 +1291,6 @@ h3 {
   color: white;
   text-align: center;
   line-height: normal;
-  font-size: 1.9rem;
 }
 
 @media(min-width: 875px) {
@@ -1233,7 +1315,7 @@ h3 {
   }
   }
 
-@media(min-width: 875px) {
+@media(min-width: 770px) {
 
 .text-container--dark-background {
       margin-top: 20px;
@@ -1246,6 +1328,7 @@ h3 {
   }
 
 .text-container__heading {
+    font-size: 1.9rem;
     text-decoration: underline;
   }
 
@@ -1283,30 +1366,34 @@ h3 {
 @media(min-width: 770px) {
 
 .text-container__why-list {
+      line-height: 3.3rem;
       font-size: 1.5rem;
       text-align: right
+  }
+  }
+
+@media(min-width: 875px) {
+
+.text-container__why-list {
+      line-height: 3rem;
+      font-size: 1.5rem;
+      text-align: right;
+      margin-top: 4%
   }
   }
 
 @media(min-width: 1080px) {
 
 .text-container__why-list {
-      display: block;
       font-size: 1.6rem;
-      line-height: 2.5rem;
-      margin-top: 1%
+      /* line-height: 2.5rem; */
+      margin-top: 10%
   }
   }
 
-@media(min-width: 875px) {
-
-.text-container__why-list li {
-        margin-top: 2%
-    }
-  }
+/* margin-top: 2%; */
 
 .text-container__why-list li:nth-child(1) {
-        margin-top: 10%;
         -webkit-animation-delay: 0;
                 animation-delay: 0;
       }
@@ -1363,6 +1450,14 @@ h3 {
     z-index: 1;
     transition: all .3s ease-in;
     display: block;
+    font-size: 1.4em;
+  }
+
+@media(min-width: 770px) {
+
+.text-container__learn-more {
+      font-size: 1.5em
+  }
   }
 
 .text-container__learn-more:hover {
@@ -1392,27 +1487,70 @@ h3 {
     }
 
 .text-container__mission-statement {
-    text-align: left;
-    /*  */
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+@media(min-width: 875px) {
+
+.text-container__mission-statement {
+      /* line-height: normal; */
+      text-align: left;
+      font-size: 2rem
+  }
   }
 
 .text-container__coachName {
+    font-size: 1.4rem;
     display: inline-block;
-    margin: 0;
+    padding-right: 6%;
+    margin-top: 5%;
+  }
+
+@media(min-width: 400px) {
+
+.text-container__coachName {
+      margin: 0;
+      padding: 5%
+  }
+  }
+
+@media(min-width: 875px) {
+
+.text-container__coachName {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      display: inline-block
+  }
   }
 
 .text-container__coachAbout {
     display: inline-block;
     font-style: italic;
     text-align: center;
-    line-height: 1.35;
+    line-height: 1.25;
     font-size: 1rem;
-    max-width: 70%;
-    @mxin atMediumXL {
+    max-width: 65%;
+  }
+
+@media(min-width: 400px) {
+
+.text-container__coachAbout {
+      max-width: 55%
+  }
+  }
+
+@media(min-width: 875px) {
+
+.text-container__coachAbout {
+      max-width: 75%;
       font-weight: 500;
       text-align: right;
-      padding: 1.5%;
-    }
+      line-height: 1.5
+  }
   }
 
 @-webkit-keyframes arrow {

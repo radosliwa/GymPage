@@ -2,26 +2,36 @@
   margin: 0 auto;
   padding: 3% 0;
   max-height: 100%;
-  max-width: 85%;
+  max-width: 1000px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #302f2eed;
-  position: relative;
   z-index: -99;
-  /* transform: translate(0, -100%); */
+  font-size: 1.3rem;
+  overflow: hidden;
+  @mixin atMediumXL {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
   &>div {
-    @mixin atMedium {
-      display: inline-block;
-      width: 33%;
+    @mixin atMediumXL {
+      /* display: inline-block;
+      width: 33%; */
+      flex: 0 1 33%;
     }
   }
   &__label {
     display: block;
-    padding: 1.5% 0 1.5% 0;
+    padding: 2% 0;
     &--margin-t-bigger {
-      margin-top: 3%;
+      margin-top: 10%;
+      @mixin atMediumXL {
+        margin-top: 1%;
+      }
     }
     &--padding-b-smaller {
       padding-bottom: 1.5%;
@@ -43,11 +53,16 @@
   }
   &__submit {
     text-align: center;
+    margin-top: 4%;
+    @mixin atMediumXL {
+      margin-top: 0;
+    }
   }
   &__social-icons-container {
     text-align: center;
   }
   &__input, &__message {
+    max-width: auto;
     text-align: center;
   }
 }

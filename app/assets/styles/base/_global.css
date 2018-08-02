@@ -39,9 +39,11 @@ a {
 }
 
 h3 {
-  margin: 1% auto;
-  font-size: 1em;
+  font-size: 1.17em;
   @mixin atSmallXL {
-    font-size: 1.17em;
+    font-size: 1.4em;
+  }
+  @mixin atMediumXL {
+    font-size: 1.5em;
   }
 }

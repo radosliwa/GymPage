@@ -20,20 +20,20 @@
       letter-spacing: 2.7px;
       float: right;
       margin-top: -29.7%;
-      margin-right: 9.5%;
+      margin-right: 10vw;
       font-weight: 100;
       font-size: 1.1em;
       min-width: 15%;
       font-weight: bolder;
       @mixin atUltraSmall {
         font-size: 1.3em;
-        margin-right: 14.5%;
+        margin-right: 14.5vw;
       }
       @mixin atSmall {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
         margin-top: -36.7%;
-        margin-right: 8%;
+        margin-right: 12vw;
         font-weight: 100;
       }
       @mixin atSmallXL {

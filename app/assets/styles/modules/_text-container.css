@@ -3,7 +3,6 @@
   color: white;
   text-align: center;
   line-height: normal;
-  font-size: 1.9rem;
   @mixin atMediumXL {
     line-height: 1.85;
   }
@@ -16,7 +15,7 @@
       background: url(../../assets/images/girlBall--small.png) no-repeat left center;
       background-size: contain;
     }
-    @mixin atMediumXL {
+    @mixin atMedium {
       margin-top: 20px;
       background: url(../../assets/images/girlBall.png) no-repeat center;
       background-size: contain;
@@ -26,6 +25,7 @@
     }
   }
   &__heading {
+    font-size: 1.9rem;
     text-decoration: underline;
     &--no-underline {
       text-align: center;
@@ -51,21 +51,24 @@
     line-height: 2.3rem;
     padding-left: 0;
     @mixin atMedium {
+      line-height: 3.3rem;
       font-size: 1.5rem;
       text-align: right;
     }
+    @mixin atMediumXL {
+      line-height: 3rem;
+      font-size: 1.5rem;
+      text-align: right;
+      margin-top: 4%;
+    }
     @mixin atLarge {
-      display: block;
       font-size: 1.6rem;
-      line-height: 2.5rem;
-      margin-top: 1%;
+      /* line-height: 2.5rem; */
+      margin-top: 10%;
     }
     li {
-      @mixin atMediumXL {
-        margin-top: 2%;
-      }
+      /* margin-top: 2%; */
       &:nth-child(1) {
-        margin-top: 10%;
         animation-delay: 0;
       }
       &:nth-child(2) {
@@ -112,6 +115,10 @@
     z-index: 1;
     transition: all .3s ease-in;
     display: block;
+    font-size: 1.4em;
+    @mixin atMedium {
+      font-size: 1.5em;
+    }
     &:hover {
       background-color: #000;
       /* border-top: 1px solid #FFF;  caused picture to move*/
@@ -137,24 +144,47 @@
     }
   }
   &__mission-statement {
-    text-align: left;
-    /*  */
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+    line-height: 2;
+    @mixin atMediumXL {
+      /* line-height: normal; */
+      text-align: left;
+      font-size: 2rem;
+    }
   }
   &__coachName {
+    font-size: 1.4rem;
     display: inline-block;
-    margin: 0;
+    padding-right: 6%;
+    margin-top: 5%;
+    @mixin atUltraSmall {
+      margin: 0;
+      padding: 5%;
+    }
+    @mixin atMediumXL {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      display: inline-block;
+    }
   }
   &__coachAbout {
     display: inline-block;
     font-style: italic;
     text-align: center;
-    line-height: 1.35;
+    line-height: 1.25;
     font-size: 1rem;
-    max-width: 70%;
-    @mxin atMediumXL {
+    max-width: 65%;
+    @mixin atUltraSmall {
+      max-width: 55%;
+    }
+    @mixin atMediumXL {
+      max-width: 75%;
       font-weight: 500;
       text-align: right;
-      padding: 1.5%;
+      line-height: 1.5;
     }
   }
 }
