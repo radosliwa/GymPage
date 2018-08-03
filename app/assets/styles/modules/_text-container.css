@@ -151,37 +151,50 @@
     @mixin atMediumXL {
       /* line-height: normal; */
       text-align: left;
-      font-size: 2rem;
+      font-size: 1.7rem;
+    }
+    @mixin atLarge {
+      /* line-height: normal; */
+      text-align: left;
+      font-size: 1.9rem;
     }
   }
   &__coachName {
     font-size: 1.4rem;
     display: inline-block;
-    padding-right: 6%;
-    margin-top: 5%;
+    margin: 5% 9% 1.5% 0;
     @mixin atUltraSmall {
-      margin: 0;
-      padding: 5%;
+      margin: 5% 9% 1.5% 0;
     }
     @mixin atMediumXL {
-      margin: 0;
-      padding: 0;
       font-size: 1.5rem;
       display: inline-block;
+      float: right;
+      margin: -2% 0 -9% -26%;
+      ;
     }
   }
   &__coachAbout {
     display: inline-block;
     font-style: italic;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.35;
     font-size: 1rem;
-    max-width: 65%;
+    max-width: 75%;
     @mixin atUltraSmall {
-      max-width: 55%;
+      max-width: 85%;
+    }
+    @mixin atSmall {
+      max-width: 70%;
+    }
+    @mixin atSmall {
+      max-width: 71%;
+    }
+    @mixin atMedium {
+      max-width: 75%;
     }
     @mixin atMediumXL {
-      max-width: 75%;
+      max-width: 70%;
       font-weight: 500;
       text-align: right;
       line-height: 1.5;
