@@ -11,7 +11,34 @@
 
 // import 'smoothScroll' from 'jquery-smooth-scroll';
 
+class MobileMenu{
+  constructor(){
+    this.menuIcon = $('.site-header__menu-icon');
+    this.siteHeader = $('.site-header');
+    this.navMenu = $('.main-nav__menu');
+    this.mainNav = $('.main-nav');
+    this.headerLogo = $('.main-nav__logo');
+    this.events();
 
+  }
+  events(){
+
+    this.menuIcon.click(this.toggleMenu.bind(this));
+  }
+  toggleMenu(){
+    this.headerLogo.toggleClass('main-nav__logo--hide');
+    this.navMenu.toggleClass('main-nav__menu--is-visible');
+    this.mainNav.toggleClass('main-nav--expansion');
+  }
+}
+
+new MobileMenu();
+
+
+
+
+
+//-------------------------------------------REVEAL ON SCROLL
 class RevealOnScroll{
   constructor(elements, offset){
     this.itemsToReveal = elements;
@@ -57,15 +84,15 @@ class StickyH{
     this.pageSections = $('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
-    this.removeLogo();
+    // this.removeLogo();
     }
 
-    removeLogo(){
-      const mq = window.matchMedia( "(max-width: 399px)" );
-      if (mq.matches) {
-            this.headerLogo.css('display','none');
-      } 
-    }
+    // removeLogo(){
+    //   const mq = window.matchMedia( "(max-width: 399px)" );
+    //   if (mq.matches) {
+    //         this.headerLogo.css('display','none');
+    //   }
+    // }
 
   wayPointHeader(){
     new Waypoint({

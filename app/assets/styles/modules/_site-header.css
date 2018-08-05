@@ -1,9 +1,9 @@
 .site-header {
-  display: none;
   background-color: rgba(11, 11, 9, 0.72);
   width: 100%;
   height: 50px;
   z-index: 3;
+  @mixin clearfix;
   @mixin atUltraSmall {
     position: fixed;
     display: block;
@@ -18,6 +18,18 @@
     transition: all .3s linear;
     &--darkerBackground {
       background-color: rgba(11, 11, 9, 1);
+    }
+  }
+  &__menu-icon {
+    display: inline-block;
+    background-color: #FFF;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 80%;
+    top: 4%;
+    @mixin atMedium {
+      display: none;
     }
   }
 }

@@ -47,21 +47,22 @@
       border-top: 2px solid #FFF;
       background-color: #0b0a09d9;
       margin: 17% 0 3% 0;
-      max-width: 90%;
       @mixin atSmall {
-        border: 2px solid #FFF;
-        border-radius: 50%;
+        border-top: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
         margin: 15% 0 0 0;
       }
       @mixin atSmallXL {
-        border-radius: 50%;
         margin: 13% 0 0 0;
+        border-radius: 50%;
+        max-width: 50%;
+        border: 2px solid #FFF;
       }
       @mixin atMedium {
-        border-radius: 50%;
         margin: 10% 0 0 0;
       }
       @mixin atMediumXL {
+        max-width: 90%;
         margin: 0 0 3% 0;
         border-radius: 0;
         border-top-left-radius: 60%;
