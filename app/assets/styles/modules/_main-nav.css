@@ -1,8 +1,6 @@
 .main-nav {
   font-family: 'Orbitron', sans-serif;
   text-align: center;
-  font-weight: 900;
-  font-size: 1.2rem;
   transition: all .5s ease-out;
   @mixin atMedium {
     display: flex;
@@ -16,27 +14,34 @@
     transform: scale(1.4);
   }
   &__menu {
-    display: none;
+    transition: all .5s ease-out;
+    opacity: 0;
+    font-size: .8rem;
     &--is-visible {
+      opacity: 1;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: center;
-      font-size: 1rem;
-      @mixin atUltraSmall {}
+      @mixin atUltraSmall {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
     }
     @mixin atSmall {
-      font-size: 1.2rem;
+      font-weight: 900;
     }
     @mixin atMedium {
+      opacity: 1;
       display: block;
-      margin: 0 0 0 39%;
+      margin: 0 0 0 40%;
+      font-size: 1.15rem;
     }
     @mixin atMediumXL {
-      margin: 0 0 0 44%;
-      font-size: 1.3rem;
+      margin: 0 0 0 45%;
+      font-size: 1.25rem;
     }
     @mixin atLarge {
-      margin: 0 0 0 47%;
+      margin: 0 0 0 49%;
       font-size: 1.35rem;
     }
     &>li {
@@ -50,8 +55,14 @@
     position: relative;
     /* for absolutely positioned :after*/
     display: inline-block;
-    padding: 1em 1em 1em 0;
-    @mixin atMedium {}
+    padding: 0 .5em 1.5em .5em;
+    @mixin atUltraSmall {}
+    @mixin atSmall {
+      padding: 0 1em 1.5em 1em;
+    }
+    @mixin atMedium {
+      padding: 1em 1em 1em 0;
+    }
     @mixin atMediumXL {}
     @mixin atLarge {}
     &:after {
@@ -84,7 +95,7 @@
     @mixin atLogo {
       transition: all .2s ease-out;
       margin: .3em auto 0 auto;
-      max-width: 5.3em;
+      max-width: 6.5em;
     }
     @mixin atUltraSmall {
       margin: 0 auto 0 -70%;
@@ -121,8 +132,11 @@
     &--hide {
       /* display: none; */
       position: relative;
-      margin: 0 auto;
-      transform: scale(.7);
+      margin: 2% auto 0 auto;
+      transform: scale(.6);
+      @mixin atUltraSmall {
+        transform: scale(.7);
+      }
     }
   }
 }

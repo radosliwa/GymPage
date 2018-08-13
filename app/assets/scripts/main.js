@@ -29,6 +29,7 @@ class MobileMenu{
     this.headerLogo.toggleClass('main-nav__logo--hide');
     this.navMenu.toggleClass('main-nav__menu--is-visible');
     this.mainNav.toggleClass('main-nav--expansion');
+    this.menuIcon.toggleClass('site-header__menu-icon__X');
   }
 }
 
