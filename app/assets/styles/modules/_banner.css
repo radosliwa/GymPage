@@ -33,7 +33,7 @@
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
         margin-top: -36.7%;
-        margin-right: 12vw;
+        margin-right: 11vw;
         font-weight: 100;
       }
       @mixin atSmallXL {
