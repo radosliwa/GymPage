@@ -2,7 +2,7 @@
 import $ from 'jquery';
 
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints.js";
-import * as vars from './vars';
+// import * as vars from './vars';
 import MobileMenu from './mobileMenu';
 import RevealOnScroll from './revealOnScroll';
 import StickyH from './stickyHeader';

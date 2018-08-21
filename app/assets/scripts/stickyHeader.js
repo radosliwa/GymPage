@@ -7,18 +7,12 @@ export default class StickyH{
     this.triggerForHeader = $('.banner__btn-container');
     this.headerLogo = $('.main-nav__logo');
     this.headerLinks =$('.main-nav a');
+    this.learnMoreButton = $('.text-container__learn-more a');
     this.pageSections = $('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
     this.addSmoothScroll();
     }
-
-    // removeLogo(){
-    //   const mq = window.matchMedia( "(max-width: 399px)" );
-    //   if (mq.matches) {
-    //         this.headerLogo.css('display','none');
-    //   }
-    // }
 
   wayPointHeader(){
     new Waypoint({
@@ -42,6 +36,7 @@ export default class StickyH{
 
 addSmoothScroll(){
   this.headerLinks.smoothScroll();
+  this.learnMoreButton.smoothScroll();
 }
   sectionWaypoint(){
     let that = this;

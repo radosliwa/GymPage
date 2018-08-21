@@ -9,5 +9,5 @@ gulp.task('scripts', function(){
     console.log(err.toString());
   }
     console.log(stats.toString());
-  });
+  })
 });

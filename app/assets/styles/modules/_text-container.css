@@ -27,7 +27,7 @@
     }
   }
   &__heading {
-    font-size: 1.9rem;
+    font-size: 1.9em;
     text-decoration: underline;
     &--no-underline {
       text-align: center;
@@ -40,7 +40,7 @@
   &__heading--our-offer {
     display: block;
     @mixin atLarge {
-      font-size: 2.3rem;
+      font-size: 2.3em;
       margin-right: -172px;
       margin-bottom: 0;
       margin-top: 0;
@@ -49,24 +49,24 @@
   &__why-list {
     display: inline-block;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     line-height: 2.3rem;
     padding-left: 0;
     @mixin atMedium {
       line-height: 3.3rem;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       text-align: right;
     }
     @mixin atMediumXL {
       line-height: 3rem;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       text-align: right;
       margin-top: 4%;
     }
     @mixin atLarge {
-      font-size: 1.6rem;
+      font-size: 1.6em;
       /* line-height: 2.5rem; */
-      margin-top: 10%;
+      margin-top: 16%;
     }
     li {
       /* margin-top: 2%; */
@@ -148,7 +148,7 @@
   &__mission-statement {
     text-align: center;
     margin-bottom: 5vh;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 2;
     @mixin atMediumXL {
       padding-left: 4%;
@@ -159,18 +159,18 @@
     @mixin atLarge {
       /* line-height: normal; */
       text-align: left;
-      font-size: 1.9rem;
+      font-size: 1.9em;
     }
   }
   &__coachName {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     display: inline-block;
     margin: 5% 9% 1.5% 0;
     @mixin atUltraSmall {
       margin: 5% 9% 1.5% 0;
     }
     @mixin atMediumXL {
-      font-size: 1.5rem;
+      font-size: 1.5em;
       display: inline-block;
       float: right;
       margin: -2% 0 -9% -26%;
@@ -182,7 +182,7 @@
     font-style: italic;
     text-align: center;
     line-height: 1.35;
-    font-size: 1rem;
+    font-size: 1em;
     max-width: 75%;
     @mixin atUltraSmall {
       max-width: 85%;

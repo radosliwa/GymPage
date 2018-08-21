@@ -29,7 +29,7 @@
       font-size: 1em;
     }
     @mixin atMedium {
-      padding: 11px 21px;
+      /* padding: 11px 21px; */
       font-size: 1.1em;
     }
     @mixin atMediumXL {

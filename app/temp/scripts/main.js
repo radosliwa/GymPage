@@ -10449,23 +10449,17 @@ var _noframeworkWaypoints = __webpack_require__(2);
 
 var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
 
-var _vars = __webpack_require__(3);
-
-var vars = _interopRequireWildcard(_vars);
-
-var _mobileMenu = __webpack_require__(4);
+var _mobileMenu = __webpack_require__(3);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-var _revealOnScroll = __webpack_require__(5);
+var _revealOnScroll = __webpack_require__(4);
 
 var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
 
-var _stickyHeader = __webpack_require__(6);
+var _stickyHeader = __webpack_require__(5);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10485,6 +10479,7 @@ new _mobileMenu2.default();
 
 //-------------------------------------------REVEAL ON SCROLL
 
+// import * as vars from './vars';
 new _revealOnScroll2.default((0, _jquery2.default)('.section'), "85%");
 //-------------------------------------------STICKY HEADER
 
@@ -11258,22 +11253,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// var $ = require('jquery');
-//
-//
-// $menuIcon = $('.site-header__menu-icon');
-// $siteHeader = $('.site-header');
-// $navMenu = $('.main-nav__menu');
-// $mainNav = $('.main-nav');
-// $headerLogo = $('.main-nav__logo');
-//
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -11323,7 +11302,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11383,7 +11362,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11399,7 +11378,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(7);
+var _jquerySmoothScroll = __webpack_require__(6);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11415,18 +11394,12 @@ var StickyH = function () {
     this.triggerForHeader = (0, _jquery2.default)('.banner__btn-container');
     this.headerLogo = (0, _jquery2.default)('.main-nav__logo');
     this.headerLinks = (0, _jquery2.default)('.main-nav a');
+    this.learnMoreButton = (0, _jquery2.default)('.text-container__learn-more a');
     this.pageSections = (0, _jquery2.default)('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
     this.addSmoothScroll();
   }
-
-  // removeLogo(){
-  //   const mq = window.matchMedia( "(max-width: 399px)" );
-  //   if (mq.matches) {
-  //         this.headerLogo.css('display','none');
-  //   }
-  // }
 
   _createClass(StickyH, [{
     key: 'wayPointHeader',
@@ -11454,6 +11427,7 @@ var StickyH = function () {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
       this.headerLinks.smoothScroll();
+      this.learnMoreButton.smoothScroll();
     }
   }, {
     key: 'sectionWaypoint',
@@ -11495,7 +11469,7 @@ var StickyH = function () {
 exports.default = StickyH;
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
