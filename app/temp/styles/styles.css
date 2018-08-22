@@ -537,8 +537,8 @@ h3 {
     display: inline-block;
     height: 30px;
     width: 40px;
-    left: 81%;
-    top: 3%;
+    left: 83%;
+    top: 2.5%;
   }
 
 @media(min-width: 400px) {
@@ -546,9 +546,13 @@ h3 {
 .site-header__menu-icon {
       height: 30px;
       width: 40px;
-      left: 80%;
+      /* left: 83%; */
+      left: 79%;
       top: 13%
   }
+  }
+
+@media(min-width: 600px) {
   }
 
 .site-header__menu-icon::before {
@@ -649,7 +653,7 @@ h3 {
 .main-nav__menu {
     transition: all .5s ease-out;
     opacity: 0;
-    font-size: .8rem;
+    font-size: .8em;
   }
 
 .main-nav__menu--is-visible {
@@ -679,24 +683,31 @@ h3 {
 .main-nav__menu {
       opacity: 1;
       display: block;
-      margin: 0 0 0 40%;
-      font-size: 1.15rem
+      margin: 0 0 0 42%;
+      font-size: 1.15em
   }
   }
 
 @media(min-width: 875px) {
 
 .main-nav__menu {
-      margin: 0 0 0 45%;
-      font-size: 1.25rem
+      margin: 0 0 0 44%;
+      font-size: 1.25em
   }
   }
+
+@media(min-width: 950px) {
+
+.main-nav__menu {
+      margin: 0 0 0 47%
+  }
+    }
 
 @media(min-width: 1080px) {
 
 .main-nav__menu {
-      margin: 0 0 0 49%;
-      font-size: 1.35rem
+      margin: 0 0 0 51%;
+      font-size: 1.35em
   }
   }
 
@@ -712,7 +723,7 @@ h3 {
     position: relative;
     /* for absolutely positioned :after*/
     display: inline-block;
-    padding: 0 .5em 1.5em .5em;
+    padding: 0 .5rem 1.5rem .5rem;
   }
 
 @media(min-width: 400px) {
@@ -721,18 +732,22 @@ h3 {
 @media(min-width: 530px) {
 
 .main-nav a {
-      padding: 0 1em 1.5em 1em
+      padding: 0 1rem 1.5rem 1rem
   }
   }
 
 @media(min-width: 770px) {
 
 .main-nav a {
-      padding: 1em 1em 1em 0
+      padding: 1em 1rem 1em 0
   }
   }
 
 @media(min-width: 875px) {
+
+.main-nav a {
+      padding: 1.1em 1.7rem 1.1em 0
+  }
   }
 
 @media(min-width: 1080px) {
@@ -744,7 +759,7 @@ h3 {
       height: 2.5px;
       background-color: white;
       width: 100%;
-      bottom: 6px;
+      bottom: 5px;
       left: -4%;
       -webkit-transform: scale(0);
               transform: scale(0);
@@ -755,11 +770,11 @@ h3 {
               transform-origin: left;
     }
 
-@media(min-width: 1080px) {
+@media(min-width: 770px) {
 
 .main-nav a:after {
         height: 3px;
-        width: 100%;
+        width: 95%;
         bottom: 14px;
         left: -12px
     }
@@ -782,8 +797,8 @@ h3 {
 
 .main-nav__logo {
       transition: all .2s ease-out;
-      margin: .3em auto 0 auto;
-      max-width: 6.5em
+      margin: .3rem auto 0 auto;
+      max-width: 6.5rem
   }
   }
 
@@ -791,8 +806,8 @@ h3 {
 
 .main-nav__logo {
       margin: 0 auto 0 -70%;
-      max-width: 6em;
-      margin-top: .2em
+      max-width: 6rem;
+      margin-top: .2rem
   }
   }
 
@@ -820,14 +835,14 @@ h3 {
 @media(min-width: 875px) {
 
 .main-nav__logo {
-      max-width: 5.8em
+      max-width: 5.8rem
   }
   }
 
 @media(min-width: 1080px) {
 
 .main-nav__logo {
-      max-width: 6.7em
+      max-width: 6.7rem
   }
   }
 
@@ -1038,7 +1053,7 @@ h3 {
 
 .banner__btn-container {
       left: 50%;
-      bottom: 8%;
+      bottom: 6%;
       box-shadow: 0px 3px 5px 1px #FFF
   }
   }

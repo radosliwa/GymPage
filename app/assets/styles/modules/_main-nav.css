@@ -16,7 +16,7 @@
   &__menu {
     transition: all .5s ease-out;
     opacity: 0;
-    font-size: .8rem;
+    font-size: .8em;
     &--is-visible {
       opacity: 1;
       display: flex;
@@ -33,16 +33,20 @@
     @mixin atMedium {
       opacity: 1;
       display: block;
-      margin: 0 0 0 40%;
-      font-size: 1.15rem;
+      margin: 0 0 0 42%;
+      font-size: 1.15em;
     }
     @mixin atMediumXL {
-      margin: 0 0 0 45%;
-      font-size: 1.25rem;
+      margin: 0 0 0 44%;
+      font-size: 1.25em;
+    }
+
+    @media(min-width: 950px) {
+      margin: 0 0 0 47%;
     }
     @mixin atLarge {
-      margin: 0 0 0 49%;
-      font-size: 1.35rem;
+      margin: 0 0 0 51%;
+      font-size: 1.35em;
     }
     &>li {
       @mixin atSmall {
@@ -55,15 +59,17 @@
     position: relative;
     /* for absolutely positioned :after*/
     display: inline-block;
-    padding: 0 .5em 1.5em .5em;
+    padding: 0 .5rem 1.5rem .5rem;
     @mixin atUltraSmall {}
     @mixin atSmall {
-      padding: 0 1em 1.5em 1em;
+      padding: 0 1rem 1.5rem 1rem;
     }
     @mixin atMedium {
-      padding: 1em 1em 1em 0;
+      padding: 1em 1rem 1em 0;
     }
-    @mixin atMediumXL {}
+    @mixin atMediumXL {
+      padding: 1.1em 1.7rem 1.1em 0;
+    }
     @mixin atLarge {}
     &:after {
       position: absolute;
@@ -71,14 +77,14 @@
       height: 2.5px;
       background-color: white;
       width: 100%;
-      bottom: 6px;
+      bottom: 5px;
       left: -4%;
       transform: scale(0);
       transition: transform .3s ease-out;
       transform-origin: left;
-      @mixin atLarge {
+      @mixin atMedium {
         height: 3px;
-        width: 100%;
+        width: 95%;
         bottom: 14px;
         left: -12px;
       }
@@ -94,13 +100,13 @@
     display: inline-block;
     @mixin atLogo {
       transition: all .2s ease-out;
-      margin: .3em auto 0 auto;
-      max-width: 6.5em;
+      margin: .3rem auto 0 auto;
+      max-width: 6.5rem;
     }
     @mixin atUltraSmall {
       margin: 0 auto 0 -70%;
-      max-width: 6em;
-      margin-top: .2em;
+      max-width: 6rem;
+      margin-top: .2rem;
     }
     @mixin atSmall {}
     @mixin atSmallXL {}
@@ -115,10 +121,10 @@
       transition: all .2s ease-out;
     }
     @mixin atMediumXL {
-      max-width: 5.8em;
+      max-width: 5.8rem;
     }
     @mixin atLarge {
-      max-width: 6.7em;
+      max-width: 6.7rem;
     }
     &--smallerScale {
       transform: none;

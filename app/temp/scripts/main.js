@@ -11269,30 +11269,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var $menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
+var $siteHeader = (0, _jquery2.default)('.site-header');
+var $navMenu = (0, _jquery2.default)('.main-nav__menu');
+var $mainNav = (0, _jquery2.default)('.main-nav');
+var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
+
 var MobileMenu = function () {
   function MobileMenu() {
     _classCallCheck(this, MobileMenu);
 
-    this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
-    this.siteHeader = (0, _jquery2.default)('.site-header');
-    this.navMenu = (0, _jquery2.default)('.main-nav__menu');
-    this.mainNav = (0, _jquery2.default)('.main-nav');
-    this.headerLogo = (0, _jquery2.default)('.main-nav__logo');
     this.events();
   }
 
   _createClass(MobileMenu, [{
     key: 'events',
     value: function events() {
-      this.menuIcon.click(this.toggleMenu.bind(this));
+      $menuIcon.click(this.toggleMenu.bind(this));
     }
   }, {
     key: 'toggleMenu',
     value: function toggleMenu() {
-      this.headerLogo.toggleClass('main-nav__logo--hide');
-      this.navMenu.toggleClass('main-nav__menu--is-visible');
-      this.mainNav.toggleClass('main-nav--expansion');
-      this.menuIcon.toggleClass('site-header__menu-icon__X');
+      $headerLogo.toggleClass('main-nav__logo--hide');
+      $navMenu.toggleClass('main-nav__menu--is-visible');
+      $mainNav.toggleClass('main-nav--expansion');
+      $menuIcon.toggleClass('site-header__menu-icon__X');
     }
   }]);
 
