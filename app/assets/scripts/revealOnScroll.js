@@ -1,6 +1,8 @@
 
 import $ from 'jquery';
 
+const $whyUsList = $('.text-container__why-list');
+
 export default class RevealOnScroll{
   constructor(elements, offset){
     this.itemsToReveal = elements;
@@ -19,7 +21,7 @@ export default class RevealOnScroll{
         element: current,
         handler: function() {
           $(current).addClass('reveal-item--is-visible');
-          $('.text-container__why-list').children().each(function(){
+          $whyUsList.children().each(function(){
             $(this).addClass('animated bounceInLeft');
           })
         },

@@ -1,10 +1,10 @@
 import $ from 'jquery';
 
-let $menuIcon = $('.site-header__menu-icon');
-let $siteHeader = $('.site-header');
-let $navMenu = $('.main-nav__menu');
-let $mainNav = $('.main-nav');
-let $headerLogo = $('.main-nav__logo');
+const $menuIcon = $('.site-header__menu-icon');
+const $siteHeader = $('.site-header');
+const $navMenu = $('.main-nav__menu');
+const $mainNav = $('.main-nav');
+const $headerLogo = $('.main-nav__logo');
 
 export default class MobileMenu{
   constructor(){

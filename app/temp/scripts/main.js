@@ -11323,6 +11323,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var $whyUsList = (0, _jquery2.default)('.text-container__why-list');
+
 var RevealOnScroll = function () {
   function RevealOnScroll(elements, offset) {
     _classCallCheck(this, RevealOnScroll);
@@ -11346,7 +11348,7 @@ var RevealOnScroll = function () {
           element: current,
           handler: function handler() {
             (0, _jquery2.default)(current).addClass('reveal-item--is-visible');
-            (0, _jquery2.default)('.text-container__why-list').children().each(function () {
+            $whyUsList.children().each(function () {
               (0, _jquery2.default)(this).addClass('animated bounceInLeft');
             });
           },
@@ -11387,16 +11389,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var $siteHeader = (0, _jquery2.default)('.site-header');
+var $triggerPointForHeader = (0, _jquery2.default)('.banner__btn-container');
+var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
+var $headerLinks = (0, _jquery2.default)('.main-nav a');
+var $learnMoreButton = (0, _jquery2.default)('.text-container__learn-more a');
+var $pageSections = (0, _jquery2.default)('.section');
+
 var StickyH = function () {
   function StickyH() {
     _classCallCheck(this, StickyH);
 
-    this.siteHeader = (0, _jquery2.default)('.site-header');
-    this.triggerForHeader = (0, _jquery2.default)('.banner__btn-container');
-    this.headerLogo = (0, _jquery2.default)('.main-nav__logo');
-    this.headerLinks = (0, _jquery2.default)('.main-nav a');
-    this.learnMoreButton = (0, _jquery2.default)('.text-container__learn-more a');
-    this.pageSections = (0, _jquery2.default)('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
     this.addSmoothScroll();
@@ -11405,20 +11408,18 @@ var StickyH = function () {
   _createClass(StickyH, [{
     key: 'wayPointHeader',
     value: function wayPointHeader() {
-      var _this = this;
-
       new Waypoint({
-        element: this.triggerForHeader.get(0),
+        element: $triggerPointForHeader.get(0),
         handler: function handler(direction) {
-          _this.headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
-                                                                WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
+          $headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
+                                                           WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
 
           if (direction == "down") {
-            _this.siteHeader.addClass('site-header--darkerBackground');
-            _this.headerLogo.addClass('main-nav__logo--smallerScale');
+            $siteHeader.addClass('site-header--darkerBackground');
+            $headerLogo.addClass('main-nav__logo--smallerScale');
           } else {
-            _this.siteHeader.removeClass('site-header--darkerBackground');
-            _this.headerLogo.removeClass('main-nav__logo--smallerScale');
+            $siteHeader.removeClass('site-header--darkerBackground');
+            $headerLogo.removeClass('main-nav__logo--smallerScale');
           }
         },
         offset: "35%"
@@ -11427,14 +11428,14 @@ var StickyH = function () {
   }, {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
-      this.headerLinks.smoothScroll();
-      this.learnMoreButton.smoothScroll();
+      $headerLinks.smoothScroll();
+      $learnMoreButton.smoothScroll();
     }
   }, {
     key: 'sectionWaypoint',
     value: function sectionWaypoint() {
       var that = this;
-      this.pageSections.each(function () {
+      $pageSections.each(function () {
         var currentSection = this;
         new Waypoint({
           element: currentSection,
@@ -11443,7 +11444,7 @@ var StickyH = function () {
             if (direction == "down") {
               // console.log(that.headerLinks.eq(0));
               var matchingLink = currentSection.getAttribute('data-match');
-              that.headerLinks.removeClass('matching-link');
+              $headerLinks.removeClass('matching-link');
               (0, _jquery2.default)(matchingLink).addClass('matching-link');
             }
           },
@@ -11454,7 +11455,7 @@ var StickyH = function () {
           handler: function handler(direction) {
             if (direction == "up") {
               var matchingLink = currentSection.getAttribute('data-match');
-              that.headerLinks.removeClass('matching-link');
+              $headerLinks.removeClass('matching-link');
               (0, _jquery2.default)(matchingLink).addClass('matching-link');
             }
           },

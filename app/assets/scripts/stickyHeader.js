@@ -1,14 +1,16 @@
 import $ from 'jquery';
 import smoothScroll from "jquery-smooth-scroll";
 
+const $siteHeader = $('.site-header');
+const $triggerPointForHeader = $('.banner__btn-container');
+const $headerLogo = $('.main-nav__logo');
+const $headerLinks =$('.main-nav a');
+const $learnMoreButton = $('.text-container__learn-more a');
+const $pageSections = $('.section');
+
+
 export default class StickyH{
   constructor(){
-    this.siteHeader = $('.site-header');
-    this.triggerForHeader = $('.banner__btn-container');
-    this.headerLogo = $('.main-nav__logo');
-    this.headerLinks =$('.main-nav a');
-    this.learnMoreButton = $('.text-container__learn-more a');
-    this.pageSections = $('.section');
     this.wayPointHeader();
     this.sectionWaypoint();
     this.addSmoothScroll();
@@ -16,17 +18,17 @@ export default class StickyH{
 
   wayPointHeader(){
     new Waypoint({
-      element: this.triggerForHeader.get(0),
+      element: $triggerPointForHeader.get(0),
       handler: (direction)=>{
-        this.headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
+        $headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
         WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
 
         if(direction == "down"){
-          this.siteHeader.addClass('site-header--darkerBackground');
-          this.headerLogo.addClass('main-nav__logo--smallerScale');
+          $siteHeader.addClass('site-header--darkerBackground');
+          $headerLogo.addClass('main-nav__logo--smallerScale');
         }else{
-          this.siteHeader.removeClass('site-header--darkerBackground');
-          this.headerLogo.removeClass('main-nav__logo--smallerScale');
+          $siteHeader.removeClass('site-header--darkerBackground');
+          $headerLogo.removeClass('main-nav__logo--smallerScale');
         }
       },
       offset: "35%"
@@ -35,12 +37,12 @@ export default class StickyH{
 }
 
 addSmoothScroll(){
-  this.headerLinks.smoothScroll();
-  this.learnMoreButton.smoothScroll();
+  $headerLinks.smoothScroll();
+  $learnMoreButton.smoothScroll();
 }
   sectionWaypoint(){
     let that = this;
-    this.pageSections.each(function(){
+    $pageSections.each(function(){
       let currentSection = this;
       new Waypoint({
         element: currentSection,
@@ -49,7 +51,7 @@ addSmoothScroll(){
           if(direction =="down"){
             // console.log(that.headerLinks.eq(0));
             let matchingLink = currentSection.getAttribute('data-match');
-            that.headerLinks.removeClass('matching-link');
+            $headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
           }
         },
@@ -60,7 +62,7 @@ addSmoothScroll(){
         handler: function(direction){
           if(direction =="up"){
             let matchingLink = currentSection.getAttribute('data-match');
-            that.headerLinks.removeClass('matching-link');
+            $headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');
           }
         },
