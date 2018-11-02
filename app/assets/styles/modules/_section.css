@@ -1,12 +1,14 @@
 .section {
   min-height: 200px;
-  padding-top: 14%;
+  padding-top: 25%;
   /* top doesnt get cut after clicking
   on the header link*/
   @mixin clearfix;
-  @mixin atMedium {
-    margin-top: 1%;
+  @mixin atSmall {
     min-height: 200px;
+    padding-top: 15%;
+  }
+  @mixin atMedium {
     padding-top: 5%;
   }
   &__our-offer-picture {

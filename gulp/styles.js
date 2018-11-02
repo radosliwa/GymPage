@@ -6,6 +6,7 @@ var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
 var mixins = require('postcss-mixins');
 var hexrgba = require('postcss-hexrgba');
+var rucksack = require('rucksack-css');
 
 gulp.task('styles', function(){
     return gulp.src('./app/assets/styles/styles.css')
@@ -14,6 +15,7 @@ gulp.task('styles', function(){
       console.log(errorInfo.toString());
       this.emit('end');
     })
-    .pipe(gulp.dest('./app/temp/styles'));
+      .pipe(postcss([ rucksack() ]))
+      .pipe(gulp.dest('./app/temp/styles'));
 
 });

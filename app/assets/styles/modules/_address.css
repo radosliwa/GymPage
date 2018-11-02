@@ -8,12 +8,12 @@
   z-index: 99;
   @mixin clearfix;
   &__item {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     font-weight: lighter;
     margin-top: 1%;
     padding: 1% 0;
     @mixin atMediumXL {
-      font-size: 1.2rem;
+      /* font-size: 1.2rem; */
       margin-top: 1%;
       padding: 2% 0;
     }

@@ -345,10 +345,12 @@ template {
 
 html, body {
   height: 100%;
+
 }
 
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -483,7 +485,7 @@ h3 {
   }
 
 .wrapper {
-  overflow: hidden;
+  overflow:visible;
   padding-left: 5px;
   padding-right: 5px;
   max-width: 1200px;
@@ -498,8 +500,10 @@ h3 {
 .site-header {
   background-color: rgba(11, 11, 9, 0.72);
   width: 100%;
-  height: 50px;
+  max-height: 50px;
   z-index: 3;
+  position: fixed;
+  display: block;
 }
 
 .site-header::after {
@@ -509,17 +513,12 @@ h3 {
   }
 
 @media(min-width: 400px) {
-
-.site-header {
-    position: fixed;
-    display: block
-}
   }
 
 @media(min-width: 770px) {
 
 .site-header {
-    height: auto;
+    max-height: 100px;
     position: fixed;
     background-color: rgba(11, 11, 9, 0.72);
     color: white;
@@ -646,28 +645,43 @@ h3 {
 
 .main-nav--expansion {
     background-color: #000;
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
 .main-nav__menu {
     transition: all .5s ease-out;
     opacity: 0;
-    font-size: .8em;
+    font-size: calc(12px + 10 * ((100vw - 420px) / 860));
   }
+
+@media screen and (min-width: 1280px) {
+
+  .main-nav__menu {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .main-nav__menu {
+    font-size: 12px;
+  }
+}
 
 .main-nav__menu--is-visible {
       opacity: 1;
       display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
+      flex-flow: row;
+      justify-content: space-around;
+      align-items: center;
     }
 
 @media(min-width: 400px) {
 
 .main-nav__menu--is-visible {
         flex-flow: row wrap;
-        justify-content: center
+        justify-content: space-evenly
     }
   }
 
@@ -683,16 +697,16 @@ h3 {
 .main-nav__menu {
       opacity: 1;
       display: block;
-      margin: 0 0 0 42%;
-      font-size: 1.15em
+      margin: 0 0 0 42%
+      /* font-size: 1.15em; */
   }
   }
 
 @media(min-width: 875px) {
 
 .main-nav__menu {
-      margin: 0 0 0 44%;
-      font-size: 1.25em
+      margin: 0 0 0 44%
+      /* font-size: 1.25em; */
   }
   }
 
@@ -706,8 +720,8 @@ h3 {
 @media(min-width: 1080px) {
 
 .main-nav__menu {
-      margin: 0 0 0 51%;
-      font-size: 1.35em
+      margin: 0 0 0 51%
+      /* font-size: 1.35em; */
   }
   }
 
@@ -719,21 +733,17 @@ h3 {
   }
 
 .main-nav a {
-    /* background-color: yellow; */
     position: relative;
     /* for absolutely positioned :after*/
     display: inline-block;
-    padding: 0 .5rem 1.5rem .5rem;
+    padding: 0 1rem 0.3rem 1rem;
+    z-index: 100;
   }
 
 @media(min-width: 400px) {
   }
 
 @media(min-width: 530px) {
-
-.main-nav a {
-      padding: 0 1rem 1.5rem 1rem
-  }
   }
 
 @media(min-width: 770px) {
@@ -753,26 +763,23 @@ h3 {
 @media(min-width: 1080px) {
   }
 
-.main-nav a:after {
-      position: absolute;
-      content: "";
-      height: 2.5px;
-      background-color: white;
-      width: 100%;
-      bottom: 5px;
-      left: -4%;
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      transition: -webkit-transform .3s ease-out;
-      transition: transform .3s ease-out;
-      transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-      -webkit-transform-origin: left;
-              transform-origin: left;
-    }
-
 @media(min-width: 770px) {
 
 .main-nav a:after {
+        position: absolute;
+        content: "";
+        height: 2.5px;
+        background-color: white;
+        width: 80%;
+        bottom: 20px;
+        left: 10%;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        transition: -webkit-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        -webkit-transform-origin: left;
+                transform-origin: left;
         height: 3px;
         width: 95%;
         bottom: 14px;
@@ -885,7 +892,7 @@ h3 {
 
 .banner {
   position: relative;
-  margin-bottom: 4%;
+  margin-bottom: 14vh;
 }
 
 .banner::after {
@@ -912,11 +919,14 @@ h3 {
 
 .banner__subtitle--on-the-right {
       font-family: 'Orbitron', sans-serif;
-      display: inline-block;
+      /* display: inline-block; */
+      display:flex;
+      justify-content: center;
+
       letter-spacing: 2.7px;
-      float: right;
+      /* float: right; */
       margin-top: -29.7%;
-      margin-right: 9.7%;
+      /* margin-right: 9.7%; */
       font-weight: 100;
       font-size: 1.1em;
       min-width: 15%;
@@ -926,8 +936,8 @@ h3 {
 @media(min-width: 400px) {
 
 .banner__subtitle--on-the-right {
-        font-size: 1.2em;
-        margin-right: 17.5%
+        font-size: 1.2em
+        /* margin-right: 14.5%; */
     }
   }
 
@@ -937,7 +947,7 @@ h3 {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
         margin-top: -36.7%;
-        margin-right: 11%;
+        /* margin-right: 11%; */
         font-weight: 100
     }
   }
@@ -946,7 +956,7 @@ h3 {
 
 .banner__subtitle--on-the-right {
         letter-spacing: 3px;
-        float: right;
+        /* float: right; */
 
         font-size: 1.3em;
         min-width: 15%
@@ -958,7 +968,7 @@ h3 {
 .banner__subtitle--on-the-right {
         letter-spacing: 3px;
         margin-top: -25.5%;
-        margin-right: 6.5%;
+        /* margin-right: 6.5%; */
         font-weight: 500;
         font-size: 1.4em;
         min-width: 20%
@@ -1144,7 +1154,7 @@ h3 {
   }
 
 .address__item {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     font-weight: lighter;
     margin-top: 1%;
     padding: 1% 0;
@@ -1153,7 +1163,7 @@ h3 {
 @media(min-width: 875px) {
 
 .address__item {
-      font-size: 1.2rem;
+      /* font-size: 1.2rem; */
       margin-top: 1%;
       padding: 2% 0
   }
@@ -1317,7 +1327,7 @@ h3 {
 
 .section {
   min-height: 200px;
-  padding-top: 14%;
+  padding-top: 25%;
 }
 
 /* top doesnt get cut after clicking
@@ -1329,11 +1339,17 @@ h3 {
     clear: both;
   }
 
+@media(min-width: 530px) {
+
+.section {
+    min-height: 200px;
+    padding-top: 15%
+}
+  }
+
 @media(min-width: 770px) {
 
 .section {
-    margin-top: 1%;
-    min-height: 200px;
     padding-top: 5%
 }
   }
@@ -1690,26 +1706,39 @@ h3 {
 .text-container__mission-statement {
     text-align: center;
     margin-bottom: 5vh;
-    font-size: 1.5em;
+      font-size: calc(18px + 11 * ((100vw - 420px) / 860));
     line-height: 2;
   }
+
+@media screen and (min-width: 1280px) {
+
+  .text-container__mission-statement {
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .text-container__mission-statement {
+    font-size: 18px;
+  }
+}
 
 @media(min-width: 875px) {
 
 .text-container__mission-statement {
       padding-left: 4%;
-      /* line-height: normal; */
-      text-align: left;
-      font-size: 1.7rem
+
+      text-align: left
+      /* font-size: 1.7rem; */
   }
   }
 
 @media(min-width: 1080px) {
 
 .text-container__mission-statement {
-      /* line-height: normal; */
-      text-align: left;
-      font-size: 1.9em
+      text-align: left
+      /* font-size: 1.9em; */
   }
   }
 
@@ -1742,7 +1771,6 @@ h3 {
     font-style: italic;
     text-align: center;
     line-height: 1.35;
-    font-size: 1em;
     max-width: 75%;
   }
 

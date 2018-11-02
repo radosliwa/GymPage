@@ -148,18 +148,19 @@
   &__mission-statement {
     text-align: center;
     margin-bottom: 5vh;
-    font-size: 1.5em;
+      font-size: responsive;
+      min-font-size: 18px;
+     max-font-size: 29px;
     line-height: 2;
-    @mixin atMediumXL {
+     @mixin atMediumXL {
       padding-left: 4%;
-      /* line-height: normal; */
+
       text-align: left;
-      font-size: 1.7rem;
+      /* font-size: 1.7rem; */
     }
     @mixin atLarge {
-      /* line-height: normal; */
       text-align: left;
-      font-size: 1.9em;
+      /* font-size: 1.9em; */
     }
   }
   &__coachName {
@@ -182,7 +183,6 @@
     font-style: italic;
     text-align: center;
     line-height: 1.35;
-    font-size: 1em;
     max-width: 75%;
     @mixin atUltraSmall {
       max-width: 85%;
