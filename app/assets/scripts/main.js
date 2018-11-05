@@ -18,9 +18,6 @@ import StickyH from './stickyHeader';
 //
 // });
 
-
- 
-
 //-------------------------------------------MOBILE MENU
 
 new MobileMenu();

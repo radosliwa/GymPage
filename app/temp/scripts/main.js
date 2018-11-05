@@ -10472,7 +10472,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 // });
 
-
 //-------------------------------------------MOBILE MENU
 
 new _mobileMenu2.default();
@@ -11274,6 +11273,7 @@ var $siteHeader = (0, _jquery2.default)('.site-header');
 var $navMenu = (0, _jquery2.default)('.main-nav__menu');
 var $mainNav = (0, _jquery2.default)('.main-nav');
 var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
+var $headerLinks = (0, _jquery2.default)('.main-nav a');
 
 var MobileMenu = function () {
   function MobileMenu() {
@@ -11286,6 +11286,9 @@ var MobileMenu = function () {
     key: 'events',
     value: function events() {
       $menuIcon.click(this.toggleMenu.bind(this));
+      $headerLinks.click(this.remove.bind(this));
+      //  mobile menu wont overlap section titles. Remove not Toggle,
+      // in order not to have any expansion on bigger viewport
     }
   }, {
     key: 'toggleMenu',
@@ -11294,6 +11297,14 @@ var MobileMenu = function () {
       $navMenu.toggleClass('main-nav__menu--is-visible');
       $mainNav.toggleClass('main-nav--expansion');
       $menuIcon.toggleClass('site-header__menu-icon__X');
+    }
+  }, {
+    key: 'remove',
+    value: function remove() {
+      $headerLogo.removeClass('main-nav__logo--hide');
+      $navMenu.removeClass('main-nav__menu--is-visible');
+      $mainNav.removeClass('main-nav--expansion');
+      $menuIcon.removeClass('site-header__menu-icon__X');
     }
   }]);
 
