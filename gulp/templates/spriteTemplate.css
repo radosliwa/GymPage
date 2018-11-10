@@ -1,0 +1,20 @@
+/* fffsssssssssssff */
+{{#shapes}}
+
+{{#first}}
+.icon {
+  display: inline-block;
+  background-image: url('../../../temp/sprite/css/{{{sprite}}}');
+  transform: scale(.8);
+@mixin atMedium{
+  transform: scale(1);
+}
+}
+{{/first}}
+
+  .icon--{{base}} {
+    width: {{width.outer}}px;
+    height: {{height.outer}}px;
+    background-position: {{position.relative.xy}};
+  }
+{{/shapes}}

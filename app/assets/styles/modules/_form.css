@@ -66,6 +66,12 @@
   }
   &__social-icons-container {
     text-align: center;
+    & > a{
+      @mixin atMedium{
+        padding: 5%;
+            
+      }
+  }
   }
   &__input, &__message {
     max-width: auto;

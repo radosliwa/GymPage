@@ -55,7 +55,9 @@
       }
     }
   }
-  a {
+  a{
+
+
     position: relative;
     /* for absolutely positioned :after*/
     display: block;
@@ -94,6 +96,11 @@
     &.matching-link {
       color: yellow;
     }
+    /* &:first-of-type{
+      &:hover:after {
+        transform: scale(0);
+      }
+    } */
   }
   &__logo {
     display: inline-block;
@@ -147,6 +154,10 @@
       @mixin atSmall {
         margin: 0 auto 0 auto;
       }
+    }
+    & > a:after{
+      opacity: 0;
+    /*logo bez podkreślenia*/
     }
   }
 }

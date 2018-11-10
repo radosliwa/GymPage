@@ -9,10 +9,11 @@
 @import 'modules/_main-nav';
 @import 'modules/_banner';
 @import 'modules/_address';
-@import 'modules/_form.css';
+@import 'modules/_form';
 @import 'modules/_row';
 @import 'modules/_section';
-@import 'modules/_text-container.css';
-@import 'modules/_site-footer.css';
-@import 'modules/_reveal-item.css';
+@import 'modules/_text-container';
+@import 'modules/_site-footer';
+@import 'modules/_reveal-item';
+@import 'modules/_sprite';
 @import 'modules/_icon';
