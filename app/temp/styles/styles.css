@@ -430,7 +430,7 @@ h3 {
   }
 
 .btn__banner {
-    padding: 5px 11px;
+    padding: 7px 11px;
     font-size: .9em;
   }
 
@@ -453,7 +453,7 @@ h3 {
 @media(min-width: 770px) {
 
 .btn__banner {
-      /* padding: 11px 21px; */
+      padding: 10px 15px;
       font-size: 1.1em
   }
   }
@@ -536,7 +536,7 @@ h3 {
     display: inline-block;
     height: 30px;
     width: 40px;
-    left: 80%;
+    left: 82%;
     top: 9%;
   }
 
@@ -546,7 +546,7 @@ h3 {
       height: 30px;
       width: 40px;
       /* left: 83%; */
-      left: 79%;
+
       top: 13%
   }
   }
@@ -729,19 +729,12 @@ h3 {
     }
   }
 
-.main-nav a{
-
-
+.main-nav a {
     position: relative;
     /* for absolutely positioned :after*/
     display: block;
     padding: 1.3rem 1rem 0.3rem 1rem;
     z-index: 100;
-    /* &:first-of-type{
-      &:hover:after {
-        transform: scale(0);
-      }
-    } */
   }
 
 @media(min-width: 400px) {
@@ -752,14 +745,14 @@ h3 {
 
 @media(min-width: 770px) {
 
-.main-nav a{
+.main-nav a {
       padding: 1em 1rem 1em 0
   }
   }
 
 @media(min-width: 875px) {
 
-.main-nav a{
+.main-nav a {
       padding: 1.1em 1.7rem 1.1em 0
   }
   }
@@ -785,16 +778,19 @@ h3 {
         -webkit-transform-origin: left;
                 transform-origin: left;
         height: 3px;
-        width: 95%;
+        width: 90%;
         bottom: 14px;
-        left: -12px
+        left: 0px
     }
   }
 
+@media(min-width: 770px) {
+
 .main-nav a:hover:after {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1)
     }
+  }
 
 .main-nav a.matching-link {
       color: yellow;
@@ -903,9 +899,9 @@ h3 {
     }
   }
 
-.main-nav__logo > a:after{
+.main-nav__logo>a:after {
       opacity: 0;
-    /*logo bez podkreślenia*/
+      /*logo bez podkreślenia*/
     }
 
 .banner {
@@ -937,14 +933,10 @@ h3 {
 
 .banner__subtitle--on-the-right {
       font-family: 'Orbitron', sans-serif;
-      /* display: inline-block; */
-      display:flex;
+      display: flex;
       justify-content: center;
-
       letter-spacing: 2.7px;
-      /* float: right; */
       margin-top: -29.7%;
-      /* margin-right: 9.7%; */
       font-weight: 100;
       font-size: 1.1em;
       min-width: 15%;
@@ -955,7 +947,6 @@ h3 {
 
 .banner__subtitle--on-the-right {
         font-size: 1.2em
-        /* margin-right: 14.5%; */
     }
   }
 
@@ -965,7 +956,8 @@ h3 {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
         margin-top: -36.7%;
-        /* margin-right: 11%; */
+        justify-content: flex-end;
+        padding-right: 11%;
         font-weight: 100
     }
   }
@@ -974,8 +966,6 @@ h3 {
 
 .banner__subtitle--on-the-right {
         letter-spacing: 3px;
-        /* float: right; */
-
         font-size: 1.3em;
         min-width: 15%
     }
@@ -986,7 +976,7 @@ h3 {
 .banner__subtitle--on-the-right {
         letter-spacing: 3px;
         margin-top: -25.5%;
-        /* margin-right: 6.5%; */
+        padding-right: 7%;
         font-weight: 500;
         font-size: 1.4em;
         min-width: 20%
@@ -997,9 +987,7 @@ h3 {
 
 .banner__subtitle--on-the-right {
         letter-spacing: 2.7px;
-        float: right;
         margin-top: -25.5%;
-        margin-right: 6.5%;
         font-weight: 600
     }
   }
@@ -1062,7 +1050,7 @@ h3 {
     border-radius: 30px;
     position: absolute;
     left: 50%;
-    bottom: 3%;
+    top: 105%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     transition: all 0.3s. linear;
@@ -1073,15 +1061,27 @@ h3 {
     }
 
 .banner__btn-container:active {
-      bottom: 13.7%;
+      top: 105.5%;
       box-shadow: 0px 1px 2px 0px #FFF;
     }
+
+@media(min-width: 530px) {
+
+.banner__btn-container:active {
+        top: 110.5%
+    }
+  }
+
+@media(min-width: 875px) {
+
+.banner__btn-container:active {
+        top: 113.5%
+    }
+  }
 
 @media(min-width: 400px) {
 
 .banner__btn-container {
-      left: 50%;
-      bottom: 6%;
       box-shadow: 0px 3px 5px 1px #FFF
   }
   }
@@ -1091,8 +1091,8 @@ h3 {
 .banner__btn-container {
       border-radius: 30px;
       position: absolute;
-      left: 66%;
-      bottom: 20%;
+      top: 110%;
+      left: 67%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%)
   }
@@ -1103,8 +1103,7 @@ h3 {
 .banner__btn-container {
       border-radius: 30px;
       position: absolute;
-      left: 75%;
-      bottom: 16%;
+      left: 76%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF
@@ -1115,7 +1114,7 @@ h3 {
 
 .banner__btn-container {
       left: 50%;
-      bottom: 14%
+      top: 113%
   }
   }
 
@@ -1900,7 +1899,7 @@ h3 {
 
 .icon {
   display: inline-block;
-  background-image: url('../../../temp/sprite/css/sprite-caed2308.svg');
+  background-image: url('../../../temp/sprite/css/sprite-8dfb68a6.svg');
   -webkit-transform: scale(.8);
           transform: scale(.8);
 }
@@ -1914,38 +1913,38 @@ h3 {
   }
 
 .icon--envelope {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 0 0;
   }
 
 .icon--facebook {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 50% 0;
   }
 
 .icon--instagram {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 0 100%;
   }
 
 .icon--map {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 50% 100%;
   }
 
 .icon--phone {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 100% 0;
   }
 
 .icon--twitter {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background-position: 100% 100%;
   }
 

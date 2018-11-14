@@ -24,13 +24,13 @@
     display: inline-block;
     height: 30px;
     width: 40px;
-    left: 80%;
+    left: 82%;
     top: 9%;
     @mixin atUltraSmall {
       height: 30px;
       width: 40px;
       /* left: 83%; */
-      left: 79%;
+
       top: 13%;
     }
     @mixin atSmallXL {}

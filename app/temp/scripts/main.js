@@ -11422,13 +11422,15 @@ var StickyH = function () {
       new Waypoint({
         element: $triggerPointForHeader.get(0),
         handler: function handler(direction) {
-          $headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
+          $headerLinks.eq(1).removeClass('matching-link'); /*#OUR OFFER IN HEADER
                                                            WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
 
           if (direction == "down") {
+
             $siteHeader.addClass('site-header--darkerBackground');
             $headerLogo.addClass('main-nav__logo--smallerScale');
           } else {
+
             $siteHeader.removeClass('site-header--darkerBackground');
             $headerLogo.removeClass('main-nav__logo--smallerScale');
           }
@@ -11464,6 +11466,7 @@ var StickyH = function () {
         new Waypoint({
           element: currentSection,
           handler: function handler(direction) {
+
             if (direction == "up") {
               var matchingLink = currentSection.getAttribute('data-match');
               $headerLinks.removeClass('matching-link');

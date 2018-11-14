@@ -6,8 +6,8 @@ del = require('del');
 var config = {
   shape: {
         dimension: {
-          maxWidth: 40,
-          maxHeight: 40
+          maxWidth: 50,
+          maxHeight: 50
         },
         spacing: {
           padding: 1

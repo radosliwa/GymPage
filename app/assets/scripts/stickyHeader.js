@@ -20,13 +20,15 @@ export default class StickyH{
     new Waypoint({
       element: $triggerPointForHeader.get(0),
       handler: (direction)=>{
-        $headerLinks.eq(0).removeClass('matching-link'); /*#OUR OFFER IN HEADER
+         $headerLinks.eq(1).removeClass('matching-link');/*#OUR OFFER IN HEADER
         WONT BE HIGHLIGHTED (DUE TO SECTIONWAYPOINT FUNCTION BELOW) WHEN SCREEN SCROLLS TO BANNER AREA*/
 
         if(direction == "down"){
+
           $siteHeader.addClass('site-header--darkerBackground');
           $headerLogo.addClass('main-nav__logo--smallerScale');
         }else{
+
           $siteHeader.removeClass('site-header--darkerBackground');
           $headerLogo.removeClass('main-nav__logo--smallerScale');
         }
@@ -60,6 +62,7 @@ addSmoothScroll(){
       new Waypoint({
         element: currentSection,
         handler: function(direction){
+
           if(direction =="up"){
             let matchingLink = currentSection.getAttribute('data-match');
             $headerLinks.removeClass('matching-link');

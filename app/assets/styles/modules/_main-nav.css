@@ -55,9 +55,7 @@
       }
     }
   }
-  a{
-
-
+  a {
     position: relative;
     /* for absolutely positioned :after*/
     display: block;
@@ -85,22 +83,19 @@
         transition: transform .3s ease-out;
         transform-origin: left;
         height: 3px;
-        width: 95%;
+        width: 90%;
         bottom: 14px;
-        left: -12px;
+        left: 0px;
       }
     }
     &:hover:after {
-      transform: scale(1);
+      @mixin atMedium {
+        transform: scale(1);
+      }
     }
     &.matching-link {
       color: yellow;
     }
-    /* &:first-of-type{
-      &:hover:after {
-        transform: scale(0);
-      }
-    } */
   }
   &__logo {
     display: inline-block;
@@ -155,9 +150,9 @@
         margin: 0 auto 0 auto;
       }
     }
-    & > a:after{
+    &>a:after {
       opacity: 0;
-    /*logo bez podkreślenia*/
+      /*logo bez podkreślenia*/
     }
   }
 }
