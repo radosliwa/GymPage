@@ -3,42 +3,56 @@
   color: white;
   text-align: center;
   line-height: normal;
+
   @mixin atMediumXL {
     line-height: 1.85;
   }
+
   &--dark-background {
-    background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
-    background-size: contain;
     background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
     margin-bottom: 15%;
-    @mixin atMedium {
-      background: url(../../assets/images/girlBall--small.png) no-repeat left center;
+    opacity: 0;
+
+    &.lazyloaded {
+      opacity: 1;
+      background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
       background-size: contain;
-    }
-    @mixin atMediumXL {
-      margin-top: 20px;
-      margin-bottom: 0;
-      background: url(../../assets/images/girlBall.png) no-repeat center;
-      background-size: contain;
-      background-color: rgba(0, 0, 0, 0.76);
-      border-bottom-left-radius: 20%;
-      border-bottom-right-radius: 20%;
+
+      @mixin atMedium {
+        background: url(../../assets/images/girlBall--small.png) no-repeat left center;
+        background-size: contain;
+      }
+
+      @mixin atMediumXL {
+        margin-top: 20px;
+        margin-bottom: 0;
+        background: url(../../assets/images/girlBall.png) no-repeat center;
+        background-size: contain;
+        background-color: rgba(0, 0, 0, 0.76);
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+      }
     }
   }
+
   &__heading {
     font-size: 1.9em;
     text-decoration: underline;
+
     &--no-underline {
       text-align: center;
       text-decoration: none;
     }
   }
+
   &--bold {
     font-weight: 900;
   }
+
   &__heading--our-offer {
     display: block;
+
     @mixin atLarge {
       font-size: 2.3em;
       margin-right: -172px;
@@ -46,41 +60,50 @@
       margin-top: 0;
     }
   }
+
   &__why-list {
     display: inline-block;
     text-align: center;
     font-size: 1.3em;
     line-height: 2.3rem;
     padding-left: 0;
+
     @mixin atMedium {
       line-height: 3.3rem;
       font-size: 1.5em;
       text-align: right;
     }
+
     @mixin atMediumXL {
       line-height: 3rem;
       font-size: 1.5em;
       text-align: right;
       margin-top: 4%;
     }
+
     @mixin atLarge {
       font-size: 1.6em;
       /* line-height: 2.5rem; */
       margin-top: 16%;
     }
+
     li {
+
       /* margin-top: 2%; */
       &:nth-child(1) {
         animation-delay: 0;
       }
+
       &:nth-child(2) {
         animation-delay: .5s;
       }
+
       &:nth-child(3) {
         animation-delay: .9s;
       }
     }
   }
+
   &__arrow {
     position: absolute;
     left: 50.8%;
@@ -93,6 +116,7 @@
     transform: rotate(45deg);
     animation: arrow 1.2s infinite linear;
     z-index: -1;
+
     &:before, &:after {
       position: absolute;
       content: "";
@@ -102,15 +126,18 @@
       border-top: orange;
       border-left: orange;
     }
+
     &:before {
       left: -12px;
       top: -13px;
     }
+
     &:after {
       left: 10px;
       top: 10px;
     }
   }
+
   &__learn-more {
     position: relative;
     background-color: orange;
@@ -118,18 +145,22 @@
     transition: all .3s ease-in;
     display: block;
     font-size: 1.4em;
+
     @mixin atMedium {
       font-size: 1.5em;
     }
+
     &:hover {
       background-color: #000;
       /* border-top: 1px solid #FFF;  caused picture to move*/
       cursor: pointer;
+
       a {
         &:hover {
           color: orange;
         }
       }
+
       .text-container__arrow {
         transition: all .5s ease-in;
         top: 90px;
@@ -141,35 +172,41 @@
         animation: none;
       }
     }
+
     &__text {
       margin: 0 auto;
     }
   }
+
   &__mission-statement {
     text-align: center;
     margin-bottom: 5vh;
-      font-size: responsive;
-      min-font-size: 18px;
-     max-font-size: 29px;
+    font-size: responsive;
+    min-font-size: 18px;
+    max-font-size: 29px;
     line-height: 2;
-     @mixin atMediumXL {
-      padding-left: 4%;
 
+    @mixin atMediumXL {
+      padding-left: 4%;
       text-align: left;
       /* font-size: 1.7rem; */
     }
+
     @mixin atLarge {
       text-align: left;
       /* font-size: 1.9em; */
     }
   }
+
   &__coachName {
     font-size: 1.4em;
     display: inline-block;
     margin: 5% 9% 1.5% 0;
+
     @mixin atUltraSmall {
       margin: 5% 9% 1.5% 0;
     }
+
     @mixin atMediumXL {
       font-size: 1.5em;
       display: inline-block;
@@ -178,24 +215,30 @@
       padding: 0 2%;
     }
   }
+
   &__coachAbout {
     display: inline-block;
     font-style: italic;
     text-align: center;
     line-height: 1.35;
     max-width: 75%;
+
     @mixin atUltraSmall {
       max-width: 85%;
     }
+
     @mixin atSmall {
       max-width: 70%;
     }
+
     @mixin atSmall {
       max-width: 71%;
     }
+
     @mixin atMedium {
       max-width: 75%;
     }
+
     @mixin atMediumXL {
       max-width: 70%;
       font-weight: 500;
@@ -210,15 +253,19 @@
   0% {
     top: 25px;
   }
+
   25% {
     top: 50px;
   }
+
   50% {
     top: 75px;
   }
+
   75% {
     top: 100px;
   }
+
   100% {
     top: 130px;
   }

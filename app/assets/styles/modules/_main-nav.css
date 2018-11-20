@@ -2,6 +2,7 @@
   font-family: 'Orbitron', sans-serif;
   text-align: center;
   transition: all .5s ease-out;
+
   @mixin atMedium {
     display: flex;
     justify-content: space-between;
@@ -9,67 +10,84 @@
     stays on the left*/
     align-items: center;
   }
+
   &--expansion {
     background-color: #000;
     transform: scale(1.1);
   }
+
   &__menu {
     transition: all .5s ease-out;
     opacity: 0;
     font-size: responsive;
     min-font-size: 18px;
     max-font-size: 22px;
+
     &--is-visible {
       opacity: 1;
       display: flex;
       flex-flow: column;
       justify-content: space-around;
       align-items: center;
+
       @mixin atUltraSmall {}
     }
+
     @mixin atSmall {
       flex-flow: row wrap;
       justify-content: space-evenly;
       font-weight: 900;
     }
+
     @mixin atMedium {
       opacity: 1;
       display: block;
       margin: 0 0 0 42%;
       /* font-size: 1.15em; */
     }
+
     @mixin atMediumXL {
       margin: 0 0 0 44%;
       /* font-size: 1.25em; */
     }
+
     @media(min-width: 950px) {
       margin: 0 0 0 47%;
     }
+
     @mixin atLarge {
       margin: 0 0 0 51%;
       /* font-size: 1.35em; */
     }
+
     &>li {
       @mixin atSmall {
         display: inline-block;
       }
     }
   }
+
   a {
     position: relative;
     /* for absolutely positioned :after*/
     display: block;
     padding: 1.3rem 1rem 0.3rem 1rem;
     z-index: 100;
+
     @mixin atUltraSmall {}
+
     @mixin atSmall {}
+
     @mixin atMedium {
       padding: 1em 1rem 1em 0;
     }
+
     @mixin atMediumXL {
       padding: 1.1em 1.7rem 1.1em 0;
     }
+
     @mixin atLarge {}
+
     &:after {
       @mixin atMedium {
         position: absolute;
@@ -88,68 +106,87 @@
         left: 0px;
       }
     }
+
     &:hover:after {
       @mixin atMedium {
         transform: scale(1);
       }
     }
+
     &.matching-link {
       color: yellow;
     }
   }
+
   &__logo {
     display: inline-block;
+
     @mixin atLogo {
       transition: all .2s ease-out;
-      margin: -0.9rem auto 0 auto;
-      max-width: 9rem;
+      margin: -0.9em auto 0 auto;
+      max-width: 40vw;
     }
+
     @mixin atUltraSmall {
       opacity: -1;
       margin: 0 auto 0 -70%;
-      max-width: 10rem;
-      margin-top: .2rem;
+      max-width: 34vw;
+      margin-top: .2em;
     }
-    @mixin atSmall {}
-    @mixin atSmallXL {}
+
+    @mixin atSmall {
+      max-width: 27vw;
+    }
+
+    @mixin atSmallXL {
+      max-width: 25vw;
+    }
+
     @mixin atMedium {
       opacity: 1;
       position: absolute;
       height: 63px;
-      top: 0;
+      top: -1em;
       margin-left: 10%;
-      max-width: 8rem;
+      max-width: 16vw;
+      top: -0.25em;
       z-index: 99;
-      transform: scale(1.3);
       transition: all .2s ease-out;
     }
-    @mixin atMediumXL {
-      top: -0.25em;
-    }
+
+    @mixin atMediumXL {}
+
     @mixin atLarge {
-      max-width: 8rem;
+      max-width: 16vw;
     }
+
     &--smallerScale {
       transform: none;
+
       @mixin atSmall {
         transform: scale(.97) translateY(-21%);
       }
+
       @mixin atMedium {
-        transform: scale(.9);
+        transform: scale(.9) translateY(-23%);
       }
     }
+
     &--hide {
       opacity: 1;
       position: relative;
       margin: 2% auto 0 auto;
       transform: scale(.7);
+
       @mixin atUltraSmall {
         transform: scale(.8);
       }
+
       @mixin atSmall {
         margin: 0 auto 0 auto;
       }
     }
+
     &>a:after {
       opacity: 0;
       /*logo bez podkreślenia*/

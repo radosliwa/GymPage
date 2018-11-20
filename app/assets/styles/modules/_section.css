@@ -4,41 +4,51 @@
   /* top doesnt get cut after clicking
   on the header link*/
   @mixin clearfix;
+
   @mixin atSmall {
     min-height: 200px;
     padding-top: 15%;
   }
+
   @mixin atMedium {
     padding-top: 5%;
   }
+
   &__our-offer-picture {
     display: block;
     margin-left: 4%;
     margin-top: 4%;
     padding: 0 0 0 0;
+
     @mixin atSmallXL {
       margin-left: 16%;
     }
+
     @mixin atMedium {
       margin-left: 16%;
       margin-top: 4%;
     }
+
     @mixin atMediumXL {
       margin: 0;
       padding: 0;
     }
   }
+
   &--larger-t-margin {
     /* padding-top: 20%; */
   }
+
   &--larger-b-margin {
     margin-bottom: 50vh;
   }
+
   &__igs-mission-team {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
     /* &__coach:nth-child(1) {
       margin-top: 15%;
       @mixin atMedium {}
@@ -49,20 +59,24 @@
       border-top: 2px solid #FFF;
       background-color: #0b0a09d9;
       margin: 17% 0 3% 0;
+
       @mixin atSmall {
         border-top: 2px solid #FFF;
         border-bottom: 2px solid #FFF;
         margin: 15% 0 0 0;
       }
+
       @mixin atSmallXL {
         margin: 13% 0 0 0;
         border-radius: 50%;
         max-width: 50%;
         border: 2px solid #FFF;
       }
+
       @mixin atMedium {
         margin: 10% 0 0 0;
       }
+
       @mixin atMediumXL {
         max-width: 90%;
         margin: 0 0 3% 0;
@@ -71,6 +85,7 @@
         border-bottom-left-radius: 60%;
         position: relative;
       }
+
       &__picture {
         display: inline-block;
         border-radius: 50%;
@@ -81,12 +96,15 @@
         box-shadow: 0px 3px 10px 1px #FFF;
         position: relative;
         margin: -16% auto -1% -5%;
+
         @mixin atUltraSmall {
           margin: -16% auto -1.5% -5%;
         }
+
         @mixin atMedium {
           margin: -16% auto -3% -5%;
         }
+
         @mixin atMediumXL {
           display: inline-block;
           border-radius: 50%;
@@ -97,12 +115,14 @@
           box-shadow: 0px 3px 10px 1px #FFF;
           margin: -16% auto 3% -5%;
         }
+
         @mixin atLarge {
           margin: -16% auto -3% -5%;
         }
       }
     }
   }
+
   &--black-background {
     background-color: #000;
   }

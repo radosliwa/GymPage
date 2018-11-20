@@ -1,18 +1,17 @@
 html, body {
   height: 100%;
-
 }
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
-  background: url('../../assets/images/background.jpg') fixed no-repeat center;
+  background: url('../../assets/images/backgroundHigh.jpg') fixed no-repeat center;
   position: relative;
   font-family: 'Orbitron', sans-serif;
   color: #FFF;
+
   @font-face {
     font-family: 'Maiden Crimes';
     src: url('../../assets/fonts/Maiden Crimes.otf');
@@ -44,9 +43,11 @@ a {
 
 h3 {
   font-size: 1.17em;
+
   @mixin atSmallXL {
     font-size: 1.4em;
   }
+
   @mixin atMediumXL {
     font-size: 1.5em;
   }

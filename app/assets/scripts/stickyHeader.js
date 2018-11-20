@@ -7,15 +7,23 @@ const $headerLogo = $('.main-nav__logo');
 const $headerLinks =$('.main-nav a');
 const $learnMoreButton = $('.text-container__learn-more a');
 const $pageSections = $('.section');
-
+const $lazyImages = $('.lazyload');
 
 export default class StickyH{
   constructor(){
+
     this.wayPointHeader();
     this.sectionWaypoint();
     this.addSmoothScroll();
+    this.refreshWayPoints();
     }
 
+    refreshWayPoints(){
+      $lazyImages.on('load', function(){
+        
+        Waypoint.refreshAll();
+      });
+    }
   wayPointHeader(){
     new Waypoint({
       element: $triggerPointForHeader.get(0),

@@ -14,6 +14,7 @@
     "@gabriel-delepine/smooth-scroll": "^1.4.0",
     "jquery": "latest",
     "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.1.4",
     "normalize.css": "latest",
     "waypoints": "^4.0.1",
     "webpack": "^3.11.0"
@@ -22,7 +23,7 @@
     "autoprefixer": "latest",
     "babel-core": "latest",
     "babel-loader": "latest",
-    "babel-preset-env": "latest",
+    "babel-preset-env": "^1.7.0",
     "babelify": "latest",
     "browser-sync": "^2.24.5",
     "browserify": "^16.2.2",

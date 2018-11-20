@@ -1,18 +1,26 @@
 .banner {
   position: relative;
-  margin-bottom: 14vh;
-  @mixin clearfix;
+  margin-bottom: 10vh;
+
+  @mixin atMedium {
+    margin-bottom: 33vh;
+  }
+
   &__image {
     margin: 0 auto;
     position: relative;
     /*to move subtitle on top */
     z-index: -1;
+
     @mixin atMedium {}
   }
+
   &__subtitle {
     font-family: Maiden Crimes, 'Orbitron', sans-serif;
     display: inline-block;
     color: #000;
+    transition: opacity .8s ease-in;
+
     &--on-the-right {
       font-family: 'Orbitron', sans-serif;
       display: flex;
@@ -23,9 +31,17 @@
       font-size: 1.1em;
       min-width: 15%;
       font-weight: bolder;
+      z-index: 99;
+      opacity: 0;
+
+      &--show {
+        opacity: 1;
+      }
+
       @mixin atUltraSmall {
         font-size: 1.2em;
       }
+
       @mixin atSmall {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
@@ -34,11 +50,13 @@
         padding-right: 11%;
         font-weight: 100;
       }
+
       @mixin atSmallXL {
         letter-spacing: 3px;
         font-size: 1.3em;
         min-width: 15%;
       }
+
       @mixin atMedium {
         letter-spacing: 3px;
         margin-top: -25.5%;
@@ -47,17 +65,20 @@
         font-size: 1.4em;
         min-width: 20%;
       }
+
       @mixin atMediumXL {
         letter-spacing: 2.7px;
         margin-top: -25.5%;
         font-weight: 600;
       }
+
       @mixin atLarge {
         font-size: 1.8em;
         font-weight: 600;
       }
     }
   }
+
   &__side-offer {
     display: none;
     border-radius: 5%;
@@ -69,18 +90,22 @@
     background-color: rgba(0, 0, 0, 0.76);
     animation: boxS 2.5s ease-in 1;
     box-shadow: 0 4px 26px 7px white;
+
     span {
       color: red;
     }
+
     a {
       display: inline-block;
       animation: text .8s infinite linear;
+
       &:hover {
         animation: none;
         color: rgb(255, 193, 173);
         text-decoration: underline;
       }
     }
+
     &__close {
       position: relative;
       float: right;
@@ -89,52 +114,65 @@
       padding: 5%;
       font-size: 1.3rem;
       padding: 1% 2% 0 0;
+
       &:hover {
         color: #fabb69;
         cursor: pointer;
       }
     }
   }
+
   &__btn-container {
     border-radius: 30px;
     position: absolute;
     left: 50%;
-    top: 105%;
+    top: 112%;
     transform: translate(-50%, -50%);
     transition: all 0.3s. linear;
+
     &:hover {
       box-shadow: 0px 3px 5px 3px #FFF;
     }
+
     &:active {
-      top: 105.5%;
+      top: 112.5%;
       box-shadow: 0px 1px 2px 0px #FFF;
-      @mixin atSmall {
-        top: 110.5%;
+
+      @mixin atSmall {}
+
+      @mixin atMedium {
+        top: 116.5%;
       }
+
       @mixin atMediumXL {
-        top: 113.5%;
+        top: 122.5%;
       }
     }
+
     @mixin atUltraSmall {
       box-shadow: 0px 3px 5px 1px #FFF;
     }
+
     @mixin atSmall {
       border-radius: 30px;
       position: absolute;
-      top: 110%;
+      top: 112%;
       left: 67%;
       transform: translate(-50%, -50%);
     }
+
     @mixin atMedium {
       border-radius: 30px;
       position: absolute;
       left: 76%;
+      top: 116%;
       transform: translate(-50%, -50%);
       box-shadow: 0px 3px 5px 1px #FFF;
     }
+
     @mixin atMediumXL {
       left: 50%;
-      top: 113%;
+      top: 122%;
     }
   }
 }
@@ -143,6 +181,7 @@
   from {
     box-shadow: 0 0px 0px 0px white;
   }
+
   to {
     box-shadow: 0 4px 26px 7px white;
   }
@@ -152,6 +191,7 @@
   from {
     color: inherit;
   }
+
   to {
     color: #ffdf02;
   }

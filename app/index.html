@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="temp\styles\styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+  <script src="temp/scripts/vendor.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
       <nav class="main-nav">
 
-        <div class="main-nav__logo"><a href="#">  <img class="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png"></a>
+        <div class="main-nav__logo"><a href="#"> <img class="main-nav__logo-graph" alt="gym-logo" src="assets/images/logo.png"></a>
 
         </div>
 
@@ -43,9 +43,9 @@
     <div class="wrapper">
 
       <picture>
-        <source media='(max-width: 529px)' srcset="assets/images/banner--small.png">
-        <source media='(max-width: 769px)' srcset="assets/images/banner--medium.png">
-        <img src="assets/images/banner--large.png" alt="fitness_and_flames" class="banner__image">
+        <source media='(max-width: 529px)' data-srcset="assets/images/banner--small.png">
+        <source media='(max-width: 769px)' data-srcset="assets/images/banner--medium.png">
+        <img src="assets/images/banner--large.png" data-src="assets/images/banner--large.png" alt="fitness_and_flames" class="banner__image lazyload">
       </picture>
 
 
@@ -77,18 +77,19 @@
           </ul>
           <!-- <img src="assets/images/girlBall.png" class="text-container__girlPicture" alt=""> -->
           <div class="text-container__learn-more">
-            <h3 class="text-container__learn-more__text"><a href="#contact" id="learn more" >LEARN MORE</a></h3>
+            <h3 class="text-container__learn-more__text"><a href="#contact" id="learn more">LEARN MORE</a></h3>
 
             <div class="text-container__arrow"> </div>
           </div>
         </div>
 
-
-        <picture class="row__medium_6 section__our-offer-picture section__our-offer-picture--pull-right">
-          <source media='(max-width: 574px)' srcset="assets/images/chad--small.png">
-          <source media='(max-width: 874px)' srcset="assets/images/chad--medium.png">
-          <img src="assets/images/chad--large.png" alt="bodybuilder">
-        </picture>
+        <div class="row__medium_6 section__our-offer-picture section__our-offer-picture--pull-right">
+          <picture>
+            <source media='(max-width: 574px)' data-srcset="assets/images/chad--small.png">
+            <source media='(max-width: 874px)' data-srcset="assets/images/chad--medium.png">
+            <img src="assets/images/chad--large.png" data-src="assets/images/chad--large.png" class="lazyload" alt="bodybuilder">
+          </picture>
+        </div>
       </div>
     </div>
   </div>
@@ -99,7 +100,8 @@
       <div class="row">
         <div class="row__medium_6 text-container">
           <h3 class="text-container__heading">OUR MISSION</h3>
-          <p class="text-container__mission-statement">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, sapiente? Culpa doloremque quibusdam beatae minus sint ad commodi blanditiis necessitatibus, ratione libero quae itaque fugit illum, iste enim nostrum maiores.</p>
+          <p class="text-container__mission-statement">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, sapiente? Culpa doloremque quibusdam beatae minus sint ad commodi blanditiis necessitatibus, ratione libero quae itaque fugit
+            illum, iste enim nostrum maiores.</p>
         </div>
         <div class="row__medium_6 text-container">
           <h3 class="text-container__heading text-container__heading--no-underline">MEET OUR TEAM</h3>
@@ -107,18 +109,18 @@
 
             <div class="section__igs-mission-team__coach">
               <h5 class="text-container__coachName">Marek</h5>
-              <div class="section__igs-mission-team__coach__picture"><img src="assets/images/coach1.jpg" alt=""></div>
+              <div class="section__igs-mission-team__coach__picture"><img data-src="assets/images/coach1.jpg" class="lazyload" alt=""></div>
               <p class="text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
 
             <div class="section__igs-mission-team__coach">
               <h5 class="text-container__coachName">Ania</h5>
-              <div class="section__igs-mission-team__coach__picture"><img src="assets/images/coach2.jpg" alt=""></div>
+              <div class="section__igs-mission-team__coach__picture"><img data-src="assets/images/coach2.jpg" class="lazyload" alt=""></div>
               <p class="text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
             <div class="section__igs-mission-team__coach">
               <h5 class="text-container__coachName">Sylwia</h5>
-              <div class="section__igs-mission-team__coach__picture"><img src="assets/images/coach3.jpg" alt=""></div>
+              <div class="section__igs-mission-team__coach__picture"><img data-src="assets/images/coach3.jpg" class="lazyload" alt=""></div>
               <p class="text-container__coachAbout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquam ea corporis, placeat quas voluptatum quidem.</p>
             </div>
           </div>
@@ -156,29 +158,29 @@
         <form class="form">
           <div class="form__input form__input--name">
             <label class="form__label form__label--margin-t-bigger" for="name">
-                Your name
-              </label>
+              Your name
+            </label>
             <input id="name" name="name" type="text" placeholder="your name...">
           </div>
 
           <div class="form__input form__input--phone">
             <label class="form__label form__label--margin-t-bigger" for="phone">
-                Your phone number
-              </label>
+              Your phone number
+            </label>
             <input id="phone" name="phone" type="tel" placeholder="your name...">
           </div>
 
           <div class="form__input form__input--email">
             <label class="form__label form__label--margin-t-bigger" for="email">
-                Your e-mail
-              </label>
+              Your e-mail
+            </label>
             <input id="email" name="email" type="email">
           </div>
 
           <div class="form__message">
             <label class="form__label form__label--margin-t-bigger form__label--padding-b-smaller" for="message">
-                Message
-              </label>
+              Message
+            </label>
             <textarea id="message" name="message" type="text" rows="5"></textarea>
           </div>
 
@@ -189,19 +191,19 @@
           <div class="form__social-icons-container">
             <!-- <div class="row__medium_4"> -->
             <a href="#">
-                <span class="icon icon--facebook"></span>
-              </a>
+              <span class="icon icon--facebook"></span>
+            </a>
             <a href="#">
-                <span class="icon icon--instagram"></span>
-              </a>
+              <span class="icon icon--instagram"></span>
+            </a>
             <a href="#">
-                <span class="icon icon--twitter"></span>
-              </a>
+              <span class="icon icon--twitter"></span>
+            </a>
             <!-- </div> -->
         </form>
-        </div>
       </div>
     </div>
+  </div>
   </div>
 
   <footer class="site-footer">
