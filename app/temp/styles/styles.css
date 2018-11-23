@@ -913,7 +913,7 @@ h3 {
 @media(min-width: 770px) {
 
 .banner {
-    margin-bottom: 33vh
+    margin-bottom: 50vh
 }
   }
 
@@ -1560,11 +1560,9 @@ h3 {
     background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
     margin-bottom: 15%;
-    opacity: 0;
   }
 
 .text-container--dark-background.lazyloaded {
-      opacity: 1;
       background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
       background-size: contain;
     }
@@ -1657,18 +1655,18 @@ h3 {
 /* margin-top: 2%; */
 
 .text-container__why-list li:nth-child(1) {
-        -webkit-animation-delay: 0;
-                animation-delay: 0;
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
       }
 
 .text-container__why-list li:nth-child(2) {
-        -webkit-animation-delay: .5s;
-                animation-delay: .5s;
+        -webkit-animation-delay: 1.5s;
+                animation-delay: 1.5s;
       }
 
 .text-container__why-list li:nth-child(3) {
-        -webkit-animation-delay: .9s;
-                animation-delay: .9s;
+        -webkit-animation-delay: 2s;
+                animation-delay: 2s;
       }
 
 .text-container__arrow {
@@ -1913,9 +1911,9 @@ h3 {
 
 .reveal-item {
   opacity: 0;
-  transition: all 1s ease-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transition: all 0.8s linear;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
 }
 
 .reveal-item--is-visible {
@@ -2027,4 +2025,18 @@ h3 {
     }
     @mixin atLarge {}
   }
+} */
+
+/* .lazyload {
+  opacity: 0
+}
+
+.lazyloading {
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 1.5s;
 } */

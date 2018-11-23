@@ -3,7 +3,7 @@
   margin-bottom: 10vh;
 
   @mixin atMedium {
-    margin-bottom: 33vh;
+    margin-bottom: 50vh;
   }
 
   &__image {

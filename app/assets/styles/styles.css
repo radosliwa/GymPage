@@ -16,3 +16,16 @@
 @import 'modules/_reveal-item';
 @import 'modules/_sprite';
 @import 'modules/_icon';
+/* .lazyload {
+  opacity: 0
+}
+
+.lazyloading {
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 1.5s;
+} */

@@ -10480,7 +10480,7 @@ new _mobileMenu2.default();
 //-------------------------------------------REVEAL ON SCROLL
 
 // import * as vars from './vars';
-new _revealOnScroll2.default((0, _jquery2.default)('.section'), "85%");
+new _revealOnScroll2.default((0, _jquery2.default)('.section'), "45%");
 //-------------------------------------------STICKY HEADER
 
 new _stickyHeader2.default();
@@ -10490,8 +10490,8 @@ var $girlBallContainer = (0, _jquery2.default)(".text-container--dark-background
 
 $bannerImage.on('load', function () {
 
-  $girlBallContainer.addClass('lazyload'); /*to make sure it doesnt
-                                           load with banner*/
+  /* $girlBallContainer.addClass('lazyload');*/ /*to make sure it doesnt
+                                                load with banner*/
   $bannerSubtitle.addClass('banner__subtitle--on-the-right--show');
 });
 
