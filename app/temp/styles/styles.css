@@ -345,6 +345,7 @@ template {
 
 html, body {
   height: 100%;
+  line-height: normal;
 }
 
 * {
@@ -352,7 +353,7 @@ html, body {
 }
 
 body {
-  background: url('../../assets/images/backgroundHigh.jpg') fixed no-repeat center;
+  background: url('../../assets/images/background1.jpg') fixed no-repeat center;
   position: relative;
   font-family: 'Orbitron', sans-serif;
   color: #FFF;
@@ -435,7 +436,6 @@ h3 {
 @media(min-width: 400px) {
 
 .btn__banner {
-      padding: 6px 12px;
       font-size: 1em
   }
   }
@@ -765,9 +765,6 @@ h3 {
         content: "";
         height: 2.5px;
         background-color: white;
-        width: 80%;
-        bottom: 20px;
-        left: 10%;
         -webkit-transform: scale(0);
                 transform: scale(0);
         transition: -webkit-transform .3s ease-out;
@@ -776,7 +773,7 @@ h3 {
         -webkit-transform-origin: left;
                 transform-origin: left;
         height: 3px;
-        width: 90%;
+        width: 85%;
         bottom: 14px;
         left: 0px
     }
@@ -1059,19 +1056,20 @@ h3 {
     border-radius: 30px;
     position: absolute;
     left: 50%;
-    top: 112%;
+    top: 118%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    transition: all 0.3s. linear;
+    transition: all 0.9s. linear;
+    box-shadow: 0px 2px 5px 1px #FFF;
   }
 
 .banner__btn-container:hover {
-      box-shadow: 0px 3px 5px 3px #FFF;
+      box-shadow: 0px 2px 3px 3px #FFF;
     }
 
 .banner__btn-container:active {
-      top: 112.5%;
-      box-shadow: 0px 1px 2px 0px #FFF;
+      top: 118.5%;
+      box-shadow: 0px 1.5px 2px 0px #FFF;
     }
 
 @media(min-width: 530px) {
@@ -1094,7 +1092,7 @@ h3 {
 @media(min-width: 400px) {
 
 .banner__btn-container {
-      box-shadow: 0px 3px 5px 1px #FFF
+      box-shadow: 0px 2px 5px 1px #FFF
   }
   }
 
@@ -1367,6 +1365,7 @@ h3 {
   }
 
 .section {
+  position: relative;
   min-height: 200px;
   padding-top: 25%;
 }
@@ -1426,7 +1425,7 @@ h3 {
   }
 
 .section--larger-t-margin {
-    /* padding-top: 20%; */
+    /* top: 20%; */
   }
 
 .section--larger-b-margin {
@@ -1546,7 +1545,6 @@ h3 {
   overflow: hidden;
   color: white;
   text-align: center;
-  line-height: normal;
 }
 
 @media(min-width: 875px) {
@@ -1655,8 +1653,8 @@ h3 {
 /* margin-top: 2%; */
 
 .text-container__why-list li:nth-child(1) {
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s;
+        -webkit-animation-delay: .8s;
+                animation-delay: .8s;
       }
 
 .text-container__why-list li:nth-child(2) {
@@ -1719,6 +1717,21 @@ h3 {
 .text-container__learn-more {
       font-size: 1.5em
   }
+  }
+
+.text-container__learn-more a {
+      position: relative;
+      top: 0.09em;
+    }
+
+/*to fix the vertical placment
+      of Orbitron font on mobile*/
+
+@media(min-width: 600px) {
+
+.text-container__learn-more a {
+        position: static
+    }
   }
 
 .text-container__learn-more:hover {
@@ -1901,12 +1914,13 @@ h3 {
 }
 
 .site-footer {
+  position: relative;
   background-color: #cd3600b5;
   color: #FFF;
   padding: .5rem 18px .5rem 18px;
   text-align: center;
   width: 100%;
-  margin-top: 4%;
+  top: 100%;
 }
 
 .reveal-item {

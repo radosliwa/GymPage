@@ -94,14 +94,11 @@
         content: "";
         height: 2.5px;
         background-color: white;
-        width: 80%;
-        bottom: 20px;
-        left: 10%;
         transform: scale(0);
         transition: transform .3s ease-out;
         transform-origin: left;
         height: 3px;
-        width: 90%;
+        width: 85%;
         bottom: 14px;
         left: 0px;
       }

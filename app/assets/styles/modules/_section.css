@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   min-height: 200px;
   padding-top: 25%;
   /* top doesnt get cut after clicking
@@ -36,7 +37,7 @@
   }
 
   &--larger-t-margin {
-    /* padding-top: 20%; */
+    /* top: 20%; */
   }
 
   &--larger-b-margin {

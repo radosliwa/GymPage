@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  line-height: normal;
 }
 
 * {
@@ -7,7 +8,7 @@ html, body {
 }
 
 body {
-  background: url('../../assets/images/backgroundHigh.jpg') fixed no-repeat center;
+  background: url('../../assets/images/background1.jpg') fixed no-repeat center;
   position: relative;
   font-family: 'Orbitron', sans-serif;
   color: #FFF;
