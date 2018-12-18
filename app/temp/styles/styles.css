@@ -353,11 +353,25 @@ html, body {
 }
 
 body {
-  background: url('../../assets/images/background1.jpg') fixed no-repeat center;
+  background-color: #262626;
   position: relative;
   font-family: 'Orbitron', sans-serif;
   color: #FFF;
 }
+
+@media(min-width: 530px) {
+
+body {
+    background: url('../../assets/images/background_low.jpg') fixed no-repeat center
+}
+  }
+
+@media(min-width: 530px) {
+
+body.lazyloaded {
+      background: url('../../assets/images/background1.jpg') fixed no-repeat center
+  }
+  }
 
 @font-face {
     font-family: 'Maiden Crimes';
@@ -1555,7 +1569,6 @@ h3 {
   }
 
 .text-container--dark-background {
-    background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
     margin-bottom: 15%;
   }
@@ -1563,6 +1576,7 @@ h3 {
 .text-container--dark-background.lazyloaded {
       background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
       background-size: contain;
+      background-color: rgba(0, 0, 0, 0.76);
     }
 
 @media(min-width: 770px) {
@@ -1576,11 +1590,11 @@ h3 {
 @media(min-width: 875px) {
 
 .text-container--dark-background.lazyloaded {
+        background-color: rgba(0, 0, 0, 0.76);
         margin-top: 20px;
         margin-bottom: 0;
         background: url(../../assets/images/girlBall.png) no-repeat center;
         background-size: contain;
-        background-color: rgba(0, 0, 0, 0.76);
         border-bottom-left-radius: 20%;
         border-bottom-right-radius: 20%
     }

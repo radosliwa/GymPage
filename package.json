@@ -20,7 +20,7 @@
     "webpack": "^3.11.0"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
+    "autoprefixer": "^9.3.1",
     "babel-core": "latest",
     "babel-loader": "latest",
     "babel-preset-env": "^1.7.0",
@@ -35,7 +35,7 @@
     "gulp-imagemin": "latest",
     "gulp-minify-css": "^1.2.4",
     "gulp-modernizr": "latest",
-    "gulp-postcss": "latest",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "latest",
     "gulp-rev": "latest",
     "gulp-sourcemaps": "^2.6.4",
@@ -52,5 +52,11 @@
     "rucksack-css": "^1.0.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 0.2%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

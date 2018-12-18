@@ -8,13 +8,13 @@
   }
 
   &--dark-background {
-    background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 0 5px 28px rgba(219, 118, 6, 0.9);
     margin-bottom: 15%;
 
     &.lazyloaded {
       background: url(../../assets/images/girlBall--verySmall.png) no-repeat left center;
       background-size: contain;
+      background-color: rgba(0, 0, 0, 0.76);
 
       @mixin atMedium {
         background: url(../../assets/images/girlBall--small.png) no-repeat left center;
@@ -22,11 +22,11 @@
       }
 
       @mixin atMediumXL {
+        background-color: rgba(0, 0, 0, 0.76);
         margin-top: 20px;
         margin-bottom: 0;
         background: url(../../assets/images/girlBall.png) no-repeat center;
         background-size: contain;
-        background-color: rgba(0, 0, 0, 0.76);
         border-bottom-left-radius: 20%;
         border-bottom-right-radius: 20%;
       }
