@@ -11422,7 +11422,8 @@ var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
 var $headerLinks = $siteHeader.find('a');
 var $learnMoreButton = (0, _jquery2.default)('#learn-more');
 var $pageSections = (0, _jquery2.default)('.section');
-var $lazyImages = (0, _jquery2.default)('.lazyloaded');
+var $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
+var $lazyImages = (0, _jquery2.default)('.lazyload');
 
 var StickyH = function () {
   function StickyH() {
@@ -11437,6 +11438,7 @@ var StickyH = function () {
   _createClass(StickyH, [{
     key: 'refreshWayPoints',
     value: function refreshWayPoints() {
+      var that = this;
       $lazyImages.on('load', function () {
         Waypoint.refreshAll();
       });
@@ -11466,8 +11468,10 @@ var StickyH = function () {
   }, {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
-      $headerLinks.smoothScroll({ speed: 500 });
+      console.log($headerLinks.get(2));
       $learnMoreButton.smoothScroll({ speed: 500 });
+      $headerLinks.smoothScroll({ speed: 500 });
+      // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
     }
   }, {
     key: 'sectionWaypoint',
@@ -11480,6 +11484,7 @@ var StickyH = function () {
           handler: function handler(direction) {
 
             if (direction == "down") {
+
               // console.log(that.headerLinks.eq(0));
               var matchingLink = currentSection.getAttribute('data-match');
               $headerLinks.removeClass('matching-link');
@@ -11493,6 +11498,7 @@ var StickyH = function () {
           handler: function handler(direction) {
 
             if (direction == "up") {
+
               var matchingLink = currentSection.getAttribute('data-match');
               $headerLinks.removeClass('matching-link');
               (0, _jquery2.default)(matchingLink).addClass('matching-link');

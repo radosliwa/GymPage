@@ -19,14 +19,15 @@
       @mixin atMedium {
         background: url(../../assets/images/girlBall--small.png) no-repeat left center;
         background-size: contain;
+        background-color: rgba(0, 0, 0, 0.76);
       }
 
       @mixin atMediumXL {
-        background-color: rgba(0, 0, 0, 0.76);
-        margin-top: 20px;
-        margin-bottom: 0;
+        /* margin-top: 20px;
+        margin-bottom: 0; */
         background: url(../../assets/images/girlBall.png) no-repeat center;
         background-size: contain;
+        background-color: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 20%;
         border-bottom-right-radius: 20%;
       }
@@ -148,13 +149,10 @@
     }
 
     a {
-      position: relative;
-      top: 0.09em;
-
-      /*to fix the vertical placment
-      of Orbitron font on mobile*/
-      @mixin atSmallXL {
-        position: static;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 414px) and (max-device-height: 812px) {
+        font-family: sans-serif;
+        /*vertical placement of 'Orbitron' was off
+        when viewed on mobile*/
       }
     }
 
@@ -219,7 +217,7 @@
       font-size: 1.5em;
       display: inline-block;
       float: right;
-      margin: -2% 0 -9% -26%;
+      margin: -1% 4% -9% -26%;
       padding: 0 2%;
     }
   }
@@ -248,11 +246,12 @@
     }
 
     @mixin atMediumXL {
-      max-width: 70%;
+      max-width: 80%;
+      line-height: 1.5;
       font-weight: 500;
       text-align: right;
-      line-height: 1.5;
-      margin-top: 8%;
+      margin-right: -5%;
+      margin-top: 17%;
     }
   }
 }

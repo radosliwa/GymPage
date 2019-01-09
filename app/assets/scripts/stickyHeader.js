@@ -7,7 +7,8 @@ const $headerLogo = $('.main-nav__logo');
 const $headerLinks = $siteHeader.find('a');
 const $learnMoreButton = $('#learn-more');
 const $pageSections = $('.section');
-const $lazyImages = $('.lazyloaded');
+const $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
+const $lazyImages = $('.lazyload');
 
 export default class StickyH{
   constructor(){
@@ -19,8 +20,10 @@ export default class StickyH{
     }
 
     refreshWayPoints(){
+      var that = this;
       $lazyImages.on('load', function(){
         Waypoint.refreshAll();
+
       });
     }
   wayPointHeader(){
@@ -46,8 +49,10 @@ export default class StickyH{
 }
 
 addSmoothScroll(){
-  $headerLinks.smoothScroll({speed:500});
+  console.log($headerLinks.get(2));
   $learnMoreButton.smoothScroll({speed:500});
+  $headerLinks.smoothScroll({speed:500});
+  // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
 }
   sectionWaypoint(){
     let that = this;
@@ -58,6 +63,7 @@ addSmoothScroll(){
         handler: function(direction){
 
           if(direction =="down"){
+
             // console.log(that.headerLinks.eq(0));
             let matchingLink = currentSection.getAttribute('data-match');
             $headerLinks.removeClass('matching-link');
@@ -71,6 +77,7 @@ addSmoothScroll(){
         handler: function(direction){
 
           if(direction =="up"){
+
             let matchingLink = currentSection.getAttribute('data-match');
             $headerLinks.removeClass('matching-link');
             $(matchingLink).addClass('matching-link');

@@ -1,18 +1,16 @@
 .banner {
   position: relative;
-  margin-bottom: 18vh;
+  margin-bottom: 30%;
 
   @mixin atUltraSmall {
-    margin-bottom: 25vh;
+    /* margin-bottom: 25vh; */
   }
 
   @mixin atSmall {
-    margin-bottom: 45vh;
+    margin-bottom: 30%;
   }
 
-  @mixin atMedium {
-    margin-bottom: 50vh;
-  }
+  @mixin atMedium {}
 
   &__image {
     margin: 0 auto;
