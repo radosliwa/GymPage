@@ -24,7 +24,7 @@ new MobileMenu();
 
 //-------------------------------------------REVEAL ON SCROLL
 
-new RevealOnScroll($('.section'), "45%");
+new RevealOnScroll($('.section'), "55%");
 //-------------------------------------------STICKY HEADER
 
 new StickyH();
@@ -34,7 +34,7 @@ const $girlBallContainer = $(".text-container--dark-background");
 
 $bannerImage.on('load', function(){
 
-/* $girlBallContainer.addClass('lazyload');*/ /*to make sure it doesnt
-load with banner*/
 $bannerSubtitle.addClass('banner__subtitle--on-the-right--show');
+/*to make sure it doesnt
+load with banner*/
 })

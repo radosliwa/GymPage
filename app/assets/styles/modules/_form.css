@@ -1,8 +1,7 @@
 .form {
-  margin: 0 auto;
+  /* margin: 0 auto;
   padding: 3% 0;
-  max-height: 100%;
-  max-width: 1000px;
+  max-height: 100%; */
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -11,68 +10,83 @@
   z-index: -99;
   font-size: 1.3rem;
   overflow: hidden;
+
   @mixin atMedium {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
   }
+
   &>div {
     flex: 0 1 100px;
+
     @mixin atMedium {
       flex: none;
       /* byl problem z message i submit */
       padding: 1% 1%;
     }
+
     @mixin atLarge {
       flex: 0 1 300px;
       padding-right: 0;
     }
   }
+
   &__label {
     display: block;
     padding: 2% 0;
+
     &--margin-t-bigger {
       margin-top: 10%;
+
       @mixin atMediumXL {
         margin-top: 1%;
       }
     }
+
     &--padding-b-smaller {
       padding-bottom: 1.5%;
     }
   }
+
   &__btn-container {
     display: block;
     /* margin: 0 auto; */
     border-radius: 30px;
     box-shadow: 0px 3px 5px 1px #FFF;
     transition: all 0.3s. linear;
+
     &:hover {
       box-shadow: 0px 3px 5px 3px #FFF;
     }
+
     &:active {
       bottom: 13.7%;
       box-shadow: 0px 1px 2px 0px #FFF;
     }
   }
+
   &__submit {
     width: 100%;
     text-align: center;
     margin-top: 4%;
+
     @mixin atMediumXL {
       margin-top: 0;
     }
   }
+
   &__social-icons-container {
     text-align: center;
-    & > a{
-      @mixin atMedium{
+
+    &>a {
+      @mixin atMedium {
         padding: 5%;
-            
       }
+    }
   }
-  }
+
   &__input, &__message {
     max-width: auto;
     text-align: center;

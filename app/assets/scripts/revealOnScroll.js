@@ -8,6 +8,7 @@ export default class RevealOnScroll{
     this.itemsToReveal = elements;
     this.hideInitially();
     this.wayPoints(offset);
+    
   }
 
   hideInitially(){
@@ -24,6 +25,7 @@ export default class RevealOnScroll{
           $whyUsList.children().each(function(){
             $(this).addClass('animated bounceInLeft');
           })
+
         },
 
         offset: offset

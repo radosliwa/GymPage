@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10435,8 +10435,7 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10446,19 +10445,19 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframeworkWaypoints = __webpack_require__(3);
+var _noframeworkWaypoints = __webpack_require__(2);
 
 var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
 
-var _mobileMenu = __webpack_require__(4);
+var _mobileMenu = __webpack_require__(3);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-var _revealOnScroll = __webpack_require__(5);
+var _revealOnScroll = __webpack_require__(4);
 
 var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
 
-var _stickyHeader = __webpack_require__(6);
+var _stickyHeader = __webpack_require__(5);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
 
@@ -10480,7 +10479,7 @@ new _mobileMenu2.default();
 //-------------------------------------------REVEAL ON SCROLL
 
 // import * as vars from './vars';
-new _revealOnScroll2.default((0, _jquery2.default)('.section'), "45%");
+new _revealOnScroll2.default((0, _jquery2.default)('.section'), "55%");
 //-------------------------------------------STICKY HEADER
 
 new _stickyHeader2.default();
@@ -10490,13 +10489,13 @@ var $girlBallContainer = (0, _jquery2.default)(".text-container--dark-background
 
 $bannerImage.on('load', function () {
 
-  /* $girlBallContainer.addClass('lazyload');*/ /*to make sure it doesnt
-                                                load with banner*/
   $bannerSubtitle.addClass('banner__subtitle--on-the-right--show');
+  /*to make sure it doesnt
+  load with banner*/
 });
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11259,7 +11258,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11284,7 +11283,7 @@ var $siteHeader = (0, _jquery2.default)('.site-header');
 var $navMenu = (0, _jquery2.default)('.main-nav__menu');
 var $mainNav = (0, _jquery2.default)('.main-nav');
 var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
-var $headerLinks = (0, _jquery2.default)('.main-nav a');
+var $headerLinks = $siteHeader.find('a');
 
 var MobileMenu = function () {
   function MobileMenu() {
@@ -11296,8 +11295,14 @@ var MobileMenu = function () {
   _createClass(MobileMenu, [{
     key: 'events',
     value: function events() {
-      $menuIcon.click(this.toggleMenu.bind(this));
-      $headerLinks.click(this.remove.bind(this));
+      var _this = this;
+
+      $menuIcon.click(function () {
+        return _this.toggleMenu();
+      });
+      $headerLinks.click(function () {
+        return _this.remove();
+      });
       //  mobile menu wont overlap section titles. Remove not Toggle,
       // in order not to have any expansion on bigger viewport
     }
@@ -11325,7 +11330,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11387,7 +11392,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11403,7 +11408,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(7);
+var _jquerySmoothScroll = __webpack_require__(6);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11414,10 +11419,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var $siteHeader = (0, _jquery2.default)('.site-header');
 var $triggerPointForHeader = (0, _jquery2.default)('.banner__btn-container');
 var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
-var $headerLinks = (0, _jquery2.default)('.main-nav a');
-var $learnMoreButton = (0, _jquery2.default)('.text-container__learn-more a');
+var $headerLinks = $siteHeader.find('a');
+var $learnMoreButton = (0, _jquery2.default)('#learn-more');
 var $pageSections = (0, _jquery2.default)('.section');
-var $lazyImages = (0, _jquery2.default)('.lazyload');
+var $lazyImages = (0, _jquery2.default)('.lazyloaded');
 
 var StickyH = function () {
   function StickyH() {
@@ -11433,7 +11438,6 @@ var StickyH = function () {
     key: 'refreshWayPoints',
     value: function refreshWayPoints() {
       $lazyImages.on('load', function () {
-
         Waypoint.refreshAll();
       });
     }
@@ -11462,8 +11466,8 @@ var StickyH = function () {
   }, {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
-      $headerLinks.smoothScroll();
-      $learnMoreButton.smoothScroll();
+      $headerLinks.smoothScroll({ speed: 500 });
+      $learnMoreButton.smoothScroll({ speed: 500 });
     }
   }, {
     key: 'sectionWaypoint',
@@ -11506,7 +11510,7 @@ var StickyH = function () {
 exports.default = StickyH;
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

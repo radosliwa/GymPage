@@ -5,7 +5,7 @@ const $siteHeader = $('.site-header');
 const $navMenu = $('.main-nav__menu');
 const $mainNav = $('.main-nav');
 const $headerLogo = $('.main-nav__logo');
-const $headerLinks =$('.main-nav a');
+const $headerLinks = $siteHeader.find('a');
 
 export default class MobileMenu{
   constructor(){
@@ -13,8 +13,8 @@ export default class MobileMenu{
 
   }
   events(){
-    $menuIcon.click(this.toggleMenu.bind(this));
-    $headerLinks.click(this.remove.bind(this));
+    $menuIcon.click(()=>this.toggleMenu());
+    $headerLinks.click (()=>this.remove());
     //  mobile menu wont overlap section titles. Remove not Toggle,
     // in order not to have any expansion on bigger viewport
 

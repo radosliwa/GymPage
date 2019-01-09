@@ -13,7 +13,6 @@
 
   &--expansion {
     background-color: #000;
-    transform: scale(1.1);
   }
 
   &__menu {
@@ -29,8 +28,6 @@
       flex-flow: column;
       justify-content: space-around;
       align-items: center;
-
-      @mixin atUltraSmall {}
     }
 
     @mixin atSmall {
@@ -42,12 +39,12 @@
     @mixin atMedium {
       opacity: 1;
       display: block;
-      margin: 0 0 0 42%;
+      margin: 0 0 0 40%;
       /* font-size: 1.15em; */
     }
 
     @mixin atMediumXL {
-      margin: 0 0 0 44%;
+      margin: 0 0 0 42%;
       /* font-size: 1.25em; */
     }
 
@@ -71,7 +68,7 @@
     position: relative;
     /* for absolutely positioned :after*/
     display: block;
-    padding: 1.3rem 1rem 0.3rem 1rem;
+    padding: 1rem 1rem 0.3rem 1rem;
     z-index: 100;
 
     @mixin atUltraSmall {}
@@ -128,7 +125,7 @@
       opacity: -1;
       margin: 0 auto 0 -70%;
       max-width: 34vw;
-      margin-top: .2em;
+      margin-top: .18em;
     }
 
     @mixin atSmall {
@@ -142,13 +139,11 @@
     @mixin atMedium {
       opacity: 1;
       position: absolute;
-      height: 63px;
-      top: -1em;
+      top: -0.45em;
       margin-left: 10%;
       max-width: 16vw;
-      top: -0.25em;
       z-index: 99;
-      transition: all .2s ease-out;
+      transition: all .3s linear;
     }
 
     @mixin atMediumXL {}
@@ -158,30 +153,31 @@
     }
 
     &--smallerScale {
-      transform: none;
+      transform: scale(.87);
+      transform-origin: center;
 
       @mixin atSmall {
-        transform: scale(.97) translateY(-21%);
+        transform: scale(.87) translateY(-15%);
       }
 
       @mixin atMedium {
-        transform: scale(.9) translateY(-23%);
+        transform: scale(.8) translateY(-11%);
       }
     }
 
     &--hide {
       opacity: 1;
       position: relative;
-      margin: 2% auto 0 auto;
-      transform: scale(.7);
+      /* margin: 0 auto 1% auto; */
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 1%;
+      padding-bottom: 1%;
 
-      @mixin atUltraSmall {
-        transform: scale(.8);
-      }
+      /* transform: scale(.7); */
+      @mixin atUltraSmall {}
 
-      @mixin atSmall {
-        margin: 0 auto 0 auto;
-      }
+      @mixin atSmall {}
     }
 
     &>a:after {

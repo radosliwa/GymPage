@@ -1,14 +1,12 @@
 .section {
   position: relative;
-  min-height: 200px;
-  padding-top: 25%;
+  padding-top: 10%;
+
   /* top doesnt get cut after clicking
   on the header link*/
-  @mixin clearfix;
-
   @mixin atSmall {
-    min-height: 200px;
-    padding-top: 15%;
+    /* min-height: 200px; */
+    /* padding-top: 5%; */
   }
 
   @mixin atMedium {
@@ -17,31 +15,19 @@
 
   &__our-offer-picture {
     display: block;
-    margin-left: 4%;
-    margin-top: 4%;
+    margin-left: 2%;
     padding: 0 0 0 0;
 
     @mixin atSmallXL {
       margin-left: 16%;
     }
 
-    @mixin atMedium {
-      margin-left: 16%;
-      margin-top: 4%;
-    }
+    @mixin atMedium {}
 
     @mixin atMediumXL {
       margin: 0;
       padding: 0;
     }
-  }
-
-  &--larger-t-margin {
-    /* top: 20%; */
-  }
-
-  &--larger-b-margin {
-    margin-bottom: 50vh;
   }
 
   &__igs-mission-team {

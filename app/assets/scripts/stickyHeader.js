@@ -4,10 +4,10 @@ import smoothScroll from "jquery-smooth-scroll";
 const $siteHeader = $('.site-header');
 const $triggerPointForHeader = $('.banner__btn-container');
 const $headerLogo = $('.main-nav__logo');
-const $headerLinks =$('.main-nav a');
-const $learnMoreButton = $('.text-container__learn-more a');
+const $headerLinks = $siteHeader.find('a');
+const $learnMoreButton = $('#learn-more');
 const $pageSections = $('.section');
-const $lazyImages = $('.lazyload');
+const $lazyImages = $('.lazyloaded');
 
 export default class StickyH{
   constructor(){
@@ -20,7 +20,6 @@ export default class StickyH{
 
     refreshWayPoints(){
       $lazyImages.on('load', function(){
-        
         Waypoint.refreshAll();
       });
     }
@@ -47,8 +46,8 @@ export default class StickyH{
 }
 
 addSmoothScroll(){
-  $headerLinks.smoothScroll();
-  $learnMoreButton.smoothScroll();
+  $headerLinks.smoothScroll({speed:500});
+  $learnMoreButton.smoothScroll({speed:500});
 }
   sectionWaypoint(){
     let that = this;

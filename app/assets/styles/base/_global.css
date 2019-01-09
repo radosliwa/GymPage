@@ -14,13 +14,7 @@ body {
   color: #FFF;
 
   @mixin atSmall {
-    background: url('../../assets/images/background_low.jpg') fixed no-repeat center;
-  }
-
-  &.lazyloaded {
-    @mixin atSmall {
-      background: url('../../assets/images/background1.jpg') fixed no-repeat center;
-    }
+    background: url('../../assets/images/background1.jpg') fixed no-repeat center;
   }
 
   @font-face {

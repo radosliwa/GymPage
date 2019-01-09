@@ -1,6 +1,14 @@
 .banner {
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 18vh;
+
+  @mixin atUltraSmall {
+    margin-bottom: 25vh;
+  }
+
+  @mixin atSmall {
+    margin-bottom: 45vh;
+  }
 
   @mixin atMedium {
     margin-bottom: 50vh;
