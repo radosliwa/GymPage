@@ -559,7 +559,6 @@ h3 {
 
 .site-header__menu-icon {
     position: absolute;
-    display: inline-block;
     height: 30px;
     width: 40px;
     left: 82%;
@@ -571,12 +570,15 @@ h3 {
 .site-header__menu-icon {
       height: 30px;
       width: 40px;
-      /* left: 83%; */
       top: 13%
   }
   }
 
 @media(min-width: 600px) {
+
+.site-header__menu-icon {
+      left: 83%
+  }
   }
 
 .site-header__menu-icon::before {
@@ -973,7 +975,7 @@ h3 {
 
 .banner {
   position: relative;
-  margin-bottom: 30%;
+  margin-bottom: 35%;
 }
 
 @media(min-width: 400px) {
@@ -986,11 +988,15 @@ h3 {
 @media(min-width: 530px) {
 
 .banner {
-    margin-bottom: 30%
+    margin-bottom: 45%
 }
   }
 
 @media(min-width: 770px) {
+
+.banner {
+    margin-bottom: 30%
+}
   }
 
 .banner__image {
@@ -1096,17 +1102,52 @@ h3 {
 .banner__side-offer {
     display: none;
     border-radius: 5%;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 18%;
     color: white;
-    width: 657px;
-    height: 350px;
     background-color: rgba(0, 0, 0, 0.76);
     -webkit-animation: boxS 2.5s ease-in 1;
             animation: boxS 2.5s ease-in 1;
     -webkit-box-shadow: 0 4px 26px 7px white;
             box-shadow: 0 4px 26px 7px white;
+    max-width: 85%;
+    font-size: calc(18px + 11 * ((100vw - 420px) / 860));
+    line-height: 2.5rem;
   }
+
+@media screen and (min-width: 1280px) {
+
+  .banner__side-offer {
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .banner__side-offer {
+    font-size: 18px;
+  }
+}
+
+/* width: 85%;
+    height: 40%; */
+
+@media(min-width: 770px) {
+
+.banner__side-offer {
+      line-height: 4rem
+      /* width: 40%;
+      height: 30%; */
+  }
+  }
+
+@media(min-width: 875px) {
+  }
+
+.banner__side-offer p {
+      padding: 0 2%;
+    }
 
 .banner__side-offer span {
       color: red;
@@ -1503,15 +1544,21 @@ h3 {
 @media(min-width: 530px) {
 
 .section {
-    /* min-height: 200px; */
-    padding-top: 15%
+    /* padding-top: 15%; */
+}
+  }
+
+@media(min-width: 600px) {
+
+.section {
+    padding-top: 3%
 }
   }
 
 @media(min-width: 770px) {
 
 .section {
-    /* padding-top: 5%; */
+    padding-top: 7%
 }
   }
 
@@ -1526,7 +1573,7 @@ h3 {
 @media(min-width: 600px) {
 
 .section__our-offer-picture {
-      max-width: 70%;
+      max-width: 66%;
       margin-left: 15%
   }
   }
@@ -2044,9 +2091,9 @@ h3 {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
-  -webkit-transform: scale(1.15);
-      -ms-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .reveal-item--is-visible {

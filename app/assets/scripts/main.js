@@ -2,21 +2,11 @@
 import $ from 'jquery';
 
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints.js";
-// import * as vars from './vars';
 import MobileMenu from './mobileMenu';
 import RevealOnScroll from './revealOnScroll';
 import StickyH from './stickyHeader';
 
 
-
-// $(function(){
-//   $('.banner__side-offer').delay(1000).fadeIn(800);
-// });
-//
-// $(".banner__side-offer__close").click(()=>{
-//   $('.banner__side-offer').css({display: 'none'});
-//
-// });
 
 //-------------------------------------------MOBILE MENU
 
@@ -28,13 +18,20 @@ new RevealOnScroll($('.section'), "55%");
 //-------------------------------------------STICKY HEADER
 
 new StickyH();
-const $bannerImage = $('.banner__image');
-const $bannerSubtitle = $('.banner__subtitle--on-the-right');
-const $girlBallContainer = $(".text-container--dark-background");
+//-------------------------------------------SIDE OFFER
+const $bannerSideOffer = $('.banner__side-offer');
+const $sideOfferLink = $bannerSideOffer.find('a');
+const $closeX = $bannerSideOffer.find('.banner__side-offer__close');
+$(function(){
+  $bannerSideOffer.delay(850).fadeIn(800);
+  $sideOfferLink.on('click', hideSideOffer);
+});
 
-$bannerImage.on('load', function(){
+$closeX.click(()=>{
+  $bannerSideOffer.addClass('animated bounceOutRight')
+  .on('animationend', hideSideOffer);
+});
 
-$bannerSubtitle.addClass('banner__subtitle--on-the-right--show');
-/*to make sure it doesnt
-load with banner*/
-})
+function hideSideOffer(){
+  $bannerSideOffer.css({display: 'none'}).removeClass('animated bounceOutRight');
+}

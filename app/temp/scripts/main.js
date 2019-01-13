@@ -10463,36 +10463,32 @@ var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// $(function(){
-//   $('.banner__side-offer').delay(1000).fadeIn(800);
-// });
-//
-// $(".banner__side-offer__close").click(()=>{
-//   $('.banner__side-offer').css({display: 'none'});
-//
-// });
-
 //-------------------------------------------MOBILE MENU
 
 new _mobileMenu2.default();
 
 //-------------------------------------------REVEAL ON SCROLL
 
-// import * as vars from './vars';
 new _revealOnScroll2.default((0, _jquery2.default)('.section'), "55%");
 //-------------------------------------------STICKY HEADER
 
 new _stickyHeader2.default();
-var $bannerImage = (0, _jquery2.default)('.banner__image');
-var $bannerSubtitle = (0, _jquery2.default)('.banner__subtitle--on-the-right');
-var $girlBallContainer = (0, _jquery2.default)(".text-container--dark-background");
-
-$bannerImage.on('load', function () {
-
-  $bannerSubtitle.addClass('banner__subtitle--on-the-right--show');
-  /*to make sure it doesnt
-  load with banner*/
+//-------------------------------------------SIDE OFFER
+var $bannerSideOffer = (0, _jquery2.default)('.banner__side-offer');
+var $sideOfferLink = $bannerSideOffer.find('a');
+var $closeX = $bannerSideOffer.find('.banner__side-offer__close');
+(0, _jquery2.default)(function () {
+  $bannerSideOffer.delay(850).fadeIn(800);
+  $sideOfferLink.on('click', hideSideOffer);
 });
+
+$closeX.click(function () {
+  $bannerSideOffer.addClass('animated bounceOutRight').on('animationend', hideSideOffer);
+});
+
+function hideSideOffer() {
+  $bannerSideOffer.css({ display: 'none' }).removeClass('animated bounceOutRight');
+}
 
 /***/ }),
 /* 2 */
@@ -11420,6 +11416,7 @@ var $siteHeader = (0, _jquery2.default)('.site-header');
 var $triggerPointForHeader = (0, _jquery2.default)('.banner__btn-container');
 var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
 var $headerLinks = $siteHeader.find('a');
+var $sideOfferLink = (0, _jquery2.default)('.banner__side-offer').find('a');
 var $learnMoreButton = (0, _jquery2.default)('#learn-more');
 var $pageSections = (0, _jquery2.default)('.section');
 var $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
@@ -11469,8 +11466,9 @@ var StickyH = function () {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
       console.log($headerLinks.get(2));
-      $learnMoreButton.smoothScroll({ speed: 500 });
-      $headerLinks.smoothScroll({ speed: 500 });
+      $learnMoreButton.smoothScroll({ speed: 700 });
+      $sideOfferLink.smoothScroll({ speed: 700 });
+      $headerLinks.smoothScroll({ speed: 780 });
       // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
     }
   }, {

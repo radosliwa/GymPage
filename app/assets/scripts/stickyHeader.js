@@ -5,6 +5,7 @@ const $siteHeader = $('.site-header');
 const $triggerPointForHeader = $('.banner__btn-container');
 const $headerLogo = $('.main-nav__logo');
 const $headerLinks = $siteHeader.find('a');
+const $sideOfferLink = $('.banner__side-offer').find('a');
 const $learnMoreButton = $('#learn-more');
 const $pageSections = $('.section');
 const $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
@@ -50,8 +51,9 @@ export default class StickyH{
 
 addSmoothScroll(){
   console.log($headerLinks.get(2));
-  $learnMoreButton.smoothScroll({speed:500});
-  $headerLinks.smoothScroll({speed:500});
+  $learnMoreButton.smoothScroll({speed:700});
+  $sideOfferLink.smoothScroll({speed:700});
+  $headerLinks.smoothScroll({speed:780});
   // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
 }
   sectionWaypoint(){

@@ -25,7 +25,6 @@
 
   &__menu-icon {
     position: absolute;
-    display: inline-block;
     height: 30px;
     width: 40px;
     left: 82%;
@@ -34,11 +33,12 @@
     @mixin atUltraSmall {
       height: 30px;
       width: 40px;
-      /* left: 83%; */
       top: 13%;
     }
 
-    @mixin atSmallXL {}
+    @mixin atSmallXL {
+      left: 83%;
+    }
 
     &::before {
       content: "";

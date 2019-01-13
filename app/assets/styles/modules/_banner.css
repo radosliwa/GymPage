@@ -1,16 +1,18 @@
 .banner {
   position: relative;
-  margin-bottom: 30%;
+  margin-bottom: 35%;
 
   @mixin atUltraSmall {
     /* margin-bottom: 25vh; */
   }
 
   @mixin atSmall {
-    margin-bottom: 30%;
+    margin-bottom: 45%;
   }
 
-  @mixin atMedium {}
+  @mixin atMedium {
+    margin-bottom: 30%;
+  }
 
   &__image {
     margin: 0 auto;
@@ -88,14 +90,32 @@
   &__side-offer {
     display: none;
     border-radius: 5%;
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 18%;
     color: white;
-    width: 657px;
-    height: 350px;
     background-color: rgba(0, 0, 0, 0.76);
     animation: boxS 2.5s ease-in 1;
     box-shadow: 0 4px 26px 7px white;
+    max-width: 85%;
+    font-size: responsive;
+    min-font-size: 18px;
+    max-font-size: 29px;
+    line-height: 2.5rem;
+
+    /* width: 85%;
+    height: 40%; */
+    @mixin atMedium {
+      line-height: 4rem;
+      /* width: 40%;
+      height: 30%; */
+    }
+
+    @mixin atMediumXL {}
+
+    p {
+      padding: 0 2%;
+    }
 
     span {
       color: red;
