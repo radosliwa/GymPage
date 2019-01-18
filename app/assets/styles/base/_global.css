@@ -1,10 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   line-height: normal;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -13,8 +13,13 @@ body {
   font-family: 'Orbitron', sans-serif;
   color: #FFF;
 
-  @mixin atSmall {
+  @mixin atMedium {
     background: url('../../assets/images/background1.jpg') fixed no-repeat center;
+  }
+
+  @media only screen and (max-width: 812px) and (max-height: 414px) and (orientation: landscape) {
+    background: none;
+    background-color: #262626;
   }
 
   @font-face {

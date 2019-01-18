@@ -6,7 +6,7 @@ const $triggerPointForHeader = $('.banner__btn-container');
 const $headerLogo = $('.main-nav__logo');
 const $headerLinks = $siteHeader.find('a');
 const $sideOfferLink = $('.banner__side-offer').find('a');
-const $learnMoreButton = $('#learn-more');
+const $learnMoreButton = $('.text-container__learn-more').find('a');
 const $pageSections = $('.section');
 const $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
 const $lazyImages = $('.lazyload');
@@ -16,8 +16,8 @@ export default class StickyH{
 
     this.wayPointHeader();
     this.sectionWaypoint();
-    this.addSmoothScroll();
     this.refreshWayPoints();
+    this.addSmoothScroll();
     }
 
     refreshWayPoints(){
@@ -50,10 +50,10 @@ export default class StickyH{
 }
 
 addSmoothScroll(){
-  console.log($headerLinks.get(2));
-  $learnMoreButton.smoothScroll({speed:700});
-  $sideOfferLink.smoothScroll({speed:700});
-  $headerLinks.smoothScroll({speed:780});
+  console.log(  $learnMoreButton);
+  $learnMoreButton.smoothScroll({speed:640});
+  $sideOfferLink.smoothScroll({speed:640});
+  $headerLinks.smoothScroll({speed:640});
   // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
 }
   sectionWaypoint(){

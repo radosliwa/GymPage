@@ -10469,7 +10469,7 @@ new _mobileMenu2.default();
 
 //-------------------------------------------REVEAL ON SCROLL
 
-new _revealOnScroll2.default((0, _jquery2.default)('.section'), "55%");
+new _revealOnScroll2.default((0, _jquery2.default)('.section'), "45%");
 //-------------------------------------------STICKY HEADER
 
 new _stickyHeader2.default();
@@ -11417,7 +11417,7 @@ var $triggerPointForHeader = (0, _jquery2.default)('.banner__btn-container');
 var $headerLogo = (0, _jquery2.default)('.main-nav__logo');
 var $headerLinks = $siteHeader.find('a');
 var $sideOfferLink = (0, _jquery2.default)('.banner__side-offer').find('a');
-var $learnMoreButton = (0, _jquery2.default)('#learn-more');
+var $learnMoreButton = (0, _jquery2.default)('.text-container__learn-more').find('a');
 var $pageSections = (0, _jquery2.default)('.section');
 var $pictureToHide = $pageSections.find(".section__our-offer-picture--pull-right");
 var $lazyImages = (0, _jquery2.default)('.lazyload');
@@ -11428,8 +11428,8 @@ var StickyH = function () {
 
     this.wayPointHeader();
     this.sectionWaypoint();
-    this.addSmoothScroll();
     this.refreshWayPoints();
+    this.addSmoothScroll();
   }
 
   _createClass(StickyH, [{
@@ -11465,10 +11465,10 @@ var StickyH = function () {
   }, {
     key: 'addSmoothScroll',
     value: function addSmoothScroll() {
-      console.log($headerLinks.get(2));
-      $learnMoreButton.smoothScroll({ speed: 700 });
-      $sideOfferLink.smoothScroll({ speed: 700 });
-      $headerLinks.smoothScroll({ speed: 780 });
+      console.log($learnMoreButton);
+      $learnMoreButton.smoothScroll({ speed: 640 });
+      $sideOfferLink.smoothScroll({ speed: 640 });
+      $headerLinks.smoothScroll({ speed: 640 });
       // $($headerLinks.get(2)).smoothScroll({offset:199, speed:500});
     }
   }, {

@@ -107,6 +107,10 @@
         @mixin atLarge {
           margin: -7% auto -3% -12%;
         }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          margin: -7% auto -3% -2%;
+        }
       }
     }
   }

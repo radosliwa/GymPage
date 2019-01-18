@@ -346,14 +346,14 @@ template {
 
 /* @import 'base/_variables'; */
 
-html, body {
-  height: 100%;
-  line-height: normal;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  line-height: normal;
 }
 
 body {
@@ -363,10 +363,18 @@ body {
   color: #FFF;
 }
 
-@media(min-width: 530px) {
+@media(min-width: 770px) {
 
 body {
     background: url('../../assets/images/background1.jpg') fixed no-repeat center
+}
+  }
+
+@media only screen and (max-width: 812px) and (max-height: 414px) and (orientation: landscape) {
+
+body {
+    background: none;
+    background-color: #262626
 }
   }
 
@@ -995,7 +1003,7 @@ h3 {
 @media(min-width: 770px) {
 
 .banner {
-    margin-bottom: 30%
+    margin-bottom: 28%
 }
   }
 
@@ -1130,15 +1138,10 @@ h3 {
   }
 }
 
-/* width: 85%;
-    height: 40%; */
-
 @media(min-width: 770px) {
 
 .banner__side-offer {
       line-height: 4rem
-      /* width: 40%;
-      height: 30%; */
   }
   }
 
@@ -1698,6 +1701,13 @@ h3 {
       }
   }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+.section__igs-mission-team__coach__picture {
+          margin: -7% auto -3% -2%
+      }
+        }
+
 .section--black-background {
     background-color: #000;
   }
@@ -2083,7 +2093,7 @@ h3 {
   padding: .5rem 18px .5rem 18px;
   text-align: center;
   width: 100%;
-  top: 100%;
+  margin-top: 3%;
 }
 
 .reveal-item {

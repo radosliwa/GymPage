@@ -11,7 +11,7 @@
   }
 
   @mixin atMedium {
-    margin-bottom: 30%;
+    margin-bottom: 28%;
   }
 
   &__image {
@@ -103,12 +103,8 @@
     max-font-size: 29px;
     line-height: 2.5rem;
 
-    /* width: 85%;
-    height: 40%; */
     @mixin atMedium {
       line-height: 4rem;
-      /* width: 40%;
-      height: 30%; */
     }
 
     @mixin atMediumXL {}

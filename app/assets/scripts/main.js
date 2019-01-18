@@ -14,7 +14,7 @@ new MobileMenu();
 
 //-------------------------------------------REVEAL ON SCROLL
 
-new RevealOnScroll($('.section'), "55%");
+new RevealOnScroll($('.section'), "45%");
 //-------------------------------------------STICKY HEADER
 
 new StickyH();
