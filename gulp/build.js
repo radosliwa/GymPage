@@ -20,7 +20,7 @@ gulp.task('delDocs',['sprites'],function(){
   return del('./docs');
 });
 gulp.task('optimizePics',['delDocs'], function(){
-  return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
+  return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/sprites'])
     .pipe(imageMin({
       progressive: true,
       interlaced:true,
