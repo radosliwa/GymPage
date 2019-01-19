@@ -1,10 +1,9 @@
-/* fffsssssssssssff */
 {{#shapes}}
 
 {{#first}}
 .icon {
   display: inline-block;
-  background-image: url('../../../temp/sprite/css/{{{sprite}}}');
+  background-image: url('../../assets/images/sprites/{{{sprite}}}');
   transform: scale(.8);
 @mixin atMedium{
   transform: scale(1);

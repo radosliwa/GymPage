@@ -30,7 +30,7 @@ gulp.task('startClean', function(){
   return del(['./app/assets/styles/modules/_sprite.css', './app/temp/sprite'])
 })
 gulp.task('createSprite',['startClean'], function(){
-  return gulp.src('./app/assets/images/icons/**/*.svg')
+  return gulp.src('./app/assets/images/icons/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('./app/temp/sprite'));
 });

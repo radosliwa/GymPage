@@ -19,6 +19,12 @@ gulp.task('previewDocs',function(){
 gulp.task('delDocs',['sprites'],function(){
   return del('./docs');
 });
+
+gulp.task('moveFonts',['delDocs'], function(){
+  return gulp.src('./app/assets/fonts/**/*')
+  .pipe(gulp.dest('./docs/assets/fonts'))
+});
+
 gulp.task('optimizePics',['delDocs'], function(){
   return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/sprites'])
     .pipe(imageMin({
@@ -42,4 +48,4 @@ gulp.task('usemin',['styles','scripts'],function(){
   .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('build',['delDocs','optimizePics','useminStart']);
+gulp.task('build',['delDocs','moveFonts','optimizePics','useminStart']);
