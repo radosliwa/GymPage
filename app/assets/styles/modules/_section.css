@@ -24,15 +24,25 @@
   }
 
   &__our-offer-picture {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 67.07%;
+
     @mixin atSmallXL {
       max-width: 66%;
       margin-left: 15%;
+      padding-bottom: 87.037%;
     }
 
     @mixin atMediumXL {
       margin: 0;
-      padding: 0;
-      max-width: auto;
+      padding-bottom: 87.037%;
+      /* max-width: auto; */
+    }
+
+    img {
+      position: absolute;
     }
   }
 

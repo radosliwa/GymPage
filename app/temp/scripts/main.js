@@ -10474,21 +10474,24 @@ new _revealOnScroll2.default((0, _jquery2.default)('.section'), "45%");
 
 new _stickyHeader2.default();
 //-------------------------------------------SIDE OFFER
-var $bannerSideOffer = (0, _jquery2.default)('.banner__side-offer');
-var $sideOfferLink = $bannerSideOffer.find('a');
-var $closeX = $bannerSideOffer.find('.banner__side-offer__close');
-(0, _jquery2.default)(function () {
-  $bannerSideOffer.delay(850).fadeIn(800);
-  $sideOfferLink.on('click', hideSideOffer);
-});
-
-$closeX.click(function () {
-  $bannerSideOffer.addClass('animated bounceOutRight').on('animationend', hideSideOffer);
-});
-
-function hideSideOffer() {
-  $bannerSideOffer.css({ display: 'none' }).removeClass('animated bounceOutRight');
-}
+// const $bannerSideOffer = $('.banner__side-offer');
+// const $sideOfferLink = $bannerSideOffer.find('a');
+// const $closeX = $bannerSideOffer.find('.banner__side-offer__close');
+// $(function() {
+//   $bannerSideOffer.delay(850).fadeIn(800);
+//   $sideOfferLink.on('click', hideSideOffer);
+// });
+//
+// $closeX.click(() => {
+//   $bannerSideOffer.addClass('animated bounceOutRight')
+//     .on('animationend', hideSideOffer);
+// });
+//
+// function hideSideOffer() {
+//   $bannerSideOffer.css({
+//     display: 'none'
+//   }).removeClass('animated bounceOutRight');
+// }
 
 /***/ }),
 /* 2 */

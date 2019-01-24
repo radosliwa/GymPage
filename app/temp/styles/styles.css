@@ -1007,15 +1007,31 @@ h3 {
 }
   }
 
-.banner__image {
-    margin: 0 auto;
+.banner__pictureWrapper {
+    display: block;
     position: relative;
-    /*to move subtitle on top */
-    z-index: -1;
+    height: 0;
+    padding-bottom: 98.29%;
+  }
+
+@media(min-width: 530px) {
+
+.banner__pictureWrapper {
+      padding-bottom: 87.037%
+  }
   }
 
 @media(min-width: 770px) {
+
+.banner__pictureWrapper {
+      padding-bottom: 63%
   }
+  }
+
+.banner__pictureWrapper img {
+      position: absolute;
+      z-index: -999;
+    }
 
 .banner__subtitle {
     font-family: Maiden Crimes, 'Orbitron', sans-serif;
@@ -1024,6 +1040,7 @@ h3 {
     -webkit-transition: opacity .8s ease-in;
     -o-transition: opacity .8s ease-in;
     transition: opacity .8s ease-in;
+    z-index: 999;
   }
 
 .banner__subtitle--on-the-right {
@@ -1040,13 +1057,7 @@ h3 {
       font-size: 1.1em;
       min-width: 15%;
       font-weight: bolder;
-      z-index: 99;
-      opacity: 0;
     }
-
-.banner__subtitle--on-the-right--show {
-        opacity: 1;
-      }
 
 @media(min-width: 400px) {
 
@@ -1060,7 +1071,7 @@ h3 {
 .banner__subtitle--on-the-right {
         font-family: Maiden Crimes, 'Orbitron', sans-serif;
         text-shadow: 2px 2px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 2px 4px #FFF, 1px 4px 4px #000;
-        margin-top: -36.7%;
+        margin-top: -35.7%;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
@@ -1082,7 +1093,7 @@ h3 {
 
 .banner__subtitle--on-the-right {
         letter-spacing: 3px;
-        margin-top: -25.5%;
+        margin-top: -25.7%;
         padding-right: 7%;
         font-weight: 500;
         font-size: 1.4em;
@@ -1094,7 +1105,6 @@ h3 {
 
 .banner__subtitle--on-the-right {
         letter-spacing: 2.7px;
-        margin-top: -25.5%;
         font-weight: 600
     }
   }
@@ -1573,11 +1583,19 @@ h3 {
   }
   }
 
+.section__our-offer-picture {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 67.07%;
+  }
+
 @media(min-width: 600px) {
 
 .section__our-offer-picture {
       max-width: 66%;
-      margin-left: 15%
+      margin-left: 15%;
+      padding-bottom: 87.037%
   }
   }
 
@@ -1585,10 +1603,14 @@ h3 {
 
 .section__our-offer-picture {
       margin: 0;
-      padding: 0;
-      max-width: auto
+      padding-bottom: 87.037%
+      /* max-width: auto; */
   }
   }
+
+.section__our-offer-picture img {
+      position: absolute;
+    }
 
 .section__igs-mission-team {
     display: -webkit-box;
