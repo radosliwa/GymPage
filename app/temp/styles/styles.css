@@ -996,40 +996,52 @@ h3 {
 @media(min-width: 530px) {
 
 .banner {
-    margin-bottom: 45%
+    margin-bottom: 35%
+}
+  }
+
+@media(min-width: 600px) {
+
+.banner {
+    margin-bottom: 35%
 }
   }
 
 @media(min-width: 770px) {
 
 .banner {
-    margin-bottom: 28%
+    margin-bottom: 24%
 }
   }
 
 .banner__pictureWrapper {
     display: block;
     position: relative;
-    height: 0;
-    padding-bottom: 98.29%;
   }
+
+.banner__pictureWrapper:before {
+      content: '';
+      display: block;
+      padding-bottom: 98.29%;
+    }
 
 @media(min-width: 530px) {
 
-.banner__pictureWrapper {
-      padding-bottom: 87.037%
-  }
+.banner__pictureWrapper:before {
+        padding-bottom: 87.037%
+    }
   }
 
 @media(min-width: 770px) {
 
-.banner__pictureWrapper {
-      padding-bottom: 63%
-  }
+.banner__pictureWrapper:before {
+        padding-bottom: 63%
+    }
   }
 
 .banner__pictureWrapper img {
       position: absolute;
+      top: 0;
       z-index: -999;
     }
 
@@ -1516,30 +1528,37 @@ h3 {
       float: left;
       width: 25%;
     }
+
     .row__medium_4 {
       float: left;
       width: 33.33%;
     }
+
     .row__medium_5 {
       float: left;
       width: 41.66%;
     }
+
     .row__medium_6 {
       float: left;
       width: 50%;
     }
+
     .row__medium_7 {
       float: left;
       width: 58.33%;
     }
+
     .row__medium_8 {
       float: left;
       width: 66.66%;
     }
+
     .row__medium_9 {
       float: left;
       width: 75%;
     }
+
     .row__medium_12 {
       float: left;
       width: 100%;
@@ -1548,7 +1567,7 @@ h3 {
 
 .section {
   position: relative;
-  padding-top: 10%;
+  padding-top: 14%;
 }
 
 /* top doesnt get cut after clicking
@@ -1557,7 +1576,7 @@ h3 {
 @media(min-width: 530px) {
 
 .section {
-    /* padding-top: 15%; */
+    padding-top: 10%
 }
   }
 
@@ -1571,7 +1590,7 @@ h3 {
 @media(min-width: 770px) {
 
 .section {
-    padding-top: 7%
+    padding-top: 4%
 }
   }
 
@@ -1586,30 +1605,57 @@ h3 {
 .section__our-offer-picture {
     display: block;
     position: relative;
-    height: 0;
-    padding-bottom: 67.07%;
+    max-width: 100%;
+  }
+
+@media(min-width: 530px) {
+
+.section__our-offer-picture {
+      max-width: 83%;
+      margin-left: 8%
+  }
   }
 
 @media(min-width: 600px) {
 
 .section__our-offer-picture {
-      max-width: 66%;
-      margin-left: 15%;
-      padding-bottom: 87.037%
+      max-width: 85%;
+      margin-left: 5%
+  }
+  }
+
+@media(min-width: 770px) {
+
+.section__our-offer-picture {
+      max-width: 69%;
+      margin-left: 16%
   }
   }
 
 @media(min-width: 875px) {
 
 .section__our-offer-picture {
-      margin: 0;
-      padding-bottom: 87.037%
+      margin: 0
       /* max-width: auto; */
   }
   }
 
+.section__our-offer-picture:before {
+      content: '';
+      display: block;
+      padding-bottom: 67.07%;
+    }
+
+@media(min-width: 875px) {
+
+.section__our-offer-picture:before {
+        padding-bottom: 87.037%
+    }
+  }
+
 .section__our-offer-picture img {
       position: absolute;
+      top: 0;
     }
 
 .section__igs-mission-team {
@@ -2109,7 +2155,6 @@ h3 {
 }
 
 .site-footer {
-  position: relative;
   background-color: #cd3600b5;
   color: #FFF;
   padding: .5rem 18px .5rem 18px;

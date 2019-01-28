@@ -7,29 +7,38 @@
   }
 
   @mixin atSmall {
-    margin-bottom: 45%;
+    margin-bottom: 35%;
+  }
+
+  @mixin atSmallXL {
+    margin-bottom: 35%;
   }
 
   @mixin atMedium {
-    margin-bottom: 28%;
+    margin-bottom: 24%;
   }
 
   &__pictureWrapper {
     display: block;
     position: relative;
-    height: 0;
-    padding-bottom: 98.29%;
 
-    @mixin atSmall {
-      padding-bottom: 87.037%;
-    }
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: 98.29%;
 
-    @mixin atMedium {
-      padding-bottom: 63%;
+      @mixin atSmall {
+        padding-bottom: 87.037%;
+      }
+
+      @mixin atMedium {
+        padding-bottom: 63%;
+      }
     }
 
     img {
       position: absolute;
+      top: 0;
       z-index: -999;
     }
   }

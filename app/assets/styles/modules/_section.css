@@ -1,11 +1,11 @@
 .section {
   position: relative;
-  padding-top: 10%;
+  padding-top: 14%;
 
   /* top doesnt get cut after clicking
   on the header link*/
   @mixin atSmall {
-    /* padding-top: 15%; */
+    padding-top: 10%;
   }
 
   @mixin atSmallXL {
@@ -13,7 +13,7 @@
   }
 
   @mixin atMedium {
-    padding-top: 7%;
+    padding-top: 4%;
   }
 
   &__our-offer {
@@ -26,23 +26,41 @@
   &__our-offer-picture {
     display: block;
     position: relative;
-    height: 0;
-    padding-bottom: 67.07%;
+    max-width: 100%;
+
+    @mixin atSmall {
+      max-width: 83%;
+      margin-left: 8%;
+    }
 
     @mixin atSmallXL {
-      max-width: 66%;
-      margin-left: 15%;
-      padding-bottom: 87.037%;
+      max-width: 85%;
+      margin-left: 5%;
+    }
+
+    @mixin atMedium {
+      max-width: 69%;
+      margin-left: 16%;
     }
 
     @mixin atMediumXL {
       margin: 0;
-      padding-bottom: 87.037%;
       /* max-width: auto; */
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: 67.07%;
+
+      @mixin atMediumXL {
+        padding-bottom: 87.037%;
+      }
     }
 
     img {
       position: absolute;
+      top: 0;
     }
   }
 
