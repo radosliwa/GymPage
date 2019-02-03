@@ -14,7 +14,8 @@ body {
   color: #FFF;
 
   @mixin atMedium {
-    background: url('../../assets/images/background1.jpg') fixed no-repeat center;
+    background: url('../../assets/images/background1.jpg') fixed;
+    background-size: cover;
   }
 
   @media only screen and (max-width: 812px) and (max-height: 414px) and (orientation: landscape) {
